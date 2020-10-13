@@ -34,10 +34,7 @@ export default {};
 </script>
 
 <style scoped>
-/* .title{
-  padding:20px 0px;
-  text-align: center;
-} */
+
 
 </style>>
 
