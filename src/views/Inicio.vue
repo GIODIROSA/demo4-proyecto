@@ -23,7 +23,9 @@
     Officiis, quas eius? Porro deleniti voluptates fuga dolorem, ex dolor magnam alias aut earum libero voluptatum quibusdam nisi molestiae tenetur labore quae dicta aliquid suscipit quam. Fugiat aliquid veritatis deleniti!
     Similique, repudiandae! Explicabo ipsum laudantium nesciunt animi iusto aliquid eveniet quidem accusamus id maiores, sapiente aliquam accusantium eum doloribus commodi, aspernatur vitae, voluptas neque? Cumque saepe numquam recusandae molestias officia.
   </p>
- <v-parallax src="../assets/img/24.png"></v-parallax>
+ <v-parallax src="../assets/img/24.png">
+ <h1 class="text-center" >AUFIELDS</h1>
+ </v-parallax>
    <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eos similique culpa earum. Sapiente, similique. A eos vero velit vitae sit commodi eius, tempora eligendi, sed odit tempore suscipit. Amet!
     Fuga doloribus incidunt enim itaque assumenda saepe doloremque a accusantium explicabo qui nam at pariatur soluta, impedit corporis corrupti eius odit porro et iusto, magni maiores? Sapiente unde dolorum quibusdam!
