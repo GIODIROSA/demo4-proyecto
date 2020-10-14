@@ -133,7 +133,7 @@
       </v-col>
     </v-row>
     <!-- dialog -->
-    <v-dialog v-model="dialog" width="500">
+    <v-dialog v-model="dialog" width="500" persistent>
       <v-card>
         <v-card-title>
           <h4>
@@ -152,7 +152,7 @@
 
         <v-divider></v-divider>
         <v-card-actions>
-          <v-btn>
+          <v-btn @click="dialog = false">
             cerrar
           </v-btn>
         </v-card-actions>

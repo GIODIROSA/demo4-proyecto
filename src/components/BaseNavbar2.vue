@@ -40,6 +40,13 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
+      <!-- button -->
+      <v-container>
+        <v-row>
+          <v-btn dark color="pink darken-1" block :to="{name: 'Inicio'}">Inicio</v-btn>
+          <v-btn dark color="pink accent-4 my-2" block :to="{name: 'Contact Us'}">Comentarios</v-btn>
+        </v-row>
+      </v-container>
     </v-navigation-drawer>
   </nav>
 </template>
