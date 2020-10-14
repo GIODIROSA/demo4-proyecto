@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <h1>tickets</h1>
     <v-row>
      <v-col class="primary" cols="12" sm="6" >
          <p>

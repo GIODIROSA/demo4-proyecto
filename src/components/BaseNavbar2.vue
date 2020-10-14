@@ -2,24 +2,27 @@
   <nav>
     <v-toolbar dense elevation="1" rounded>
       <v-toolbar-title>
-         <h5 class="font-weight-light" >Aufields</h5> 
+        <h5 class="font-weight-black titleAufields">Aufields</h5>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon color="indigo" disabled>
         <v-icon>mdi-star</v-icon>
       </v-btn>
-       <v-btn icon color="green accent-3" >
+      <v-btn icon color="green accent-3">
         <v-icon>mdi-music</v-icon>
       </v-btn>
-       <v-btn icon color="amber darken-3">
+      <v-btn icon color="amber darken-3">
         <v-icon>mdi-ticket</v-icon>
       </v-btn>
-      
-      
+
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"> </v-app-bar-nav-icon>
     </v-toolbar>
 
-    <v-navigation-drawer app v-model="drawer" class="pink accent-3">
+    <v-navigation-drawer
+      app
+      v-model="drawer"
+      class="navigationDrawer red accent-3"
+    >
       <v-list>
         <v-list-item
           v-for="link in links"
@@ -47,14 +50,22 @@ export default {
     return {
       drawer: false,
       links: [
-        { icon: "mdi-heart", text: "Home", route: "/" },
-        { icon: "mdi-ticket", text: "About", route: "/about" },
-        { icon: "mdi-music", text: "Grid", route: "/grid" },
-        { icon: "", text: "Botones", route: "/botones" },
+        { icon: "mdi-heart", text: "Inicio", route: "/" },
+        { icon: "mdi-ticket", text: "Line Up", route: "/lineup" },
+        { icon: "mdi-music", text: "Tickets", route: "/tickets" },
+        { icon: "", text: "Travel", route: "/travel" },
+        { icon: "", text: "Beneficios", route: "/beneficios" },
+        { icon: "", text: "Auf 2019", route: "/auf2019" },
+        { icon: "", text: "Contact Us", route: "/contactus" },
+        { icon: "", text: "Faqs", route: "/faqs" },
       ],
     };
   },
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.titleAufields {
+  color: #F50057;
+}
+</style>

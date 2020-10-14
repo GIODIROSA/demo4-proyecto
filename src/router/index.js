@@ -1,29 +1,49 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Inicio from '../views/Inicio.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Inicio',
+    component: Inicio
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/lineup',
+    name: 'LineUp',
+    component: () => import(/* webpackChunkName: "LineUp" */ '../views/Lineup.vue')
   },
   {
-    path: '/grid',
-    name: 'Grid',
-    component: () => import(/* webpackChunkName: "grid" */ '../views/Grid.vue')
+    path: '/tickets',
+    name: 'Tickets',
+    component: () => import(/* webpackChunkName: "tickets" */ '../views/Tickets.vue')
   },
   {
-    path: '/botones',
-    name: 'Botones',
-    component: () => import(/* webpackChunkName: "botones" */ '../views/Botones.vue')
+    path: '/travel',
+    name: 'Travel',
+    component: () => import(/* webpackChunkName: "travel" */ '../views/Travel.vue')
+  },
+  {
+    path: '/beneficios',
+    name: 'Beneficios',
+    component: () => import(/* webpackChunkName: "beneficios" */ '../views/Beneficios.vue')
+  },
+  {
+    path: '/auf2019',
+    name: 'Auf2019',
+    component: () => import(/* webpackChunkName: "auf 2019" */ '../views/Auf2019.vue')
+  },
+  {
+    path: '/contactus',
+    name: 'Contact Us',
+    component: () => import(/* webpackChunkName: "contact us" */ '../views/Contactus.vue')
+  },
+  {
+    path: '/faqs',
+    name: 'Faqs',
+    component: () => import(/* webpackChunkName: "faqs" */ '../views/Faqs.vue')
   }
 ]
 
