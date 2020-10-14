@@ -5,7 +5,7 @@
         <v-btn>Texto</v-btn>
         <v-btn class="pink accent-3 mx-4 white--text">Texto</v-btn>
         <v-btn dark class="blue">Texto</v-btn>
-        <v-btn class="mx-4" color="secondary" flat>Sin fondo</v-btn>
+        <v-btn class="mx-4" color="secondary" text>Sin fondo</v-btn>
         <v-btn
           class="mx-4"
           color="warning"
