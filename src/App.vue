@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <BaseNavbar />
+    <BaseNavbar2 />
 
     <v-main>
       <router-view />
@@ -9,11 +9,14 @@
 </template>
 
 <script>
+
 export default {
   name: "App",
 
   data: () => ({
+  
     //
   }),
+  
 };
 </script>
