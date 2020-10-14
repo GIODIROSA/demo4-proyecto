@@ -31,7 +31,9 @@
             </p>
           </v-card-text>
           <v-card-actions>
-            <v-btn color="info" elevation="2" text>Accion</v-btn>
+            <v-btn color="info" elevation="2" text @click="dialog = true"
+              >Accion</v-btn
+            >
           </v-card-actions>
         </v-card>
       </v-col>
@@ -63,7 +65,9 @@
             </p>
           </v-card-text>
           <v-card-actions>
-            <v-btn color="info" elevation="2" text>Accion</v-btn>
+            <v-btn color="info" elevation="2" text @click="dialog = true"
+              >Accion</v-btn
+            >
           </v-card-actions>
         </v-card>
       </v-col>
@@ -91,7 +95,9 @@
             </p>
           </v-card-text>
           <v-card-actions>
-            <v-btn color="info" elevation="2" text>Accion</v-btn>
+            <v-btn color="info" elevation="2" text @click="dialog = true"
+              >Accion</v-btn
+            >
           </v-card-actions>
         </v-card>
       </v-col>
@@ -119,11 +125,40 @@
             </p>
           </v-card-text>
           <v-card-actions>
-            <v-btn color="info" elevation="2" text>Accion</v-btn>
+            <v-btn color="info" elevation="2" text @click="dialog = true"
+              >Accion</v-btn
+            >
           </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
+    <!-- dialog -->
+    <v-dialog v-model="dialog" width="500">
+      <v-card>
+        <v-card-title>
+          <h4>
+            Este es el titulo
+          </h4>
+        </v-card-title>
+        <v-card-texto>
+          <p class="px-6">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore
+            maxime, cumque ipsum recusandae, sed repudiandae aliquam vitae
+            temporibus earum quibusdam aperiam dignissimos. Beatae accusantium
+            natus numquam ut eaque quam cum fuga deleniti aliquam atque,
+            distinctio repudiandae
+          </p>
+        </v-card-texto>
+
+        <v-divider></v-divider>
+        <v-card-actions>
+          <v-btn>
+            cerrar
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+    <!-- fin dialog -->
   </v-container>
 </template>
 
@@ -131,13 +166,15 @@
 export default {
   name: "Lineup",
   data() {
-    return {};
+    return {
+      dialog: false,
+    };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.titleDj{
+.titleDj {
   height: 15.625rem;
   display: flex;
   justify-content: center;
