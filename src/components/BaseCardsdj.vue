@@ -203,53 +203,10 @@ export default {
       charlotte: false,
       boris: false,
       martin: false,
-      pictures: [],
-      cards: [
-        {
-          id: Date.now(),
-          img: "../assets/img/amelielens01.png",
-          title: "Amelie Lens",
-          subtitle: "Belgica",
-          actions: "Biografia",
-          amelie: "false",
-          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
-        },
-        {
-          id: Date.now(),
-          img: "../assets/img/borisbrejcha01.png",
-          title: "Boris Brejcha",
-          subtitle: "Alemania",
-          actions: "Biografia",
-          boris: "false",
-          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
-        },
-        {
-          id: Date.now(),
-          img: "../assets/img/charlottedewitte01.png",
-          title: "Charlotte De Witte",
-          subtitle: "Belgica",
-          actions: "Biografia",
-          charlotte: "false",
-          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
-        },
-        {
-          id: Date.now(),
-          img: "../assets/img/martingarrix01.png",
-          title: "Martin Garrix",
-          subtitle: "Holanda",
-          actions: "Biografia",
-          amelie: "false",
-          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
-        },
-      ],
+     
     };
   }, //final de data
-  computed: {
-    getImg() {
-      return this.cards.forEach((e) => console.log(e.img));
-      this.pictures.push(e.img);
-    },
-  },
+ 
 };
 </script>
 

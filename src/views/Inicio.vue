@@ -35,7 +35,7 @@
           <!-- COLUMNA UNO -->
           <v-col cols="12" sm="12" md="6">
             <h3 class="areaGeneraltitle">
-             AREA GENERAL
+              AREA GENERAL
             </h3>
           </v-col>
           <!-- COLUMNA DOS -->
@@ -56,7 +56,7 @@
           <!-- COLUMNA UNO -->
           <v-col cols="12" sm="12" md="6">
             <h3 class="hospitalityAreaTitle">
-              AREA HOSPITALITY 
+              AREA HOSPITALITY
             </h3>
           </v-col>
           <!-- COLUMNA DOS -->
@@ -79,10 +79,7 @@
       </v-container>
     </section>
     <!-- PARALLAX -->
-    <v-parallax
-      dark
-      src="../assets/img/parallax01.jpg"
-    >
+    <v-parallax dark src="../assets/img/parallax01.jpg">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
           <h1 class="display-1 font-weight-thin mb-4">
@@ -95,8 +92,18 @@
       </v-row>
     </v-parallax>
     <!-- FINAL DE PARALLAX -->
+    <!-- PREGUNTAR EN CLASE -->
+    <!-- <div v-for="(card, index) in cardsDj" :key="index">
+      <BaseCardsdj2
+        :src="card.img"
+        :title="card.title"
+        :subtitle="card.subtitle"
+        :accion="card.accion"
+        :text="card.text"
+      />
+    </div> -->
+    <!-- FINAL DE PREGUNTAR EN CLASE -->
     <BaseCardsdj />
-    
   </div>
 </template>
 
@@ -108,7 +115,57 @@ export default {
   data() {
     return {
       show: false,
+      cardsDj: [],
+      cards: [
+        {
+          id: Date.now(),
+          img: "../assets/img/amelielens01.png",
+          title: "Amelie Lens",
+          subtitle: "Belgica",
+          accion: "Biografia",
+          estado: "false",
+          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
+        },
+        {
+          id: Date.now(),
+          img: "../assets/img/borisbrejcha01.png",
+          title: "Boris Brejcha",
+          subtitle: "Alemania",
+          accion: "Biografia",
+          estado: "false",
+          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
+        },
+        {
+          id: Date.now(),
+          img: "../assets/img/charlottedewitte01.png",
+          title: "Charlotte De Witte",
+          subtitle: "Belgica",
+          accion: "Biografia",
+          estado: "false",
+          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
+        },
+        {
+          id: Date.now(),
+          img: "../assets/img/martingarrix01.png",
+          title: "Martin Garrix",
+          subtitle: "Holanda",
+          accion: "Biografia",
+          estado: "false",
+          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
+        },
+      ],
     };
+  },
+  mounted() {
+    this.cards.forEach((e) => {
+      console.log(e.img);
+      console.log(e.title);
+      console.log(e.subtitle);
+      console.log(e.accion);
+      console.log(e.text);
+
+      this.cardsDj.push(e.img, e.title, e.subtitle, e.accion, e.text);
+    });
   },
 };
 </script>
@@ -138,15 +195,14 @@ export default {
   padding: 20px;
 }
 
-.areasConcierto{
+.areasConcierto {
   padding: 120px 0;
 
-.areaGeneraltitle{
-  color: #80DEEA;
+  .areaGeneraltitle {
+    color: #80deea;
+  }
+  .hospitalityAreaTitle {
+    color: #f48fb1;
+  }
 }
-.hospitalityAreaTitle{
-  color: #F48FB1;
-}
-}
-
 </style>
