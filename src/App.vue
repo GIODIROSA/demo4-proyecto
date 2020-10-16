@@ -5,6 +5,7 @@
     <v-main>
       <router-view />
     </v-main>
+    <BaseFooter />
   </v-app>
 </template>
 

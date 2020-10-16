@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="py-10">
     <!-- BUSCAR LA MANERA DE OPTIMIZAR ESTA PARTE -->
 
     <v-container>
