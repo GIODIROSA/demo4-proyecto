@@ -1,8 +1,8 @@
 <template>
   <nav>
-    <v-toolbar dense elevation="1" rounded>
+    <v-toolbar dense elevation="1" class="red accent-3">
       <v-toolbar-title>
-        <h5 class="font-weight-black titleAufields">Aufields</h5>
+        <h5 class="white--text">Aufields</h5>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon color="indigo" disabled>

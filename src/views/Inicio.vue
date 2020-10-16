@@ -1,55 +1,101 @@
 <template>
-<div>
-  <v-container>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eos similique culpa earum. Sapiente, similique. A eos vero velit vitae sit commodi eius, tempora eligendi, sed odit tempore suscipit. Amet!
-    Fuga doloribus incidunt enim itaque assumenda saepe doloremque a accusantium explicabo qui nam at pariatur soluta, impedit corporis corrupti eius odit porro et iusto, magni maiores? Sapiente unde dolorum quibusdam!
-    Ratione labore reprehenderit soluta culpa nemo aliquam omnis explicabo. Id, fugiat repellendus ea at quas perspiciatis neque omnis, consequatur pariatur quae perferendis, porro ullam? Nesciunt delectus iusto ratione fugiat aspernatur.
-    Ab dolor ipsa nesciunt nostrum? Praesentium earum nesciunt itaque sequi dolor. Rerum distinctio tempora, quasi impedit fuga rem autem ex, inventore ad obcaecati quidem. Nam ratione laborum perferendis esse tenetur!
-    Et voluptatibus veritatis nobis similique recusandae dolor libero maiores reiciendis dignissimos quibusdam perspiciatis ex iste deleniti harum, error dolore labore laudantium, porro nostrum beatae! Modi voluptatum sequi harum temporibus! Fuga.
-    Nostrum accusamus numquam eum reprehenderit at alias earum, placeat incidunt rerum, architecto minima! Necessitatibus, repellat sunt explicabo vel possimus deleniti hic in suscipit est, facere aliquid corrupti recusandae, magnam libero.
-    Quis modi quibusdam numquam nihil minima tenetur animi pariatur provident impedit ad aliquam id, dolorum repudiandae voluptate sit aliquid. Itaque quo repellendus iusto asperiores deleniti libero fugit, temporibus voluptas saepe.
-    Ut fugit perferendis consequatur ex placeat neque facere alias! Accusamus temporibus ut, eaque atque minima in asperiores excepturi nisi. Recusandae dolore eius dicta nobis distinctio nostrum fugiat aperiam ut quasi?
-    Nihil culpa iure modi, odit debitis tempora? Vitae minus cupiditate, deleniti explicabo aliquid repudiandae alias natus autem molestiae! Perspiciatis, ab. Incidunt hic voluptatem, iste dolore consequatur iusto eius officiis blanditiis.
-    Cumque rem eum temporibus voluptatibus, quos repellat quo neque praesentium debitis iste perferendis mollitia, a alias. Nihil quo rerum repellat harum dolorum, quidem neque libero tempora, accusantium atque rem alias.
-    Eum voluptatum enim eligendi consequuntur adipisci rem perferendis aut asperiores velit consectetur autem tenetur atque impedit voluptate minus labore nostrum, vero reprehenderit earum aperiam! Corrupti harum optio sit excepturi molestiae.
-    Deleniti optio provident eveniet et ab cum asperiores, perspiciatis rem ducimus nisi, molestias, exercitationem possimus voluptatum officia nemo totam recusandae error magnam deserunt. Iste mollitia recusandae odio excepturi in quis.
-    Adipisci deleniti voluptatum voluptatibus corporis, dicta architecto rerum aliquam temporibus ut eum at deserunt iure itaque labore nostrum id? Adipisci aliquam modi consectetur, laudantium corporis vero vitae id! Ut, quis!
-    Dicta ut quas, ullam ex corrupti, nobis ipsum dignissimos assumenda, laudantium dolore dolor nulla! Illo dolorem, delectus odit error debitis dolore iusto obcaecati eius. Quidem eos illo dicta eveniet alias?
-    Laudantium impedit ea vero doloribus doloremque, minus laborum suscipit nobis? Sit dolores ad beatae in, quasi blanditiis esse adipisci non eius impedit unde mollitia neque dicta voluptates a eum possimus!
-    Nulla dolorum accusamus earum necessitatibus ad est quaerat quos voluptas qui! Quod, ratione incidunt cumque neque iure quae, ad officia labore quaerat quidem dolore necessitatibus, laudantium nostrum quia eveniet modi.
-    Illo ipsum, soluta veritatis ducimus quia distinctio, modi nisi cupiditate, voluptatum voluptatibus magnam incidunt voluptatem itaque. Doloremque, non quasi! Ex placeat veniam eveniet voluptate quibusdam inventore voluptas soluta distinctio quos.
-    Quae harum laudantium, quas vel deserunt similique quia adipisci aliquid quod provident dignissimos obcaecati et asperiores. Suscipit veritatis asperiores quisquam perspiciatis est tempora numquam corporis quis nemo non, mollitia natus.
-    Officiis, quas eius? Porro deleniti voluptates fuga dolorem, ex dolor magnam alias aut earum libero voluptatum quibusdam nisi molestiae tenetur labore quae dicta aliquid suscipit quam. Fugiat aliquid veritatis deleniti!
-    Similique, repudiandae! Explicabo ipsum laudantium nesciunt animi iusto aliquid eveniet quidem accusamus id maiores, sapiente aliquam accusantium eum doloribus commodi, aspernatur vitae, voluptas neque? Cumque saepe numquam recusandae molestias officia.
-  </p>
- <v-parallax src="../assets/img/24.png">
- <h1 class="text-center" >AUFIELDS</h1>
- </v-parallax>
-   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eos similique culpa earum. Sapiente, similique. A eos vero velit vitae sit commodi eius, tempora eligendi, sed odit tempore suscipit. Amet!
-    Fuga doloribus incidunt enim itaque assumenda saepe doloremque a accusantium explicabo qui nam at pariatur soluta, impedit corporis corrupti eius odit porro et iusto, magni maiores? Sapiente unde dolorum quibusdam!
-    Ratione labore reprehenderit soluta culpa nemo aliquam omnis explicabo. Id, fugiat repellendus ea at quas perspiciatis neque omnis, consequatur pariatur quae perferendis, porro ullam? Nesciunt delectus iusto ratione fugiat aspernatur.
-    Ab dolor ipsa nesciunt nostrum? Praesentium earum nesciunt itaque sequi dolor. Rerum distinctio tempora, quasi impedit fuga rem autem ex, inventore ad obcaecati quidem. Nam ratione laborum perferendis esse tenetur!
-    Et voluptatibus veritatis nobis similique recusandae dolor libero maiores reiciendis dignissimos quibusdam perspiciatis ex iste deleniti harum, error dolore labore laudantium, porro nostrum beatae! Modi voluptatum sequi harum temporibus! Fuga.
-    Nostrum accusamus numquam eum reprehenderit at alias earum, placeat incidunt rerum, architecto minima! Necessitatibus, repellat sunt explicabo vel possimus deleniti hic in suscipit est, facere aliquid corrupti recusandae, magnam libero.
-    Quis modi quibusdam numquam nihil minima tenetur animi pariatur provident impedit ad aliquam id, dolorum repudiandae voluptate sit aliquid. Itaque quo repellendus iusto asperiores deleniti libero fugit, temporibus voluptas saepe.
-    Ut fugit perferendis consequatur ex placeat neque facere alias! Accusamus temporibus ut, eaque atque minima in asperiores excepturi nisi. Recusandae dolore eius dicta nobis distinctio nostrum fugiat aperiam ut quasi?
-    Nihil culpa iure modi, odit debitis tempora? Vitae minus cupiditate, deleniti explicabo aliquid repudiandae alias natus autem molestiae! Perspiciatis, ab. Incidunt hic voluptatem, iste dolore consequatur iusto eius officiis blanditiis.
-    Cumque rem eum temporibus voluptatibus, quos repellat quo neque praesentium debitis iste perferendis mollitia, a alias. Nihil quo rerum repellat harum dolorum, quidem neque libero tempora, accusantium atque rem alias.
-    Eum voluptatum enim eligendi consequuntur adipisci rem perferendis aut asperiores velit consectetur autem tenetur atque impedit voluptate minus labore nostrum, vero reprehenderit earum aperiam! Corrupti harum optio sit excepturi molestiae.
-    Deleniti optio provident eveniet et ab cum asperiores, perspiciatis rem ducimus nisi, molestias, exercitationem possimus voluptatum officia nemo totam recusandae error magnam deserunt. Iste mollitia recusandae odio excepturi in quis.
-    Adipisci deleniti voluptatum voluptatibus corporis, dicta architecto rerum aliquam temporibus ut eum at deserunt iure itaque labore nostrum id? Adipisci aliquam modi consectetur, laudantium corporis vero vitae id! Ut, quis!
-    Dicta ut quas, ullam ex corrupti, nobis ipsum dignissimos assumenda, laudantium dolore dolor nulla! Illo dolorem, delectus odit error debitis dolore iusto obcaecati eius. Quidem eos illo dicta eveniet alias?
-    Laudantium impedit ea vero doloribus doloremque, minus laborum suscipit nobis? Sit dolores ad beatae in, quasi blanditiis esse adipisci non eius impedit unde mollitia neque dicta voluptates a eum possimus!
-    Nulla dolorum accusamus earum necessitatibus ad est quaerat quos voluptas qui! Quod, ratione incidunt cumque neque iure quae, ad officia labore quaerat quidem dolore necessitatibus, laudantium nostrum quia eveniet modi.
-    Illo ipsum, soluta veritatis ducimus quia distinctio, modi nisi cupiditate, voluptatum voluptatibus magnam incidunt voluptatem itaque. Doloremque, non quasi! Ex placeat veniam eveniet voluptate quibusdam inventore voluptas soluta distinctio quos.
-    Quae harum laudantium, quas vel deserunt similique quia adipisci aliquid quod provident dignissimos obcaecati et asperiores. Suscipit veritatis asperiores quisquam perspiciatis est tempora numquam corporis quis nemo non, mollitia natus.
-    Officiis, quas eius? Porro deleniti voluptates fuga dolorem, ex dolor magnam alias aut earum libero voluptatum quibusdam nisi molestiae tenetur labore quae dicta aliquid suscipit quam. Fugiat aliquid veritatis deleniti!
-    Similique, repudiandae! Explicabo ipsum laudantium nesciunt animi iusto aliquid eveniet quidem accusamus id maiores, sapiente aliquam accusantium eum doloribus commodi, aspernatur vitae, voluptas neque? Cumque saepe numquam recusandae molestias officia.
-  </p>
-</v-container>
-</div>
+  <div>
+    <!-- BANNER PRINCIPAL -->
+    <section>
+      <div class="heroSection">
+        <div class="logotipo">
+          <img
+            class="imagenLogotipo"
+            src="../assets/img/logotipo03-02-02.svg"
+            alt="logotipo"
+          />
+        </div>
+        <v-container>
+          <v-row>
+            <h3 class="titleBanner display-2 white--text">CHILE 2021</h3>
+            <v-btn dark class="purple accent-1" block :to="{ name: 'Tickets' }"
+              >Comprar tickets Aufields</v-btn
+            >
+            <v-btn
+              dark
+              class="teal accent-3 my-3"
+              block
+              :to="{ name: 'LineUp' }"
+              >Line Up</v-btn
+            >
+          </v-row>
+        </v-container>
+      </div>
+    </section>
+    <!-- FINAL BANNER PRINCIPAL -->
+    <!-- AREAS DE CONCIERTO -->
+    <section class="areasConcierto">
+      <v-container>
+        <v-row>
+          <!-- COLUMNA UNO -->
+          <v-col cols="12" sm="12" md="6">
+            <h3 class="areaGeneraltitle">
+             AREA GENERAL
+            </h3>
+          </v-col>
+          <!-- COLUMNA DOS -->
+          <v-col>
+            <p>
+              Más de 10 horas de música continua sonarán en los múltiples
+              escenarios al aire libre del General Area bajo el ambiente
+              festivalero de Creamfields Chile. El espacio contará con más de
+              5.000 mt2 de sombra, puntos de hidratación gratuita, entretención
+              y muchas sorpresas más para que nuestros fanáticos tengan una
+              experiencia tremenda. Además, tendrá servicio de barra (con y sin
+              alcohol), comida y baños.
+            </p>
+          </v-col>
+        </v-row>
+        <!-- VIP CONCIERTO -->
+        <v-row>
+          <!-- COLUMNA UNO -->
+          <v-col cols="12" sm="12" md="6">
+            <h3 class="hospitalityAreaTitle">
+              AREA HOSPITALITY 
+            </h3>
+          </v-col>
+          <!-- COLUMNA DOS -->
+          <v-col>
+            <p>
+              Para quienes quieren disfrutar de la experiencia del mundo
+              Creamfields Chile de forma más cómoda, dispondremos de la zona
+              Hospitality Area. Este sector estará ubicado bajo una gran carpa
+              que brindará sombra y espacios más elaborados a los asistentes.
+              Contará con accesos diferenciados para que tu entrada al festival
+              sea más expedita y cómoda. También tendremos zonas de descanso y
+              baños premium, además de especiales activaciones que
+              complementarán este sector. Quienes opten por este ticket tendrán
+              acceso a una zona para bailar inmediatamente al costado y frente
+              al escenario principal. Además, en esta zona tendrá repetición de
+              sonido de los escenarios. *No incluye bar abierto.
+            </p>
+          </v-col>
+        </v-row>
+      </v-container>
+    </section>
+    <!-- PARALLAX -->
+    <v-parallax
+      dark
+      src="../assets/img/parallax01.jpg"
+    >
+      <v-row align="center" justify="center">
+        <v-col class="text-center" cols="12">
+          <h1 class="display-1 font-weight-thin mb-4">
+            AUFIELDS
+          </h1>
+          <h4 class="subheading">
+            CONCIERTO DE MÚSICA TECHNO MÁS GRANDE DE SUR AMÉRICA
+          </h4>
+        </v-col>
+      </v-row>
+    </v-parallax>
+    <!-- FINAL DE PARALLAX -->
+  </div>
 </template>
 
 <script>
@@ -57,6 +103,48 @@
 
 export default {
   name: "Inicio",
- 
+  data() {
+    return {
+      show: false,
+    };
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+.heroSection {
+  background-image: url("../assets/img/banner-inicial02.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 750px;
+  .logotipo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 100px;
+    .imagenLogotipo {
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
+.titleBanner {
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
+
+.areasConcierto{
+  padding: 120px 0;
+
+.areaGeneraltitle{
+  color: #80DEEA;
+}
+.hospitalityAreaTitle{
+  color: #F48FB1;
+}
+}
+
+</style>
