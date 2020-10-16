@@ -95,6 +95,7 @@
       </v-row>
     </v-parallax>
     <!-- FINAL DE PARALLAX -->
+    <BaseCardsdj />
   </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
   <nav>
-    <v-toolbar dense elevation="1" class="red accent-3">
+    <v-toolbar dense elevation="1">
       <v-toolbar-title>
-        <h5 class="white--text">Aufields</h5>
+        <h5>Aufields</h5>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon color="indigo" disabled>
@@ -21,7 +21,7 @@
     <v-navigation-drawer
       app
       v-model="drawer"
-      class="navigationDrawer red accent-3"
+      class="navigationDrawer purple darken-2"
     >
       <v-list>
         <v-list-item
