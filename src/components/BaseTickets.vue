@@ -45,7 +45,7 @@
 
             <v-card-text>
               <v-chip-group
-                v-model="selection"
+                v-model="selectionStandardOne"
                 active-class="deep-purple accent-4 white--text"
                 column
               >
@@ -109,7 +109,7 @@
 
             <v-card-text>
               <v-chip-group
-                v-model="selection"
+                v-model="selectionStandardTwo"
                 active-class="deep-purple accent-4 white--text"
                 column
               >
@@ -176,7 +176,7 @@
 
             <v-card-text>
               <v-chip-group
-                v-model="selection"
+                v-model="selectionGoldOne"
                 active-class="deep-purple accent-4 white--text"
                 column
               >
@@ -319,6 +319,10 @@ export default {
       ],
       loading: false,
       selectionGoldtwo: 1,
+      selectionGoldOne: 1,
+      selectionStandardTwo: 1,
+      selectionStandardOne: 1,
+
     };
   }, //final de data
   methods: {
