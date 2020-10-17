@@ -1,10 +1,8 @@
 <template>
   <div>
-    <h1>estoy probando</h1>
     <v-container>
       <v-row>
-
-          <!-- STANDARD ONEDAY -->
+        <!-- STANDARD ONEDAY -->
         <v-col cols="12" sm="6" md="6" lg="3">
           <v-card
             v-for="(ticket, index) in ticketStandard"
@@ -201,7 +199,8 @@
         </v-col>
         <!-- STANDARD ONE DAY GOLD -->
         <v-col cols="12" sm="6" md="6" lg="3">
-          <v-card dark
+          <v-card
+            dark
             v-for="(gold2, index) in ticketTwodayGold"
             color="indigo darken-4"
             :key="index"
@@ -245,7 +244,7 @@
 
             <v-card-text>
               <v-chip-group
-                v-model="selection"
+                v-model="selectionGoldtwo"
                 active-class="deep-purple accent-4 white--text"
                 column
               >
@@ -266,7 +265,6 @@
             </v-card-actions>
           </v-card>
         </v-col>
-
       </v-row>
     </v-container>
   </div>
@@ -308,7 +306,7 @@ export default {
           titleDate: "06 Noviembre",
         },
       ],
-       ticketTwodayGold: [
+      ticketTwodayGold: [
         {
           title: "TwoDay Gold",
           subtitle: "Chile 2021",
@@ -320,19 +318,16 @@ export default {
         },
       ],
       loading: false,
-      selection: 1,
+      selectionGoldtwo: 1,
     };
-  },//final de data
+  }, //final de data
   methods: {
     reserve() {
-      this.loading= true;
-      setTimeout(()=> (this.loading = false), 2000)
-      
-    }
+      this.loading = true;
+      setTimeout(() => (this.loading = false), 2000);
+    },
   },
 };
 </script>
 
 <style></style>
-
-
