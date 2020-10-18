@@ -44,7 +44,9 @@ const routes = [
     path: '/faqs',
     name: 'Faqs',
     component: () => import(/* webpackChunkName: "faqs" */ '../views/Faqs.vue')
-  }
+  },
+ 
+
 ]
 
 const router = new VueRouter({

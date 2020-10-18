@@ -158,11 +158,11 @@ export default {
   },
   mounted() {
     this.cards.forEach((e) => {
-      console.log(e.img);
-      console.log(e.title);
-      console.log(e.subtitle);
-      console.log(e.accion);
-      console.log(e.text);
+      // console.log(e.img);
+      // console.log(e.title);
+      // console.log(e.subtitle);
+      // console.log(e.accion);
+      // console.log(e.text);
 
       this.cardsDj.push(e.img, e.title, e.subtitle, e.accion, e.text);
     });

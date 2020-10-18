@@ -2,24 +2,30 @@
   <div>
     <section>
       <div class="bannerTickets">
-        <img class="imgbanner" src="../assets/img/tickets02.png" alt="">
+        <img class="imgbanner" src="../assets/img/tickets02.png" alt="" />
       </div>
-  
-  
     </section>
     <BaseTickets />
-
-   
+    
   </div>
 </template>
 
 <script>
-export default {};
+
+export default {
+  name: "Tickets",
+  data() {
+    return {
+     
+    };
+  },
+
+};
 </script>
 
 <style lang="scss" scoped>
-.bannerTickets{
-  background-image: url('../assets/img/bannertickets01.png');
+.bannerTickets {
+  background-image: url("../assets/img/bannertickets01.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,11 +35,14 @@ export default {};
   justify-content: center;
   align-items: center;
 }
-.imgbanner{
-  padding:  150px; 
+.imgbanner {
+  padding: 150px;
+  width: 750px;
+  height: 850px;
+}
+.pr{
   width: 750px;
   height: 750px;
+  background: red;
 }
-
-
-</style>>
+</style>
