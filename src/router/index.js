@@ -6,14 +6,14 @@ import firebase from "firebase";
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "*",
-    redirection: "/login",
-  },
-  {
-    path: "/",
-    redirection: "/login",
-  },
+  // {
+  //   path: "*",
+  //   redirection: "/login",
+  // },
+  // {
+  //   path: "/",
+  //   redirection: "/login",
+  // },
   {
     path: "/login",
     name: "Login",
@@ -21,7 +21,7 @@ const routes = [
       import(/* webpackChunkName: "LineUp" */ "../components/Login.vue"),
   },
   {
-    path: "/inicio",
+    path: "/",
     name: "Inicio",
     component: Inicio,
   },

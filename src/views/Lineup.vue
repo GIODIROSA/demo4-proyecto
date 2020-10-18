@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-container>
     <v-row wrap>
       <!-- UNO -->
@@ -160,6 +161,9 @@
     </v-dialog>
     <!-- fin dialog -->
   </v-container>
+     <a href="#" @click="logOut">Logout</a>
+     </div>
+
 </template>
 
 <script>
@@ -169,6 +173,12 @@ export default {
     return {
       dialog: false,
     };
+  },
+  methods: {
+    logOut() {
+      alert('Usuario se ha desconectado')
+      firebase.auth().signOut().then(()=> this.$router.replace('login'))
+    }
   },
 };
 </script>
