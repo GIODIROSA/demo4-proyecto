@@ -3,12 +3,12 @@
     <h2 class="titleLogin display-1 py-2">Login</h2>
     <v-container>
       <v-row>
-        <v-col cols="12" sm="12" md="6" lg="4">
+        <v-col cols="12" >
           <div class="imgVertical">
-            <img class="imgLogin" src="../assets/img/login01.png" alt="" />
+            <img class="imgLogin" src="../assets/img/login02.png" alt="" />
           </div>
         </v-col>
-        <v-col cols="12" sm="12" md="6" lg="8">
+        <v-col cols="12" sm="12" >
           <!-- FORM VUETIFY -->
           <v-form @submit.prevent="login">
             <v-text-field
@@ -72,19 +72,18 @@ export default {
 
 <style lang="scss" scoped>
 .formularioLogin {
-  background: #e0f7fa;
+  background: #B39DDB;
   .titleLogin {
     text-align: center;
   }
 }
-.imgVertical {
-  background-image: url("../assets/img/parallax01.jpg");
-  background-size: cover;
-
-  background-attachment: fixed;
-  width: 250px;
-  height: 350px;
+.imgVertical{
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
+
+
 .imgLogin {
   width: 250px;
   height: 400;
