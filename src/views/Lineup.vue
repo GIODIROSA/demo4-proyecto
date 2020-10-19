@@ -161,12 +161,13 @@
     </v-dialog>
     <!-- fin dialog -->
   </v-container>
-     <a href="#" @click="logOut">Logout</a>
+     <button @click="logOut">Log Out</button>
      </div>
 
 </template>
 
 <script>
+import firebase from 'firebase'
 export default {
   name: "Lineup",
   data() {

@@ -1,11 +1,39 @@
 <template>
-  <div>
-    <h2>Login</h2>
-    <form @submit.prevent="login">
-      <input v-model="usuario" type="text" placeholder="Usuario" />
-      <input v-model="contrasena" type="password" placeholder="Contraseña" />
-      <input type="submit" value="Acceder" />
-    </form>
+  <div class="formularioLogin">
+    <h2 class="titleLogin display-1 py-2">Login</h2>
+    <v-container>
+      <v-row>
+        <v-col cols="12" sm="12" md="6" lg="4">
+          <div class="imgVertical">
+            <img class="imgLogin" src="../assets/img/login01.png" alt="" />
+          </div>
+        </v-col>
+        <v-col cols="12" sm="12" md="6" lg="8">
+          <!-- FORM VUETIFY -->
+          <v-form @submit.prevent="login">
+            <v-text-field
+              color="teal lighten-1"
+              label="Usuario"
+              v-model="usuario"
+            >
+            </v-text-field>
+            <v-text-field
+              color="teal lighten-1"
+              label="Contraseña"
+              v-model="contrasena"
+            >
+            </v-text-field>
+            <v-btn dark block color="cyan lighten-4" type="submit"
+              >Registrar</v-btn
+            >
+            <v-btn @click="clear" dark block color="red accent-2 my-3"
+              >Clear</v-btn
+            >
+          </v-form>
+        </v-col>
+      </v-row>
+    </v-container>
+
     <pre>
         {{ $data }}
     </pre>
@@ -34,16 +62,32 @@ export default {
           (error) => console.error(error)
         );
     },
+    clear() {
+      this.usuario = "";
+      this.contrasena = "";
+    },
   },
 };
 </script>
 
-<style scoped>
-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+<style lang="scss" scoped>
+.formularioLogin {
+  background: #e0f7fa;
+  .titleLogin {
+    text-align: center;
+  }
+}
+.imgVertical {
+  background-image: url("../assets/img/parallax01.jpg");
+  background-size: cover;
+
+  background-attachment: fixed;
+  width: 250px;
+  height: 350px;
+}
+.imgLogin {
+  width: 250px;
+  height: 400;
 }
 form > * {
   display: block;
