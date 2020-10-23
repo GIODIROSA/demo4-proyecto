@@ -3,12 +3,17 @@
     <h2 class="titleLogin display-1 py-2">Login</h2>
     <v-container>
       <v-row>
-        <v-col cols="12" >
+        <v-col cols="12">
           <div class="imgVertical">
             <img class="imgLogin" src="../assets/img/login02.png" alt="" />
           </div>
         </v-col>
-        <v-col cols="12" sm="12" >
+        <v-col cols="12" sm="12">
+          <!-- button google -->
+          <v-btn @click="logInGoogle" depressed color="primary">
+            google
+          </v-btn>
+          <!-- final button -->
           <!-- FORM VUETIFY -->
           <v-form @submit.prevent="login">
             <v-text-field
@@ -61,10 +66,37 @@ export default {
           },
           (error) => console.error(error)
         );
-    },
+    }, //final de login
     clear() {
       this.usuario = "";
       this.contrasena = "";
+    }, // final de clear
+    //upload google
+    logInGoogle() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+          console.log("result");
+          this.$router.replace("lineup");
+
+          let user = {
+            name: result.user.displayName,
+            photoUrl: result.user.providerData[0].photoURL,
+            email: result.user.email,
+          };
+          this.createUser(user);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }, //final upload
+    createUser(user) {
+      firebase
+        .firestore()
+        .collection("usuarios")
+        .add(user);
     },
   },
 };
@@ -72,17 +104,16 @@ export default {
 
 <style lang="scss" scoped>
 .formularioLogin {
-  background: #B39DDB;
+  background: #b39ddb;
   .titleLogin {
     text-align: center;
   }
 }
-.imgVertical{
+.imgVertical {
   display: flex;
   justify-content: center;
   align-content: center;
 }
-
 
 .imgLogin {
   width: 250px;
