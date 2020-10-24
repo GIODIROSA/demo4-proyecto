@@ -22,9 +22,14 @@
     </v-card-subtitle>
 
     <v-card-text class="text--primary">
-      <div>Whitehaven Beach</div>
+      <div>{{artista.data.born}}</div>
 
-      <div>Whitsunday Island, Whitsunday Islands</div>
+      <div>{{artista.data.website}}</div>
+      <div>
+        <p>
+          {{artista.data.description}}
+        </p>
+      </div>
     </v-card-text>
 
     <v-card-actions>
