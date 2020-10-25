@@ -1,44 +1,84 @@
 <template>
-  <div class="formularioLogin">
-    <h2 class="titleLogin display-1 py-2">Login</h2>
-    <v-container>
-      <v-row>
-        <v-col cols="12">
-          <div class="imgVertical">
-            <img class="imgLogin" src="../assets/img/login02.png" alt="" />
-          </div>
-        </v-col>
-        <v-col cols="12" sm="12">
-          <!-- button google -->
-          <v-btn @click="logInGoogle" depressed color="primary">
-            google
-          </v-btn>
-          <!-- final button -->
-          <!-- FORM VUETIFY -->
-          <v-form @submit.prevent="login">
-            <v-text-field
-              color="teal lighten-1"
-              label="Usuario"
-              v-model="usuario"
-            >
-            </v-text-field>
-            <v-text-field
-              color="teal lighten-1"
-              label="Contraseña"
-              v-model="contrasena"
-            >
-            </v-text-field>
-            <v-btn dark block color="cyan lighten-4" type="submit"
-              >Registrar</v-btn
-            >
-            <v-btn @click="clear" dark block color="red accent-2 my-3"
-              >Clear</v-btn
-            >
-          </v-form>
-        </v-col>
-      </v-row>
-    </v-container>
+  <div>
+    <section class="parallaxLogin">
+      <v-parallax dark src="../assets/img/bannerlogin01.png">
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-1 font-weight-thin mb-4">
+              LOGIN
+            </h1>
+            <h4 class="subheading">
+              REGISTRATE PARA ACCEDER
+            </h4>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </section>
 
+    <section class="formularioLogin">
+      <v-container>
+        <v-row>
+          <v-col class="menuBtn" cols="12" sm="12" md="12" lg="12">
+            <!-- FORM VUETIFY -->
+            <v-form class="loginForm" @submit.prevent="login">
+              <div class="py-5">
+                <v-btn icon color="indigo">
+                  <v-icon>mdi-star</v-icon>
+                </v-btn>
+                <v-btn icon color="green accent-3">
+                  <v-icon>mdi-music</v-icon>
+                </v-btn>
+                <v-btn icon color="amber darken-3">
+                  <v-icon>mdi-ticket</v-icon>
+                </v-btn>
+              </div>
+              <v-tex>
+                <h3>
+                  REGISTRATE
+                </h3>
+                <p class="politianLogin">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio reprehenderit ipsum quas aliquid cum placeat
+                  voluptas repellendus voluptatibus totam, incidunt fugit minus
+                  quos tenetur ipsam tempora facilis hic natus consequuntur
+                  nobis quia praesentium iusto omnis vero maxime! Aliquam alias
+                  laborum incidunt perferendis commodi illo, similique, quasi
+                  amet consequatur neque nesciunt!
+                </p>
+              </v-tex>
+
+              <v-text-field
+                color="teal lighten-1"
+                label="Usuario"
+                v-model="usuario"
+              >
+              </v-text-field>
+              <v-text-field
+                color="teal lighten-1"
+                label="Contraseña"
+                v-model="contrasena"
+              >
+              </v-text-field>
+              <v-btn dark block color="cyan lighten-4" type="submit"
+                >Registrar</v-btn
+              >
+              <v-btn @click="clear" dark block color="teal accent-3 my-3"
+                >Clear</v-btn
+              >
+              <v-btn
+                dark
+                block
+                @click="logInGoogle"
+                depressed
+                color="deep-purple accent-3"
+              >
+                google
+              </v-btn>
+            </v-form>
+          </v-col>
+        </v-row>
+      </v-container>
+    </section>
     <pre>
         {{ $data }}
     </pre>
@@ -104,21 +144,25 @@ export default {
 
 <style lang="scss" scoped>
 .formularioLogin {
-  background: #b39ddb;
-  .titleLogin {
-    text-align: center;
-  }
+  width: 450px;
+  margin: auto;
 }
-.imgVertical {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+.politianLogin {
+  padding: 20px 0;
+  font-weight: 300;
+  font-size: 12px;
 }
 
-.imgLogin {
-  width: 250px;
-  height: 400;
+.loginForm {
+  width: 300px;
+  padding: 10px 0;
 }
+.imagenLogin {
+  widows: 350px;
+  height: 350px;
+  margin: 150px 0;
+}
+
 form > * {
   display: block;
 }
