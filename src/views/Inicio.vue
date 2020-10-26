@@ -92,17 +92,7 @@
       </v-row>
     </v-parallax>
     <!-- FINAL DE PARALLAX -->
-    <!-- PREGUNTAR EN CLASE -->
-    <!-- <div v-for="(card, index) in cardsDj" :key="index">
-      <BaseCardsdj2
-        :src="card.img"
-        :title="card.title"
-        :subtitle="card.subtitle"
-        :accion="card.accion"
-        :text="card.text"
-      />
-    </div> -->
-    <!-- FINAL DE PREGUNTAR EN CLASE -->
+
     <BaseCardsdj />
   </div>
 </template>
@@ -115,57 +105,7 @@ export default {
   data() {
     return {
       show: false,
-      cardsDj: [],
-      cards: [
-        {
-          id: Date.now(),
-          img: "../assets/img/amelielens01.png",
-          title: "Amelie Lens",
-          subtitle: "Belgica",
-          accion: "Biografia",
-          estado: "false",
-          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
-        },
-        {
-          id: Date.now(),
-          img: "../assets/img/borisbrejcha01.png",
-          title: "Boris Brejcha",
-          subtitle: "Alemania",
-          accion: "Biografia",
-          estado: "false",
-          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
-        },
-        {
-          id: Date.now(),
-          img: "../assets/img/charlottedewitte01.png",
-          title: "Charlotte De Witte",
-          subtitle: "Belgica",
-          accion: "Biografia",
-          estado: "false",
-          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
-        },
-        {
-          id: Date.now(),
-          img: "../assets/img/martingarrix01.png",
-          title: "Martin Garrix",
-          subtitle: "Holanda",
-          accion: "Biografia",
-          estado: "false",
-          text: "loquesealoquesealoquesealoquesealoquesealoquesea",
-        },
-      ],
     };
-  },
-  mounted() {
-    this.cards.forEach((e) => {
-      // console.log(e.img);
-      // console.log(e.title);
-      // console.log(e.subtitle);
-      // console.log(e.accion);
-      // console.log(e.text);
-
-      this.cardsDj.push(e.img, e.title, e.subtitle, e.accion, e.text);
-    });
   },
 };
 </script>
