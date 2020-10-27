@@ -42,47 +42,38 @@ export default new Vuex.Store({
         id: 6,
         pregunta: "¿Puedo traer cristales / espejos?",
         respuesta:
-          "No se permite vidrio en Creamfields. Esto incluye perfumes, frascos de base, aftershave y espejos. Estos son artículos prohibidos y serán confiscados en la entrada (tenga en cuenta que no hay posibilidad de dejar sus pertenencias y recogerlas después del espectáculo), así que verifique dos veces antes de llegar al espectáculo. Se aceptan espejos compactos de maquillaje pequeño."
+          "No se permite vidrio en Creamfields. Esto incluye perfumes, frascos de base, aftershave y espejos. Estos son artículos prohibidos y serán confiscados en la entrada (tenga en cuenta que no hay posibilidad de dejar sus pertenencias y recogerlas después del espectáculo), así que verifique dos veces antes de llegar al espectáculo. Se aceptan espejos compactos de maquillaje pequeño.",
       },
       {
         id: 7,
         pregunta: "¿Puedo traer una maleta?",
         respuesta:
-          "Sí, puede si ha comprado un boleto para acampar, pero recuerde que Aufields está en medio de un campo, le recomendamos traer una mochila. Los titulares de boletos de un día pueden traer una bolsa no más grande que una hoja de papel A4."
+          "Sí, puede si ha comprado un boleto para acampar, pero recuerde que Aufields está en medio de un campo, le recomendamos traer una mochila. Los titulares de boletos de un día pueden traer una bolsa no más grande que una hoja de papel A4.",
       },
       {
         id: 8,
         pregunta: "¿Necesito otro boleto si compro un paquete Dreamfields?",
         respuesta:
-          "El alojamiento de Dreamfields se puede comprar por separado o como un paquete (alojamiento de Dreamfields y su boleto para el festival), sin embargo, debe tener un boleto para el evento para tener acceso al evento y al campamento Dreamfields."
+          "El alojamiento de Dreamfields se puede comprar por separado o como un paquete (alojamiento de Dreamfields y su boleto para el festival), sin embargo, debe tener un boleto para el evento para tener acceso al evento y al campamento Dreamfields.",
       },
       {
         id: 9,
         pregunta: "¿Cuánto alcohol puedo traer?",
         respuesta:
-          "Solo se puede traer alcohol al festival si está acampando. Hay un límite de 24 latas y una botella de plástico de 1 litro de licor o vino por persona. Cualquier alcohol en botellas de vidrio debe decantarse en botellas de plástico. Las latas se pueden mezclar, p. Ej. 12 sidras y 12 lager y pueden estar sueltas (no en caja) pero no deben exceder 24. Tenga en cuenta que no se puede traer alcohol a la arena del evento, que se aplicará al ingresar a la arena. Estrictamente NO se permiten barriles."
+          "Solo se puede traer alcohol al festival si está acampando. Hay un límite de 24 latas y una botella de plástico de 1 litro de licor o vino por persona. Cualquier alcohol en botellas de vidrio debe decantarse en botellas de plástico. Las latas se pueden mezclar, p. Ej. 12 sidras y 12 lager y pueden estar sueltas (no en caja) pero no deben exceder 24. Tenga en cuenta que no se puede traer alcohol a la arena del evento, que se aplicará al ingresar a la arena. Estrictamente NO se permiten barriles.",
       },
       {
         id: 10,
         pregunta: "¿Puedo comprar un boleto de día jueves o viernes?",
         respuesta:
-          "Los boletos de un día se pueden comprar para el viernes / sábado o domingo. También entradas de 2 días para no acampar (viernes y sábado) y entradas de 3 días para no acampar (viernes, sábado).."
+          "Los boletos de un día se pueden comprar para el viernes / sábado. También entradas de 2 días para no acampar (viernes y sábado) y entradas de 3 días para no acampar (viernes, sábado)..",
       },
     ],
   },
   getters: {
     questionAvailable: (state) => (question) => {
-      return state.topTick.filter(
-        (q) => q.id == question || q.pregunta.includes(question)
-      );
+      return state.topTick.filter((q) => q.pregunta.includes(question));
     },
-
-    // productoDisponiblePorId: (state, getters) => (producto) => {
-    //   return getters.productosConStock.filter(
-    //     (p) => p.id == producto || p.nombre.includes(producto)
-    //   );
-    // },
-
   },
   mutations: {
     SET_ARTISTAS(state, artistas) {

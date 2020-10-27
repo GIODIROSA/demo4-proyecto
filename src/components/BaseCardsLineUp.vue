@@ -3,7 +3,7 @@
     <h1>probando</h1>
     <v-container>
       <v-row>
-        <v-col v-for="(artista, index) in artistas" :key="index">
+        <v-col>
           <v-card color="indigo lighten-4" class="mx-auto" max-width="550">
             <v-img :src="artista.data.photo" height="400px"></v-img>
 
