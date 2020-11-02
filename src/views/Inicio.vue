@@ -28,56 +28,11 @@
       </div>
     </section>
     <!-- FINAL BANNER PRINCIPAL -->
-    <!-- AREAS DE CONCIERTO -->
-    <section class="areasConcierto">
-      <v-container>
-        <v-row>
-          <!-- COLUMNA UNO -->
-          <v-col cols="12" sm="12" md="6">
-            <h3 class="areaGeneraltitle">
-              AREA GENERAL
-            </h3>
-          </v-col>
-          <!-- COLUMNA DOS -->
-          <v-col>
-            <p>
-              Más de 10 horas de música continua sonarán en los múltiples
-              escenarios al aire libre del General Area bajo el ambiente
-              festivalero de Creamfields Chile. El espacio contará con más de
-              5.000 mt2 de sombra, puntos de hidratación gratuita, entretención
-              y muchas sorpresas más para que nuestros fanáticos tengan una
-              experiencia tremenda. Además, tendrá servicio de barra (con y sin
-              alcohol), comida y baños.
-            </p>
-          </v-col>
-        </v-row>
-        <!-- VIP CONCIERTO -->
-        <v-row>
-          <!-- COLUMNA UNO -->
-          <v-col cols="12" sm="12" md="6">
-            <h3 class="hospitalityAreaTitle">
-              AREA HOSPITALITY
-            </h3>
-          </v-col>
-          <!-- COLUMNA DOS -->
-          <v-col>
-            <p>
-              Para quienes quieren disfrutar de la experiencia del mundo
-              Creamfields Chile de forma más cómoda, dispondremos de la zona
-              Hospitality Area. Este sector estará ubicado bajo una gran carpa
-              que brindará sombra y espacios más elaborados a los asistentes.
-              Contará con accesos diferenciados para que tu entrada al festival
-              sea más expedita y cómoda. También tendremos zonas de descanso y
-              baños premium, además de especiales activaciones que
-              complementarán este sector. Quienes opten por este ticket tendrán
-              acceso a una zona para bailar inmediatamente al costado y frente
-              al escenario principal. Además, en esta zona tendrá repetición de
-              sonido de los escenarios. *No incluye bar abierto.
-            </p>
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
+    <div class="PostArtistas">
+      <PostArtistas :artistas="artistas" />
+    </div>
+    
+   
     <!-- PARALLAX -->
     <v-parallax dark src="../assets/img/parallax01.jpg">
       <v-row align="center" justify="center">
@@ -86,17 +41,23 @@
             AUFIELDS
           </h1>
           <h4 class="subheading">
-            CONCIERTO DE MÚSICA TECHNO MÁS GRANDE DE SUR AMÉRICA
+            CONCIERTO DE MÚSICA ELECTRÓNICA MÁS GRANDE DE SUR AMÉRICA
           </h4>
         </v-col>
       </v-row>
     </v-parallax>
+    
     <!-- FINAL DE PARALLAX -->
-
+    <!-- AREAS DE CONCIERTO -->
+     <AreaConcierto :areas= "areas" />
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+import PostArtistas from "@/components/inicio/PostArtistas.vue";
+import AreaConcierto from "@/components/inicio/AreaConcierto.vue";
+
 // @ is an alias to /src
 
 export default {
@@ -105,6 +66,15 @@ export default {
     return {
       show: false,
     };
+  }, //final de data
+  computed: {
+    ...mapState(["artistas"]),
+    ...mapState("Areas",["areas"]),
+
+  }, //final de computed
+  components: {
+    PostArtistas,
+    AreaConcierto,
   },
 };
 </script>
@@ -128,6 +98,9 @@ export default {
     }
   }
 }
+.PostArtistas {
+  background: #f5f6f5;
+}
 .titleBanner {
   display: block;
   margin: auto;
@@ -142,6 +115,11 @@ export default {
   }
   .hospitalityAreaTitle {
     color: #f48fb1;
+  }
+  .textoAreaGeneral {
+    color: gray;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
   }
 }
 </style>

@@ -131,7 +131,7 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-    }, //final upload
+    }, //final log in google
     createUser(user) {
       firebase
         .firestore()

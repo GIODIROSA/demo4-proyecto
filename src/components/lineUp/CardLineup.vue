@@ -81,7 +81,7 @@
 
 <script>
 export default {
-  name: "BaseCard",
+  name: "CardLineup",
   props: ["artista"],
   data() {
     return {

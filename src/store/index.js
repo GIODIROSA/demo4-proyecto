@@ -2,6 +2,9 @@ import Vue from "vue";
 import Vuex from "vuex";
 import firebase from "firebase";
 
+// modules
+import Areas from "../store/areas";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -96,5 +99,8 @@ export default new Vuex.Store({
         });
     },
   },
-  modules: {},
+  modules: {
+    Areas,
+
+  },
 });

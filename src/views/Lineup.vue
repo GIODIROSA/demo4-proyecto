@@ -2,9 +2,9 @@
   <div>
     <v-container>
       <v-row>
-        <v-col md="6" v-for="(artista, index) in artistas" :key="index"
-          ><BaseCard :artista="artista"
-        /></v-col>
+        <v-col md="6" >
+          <CardLineup :artista="artista" />
+        </v-col>
       </v-row>
     </v-container>
     <!-- fin dialog -->
@@ -15,7 +15,7 @@
 <script>
 import firebase from "firebase";
 import { mapState } from "vuex";
-import BaseCard from '@/components/LineUp/BaseCard.vue'
+import CardLineup from "@/components/lineUp/CardLineup.vue";
 export default {
   name: "Lineup",
   data() {
@@ -31,13 +31,13 @@ export default {
         .signOut()
         .then(() => this.$router.replace("login"));
     },
-  },//final methods
-   computed: {
-      ...mapState(['artistas']),
-    },
-    components: {
-      BaseCard,
-    },
+  }, //final methods
+  computed: {
+    ...mapState(["artistas"]),
+  },
+  components: {
+    CardLineup,
+  },
 };
 </script>
 
