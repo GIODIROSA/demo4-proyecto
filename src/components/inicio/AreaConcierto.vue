@@ -1,12 +1,26 @@
 <template>
   <div>
     <v-container>
+      <div class="encabezadoTicketConcierto">
+        <h1 class="areaConcierto pt-5">AREA DE CONCIERTO</h1>
+        <h5 class="subtituloConcierto">AREAS DE TICKET | STANTARD | GOLD</h5>
+     
+      </div>
+
+      <v-divider inset></v-divider>
       <v-row>
-        <v-col cols="12" sm="6" md="6" lg="6" v-for="(area, index) in areas" :key="index">
-          <h5>
+        <v-col
+          cols="12"
+          sm="6"
+          md="6"
+          lg="12"
+          v-for="(area, index) in areas"
+          :key="index"
+        >
+          <h3 class="tituloArea py-4">
             {{ area.data.titulo }}
-          </h5>
-          <p>
+          </h3>
+          <p class="textoDescripcion text-sm-body-2">
             {{ area.data.descripcion }}
           </p>
         </v-col>
@@ -22,4 +36,26 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.encabezadoTicketConcierto{
+  padding: 50px 0px;
+.areaConcierto {
+  text-align: center;
+  color: #4fc3f7;
+}
+.subtituloConcierto {
+  text-align: center;
+  color: #757575;
+
+}
+}
+
+.tituloArea {
+  font-weight: 400;
+  font-size: 20px;
+  color: #f48fb1;
+}
+.textoDescripcion {
+  color: #757575;
+}
+</style>

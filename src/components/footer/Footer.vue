@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-footer dark padless>
-      <v-card flat tile class="deep-purple accent-2 lighten-1 white--text text-center">
+      <v-card flat tile class="grey lighten-4 accent-2 lighten-1 white--text text-center">
         <v-card-text>
           <v-btn
             v-for="(icon, index) in icons"

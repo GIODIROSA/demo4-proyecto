@@ -2,7 +2,7 @@
   <div>
     <v-container>
       <v-row>
-        <v-col md="6" >
+        <v-col md="6" v-for= "(artista, index) in artistas" :key="index" >
           <CardLineup :artista="artista" />
         </v-col>
       </v-row>

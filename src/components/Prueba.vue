@@ -1,6 +1,10 @@
 <template>
 <div>
     <h1>Inicio de la prueba</h1>
+    <CountDown :seconds= "31795200" />
+    <!-- <CountDown :seconds= "650" />
+    <CountDown :seconds= "320"/> -->
+
 <!-- card -->
 <v-container>
     <v-row>
@@ -62,8 +66,12 @@
 
 <script>
 import firebase from 'firebase'
+import CountDown from '@/components/cuenta-regresiva/CountDown.vue'
 export default {
     name: "Prueba",
+    components: {
+      CountDown,
+    },
     data() {
         return {
             artistas: [],

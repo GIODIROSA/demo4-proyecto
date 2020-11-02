@@ -30,14 +30,16 @@
             </v-img>
 
             <v-card-subtitle class="pb-0">
-              {{ artista.data.country }}
+             <span  class="categoriaArtista">País: </span> {{ artista.data.country }}
             </v-card-subtitle>
 
-            <v-card-subtitle class="pb-0">
+            <v-card-subtitle class="pb-0 text-sm-body-2">
+              <span class="categoriaArtista"> Website:</span> <br />
               {{ artista.data.website }}
             </v-card-subtitle>
 
             <v-card-subtitle class="pb-0">
+              <span class="categoriaArtista">Genero:</span> <br />
               {{ artista.data.genres }}
             </v-card-subtitle>
 
@@ -82,5 +84,11 @@ export default {
   font-weight: 300;
   color: #ffab40;
   text-align: center;
+}
+.categoriaArtista{
+  font-weight: 600;
+  color: #C51162;
+
+
 }
 </style>

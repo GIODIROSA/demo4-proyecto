@@ -12,7 +12,11 @@
         </div>
         <v-container>
           <v-row>
-            <h3 class="titleBanner display-2 white--text">CHILE 2021</h3>
+            <div class="cuentaRegresiva font-weight-light white--text pb-2">
+              <CountDown :seconds="31795200" />
+              <h5 class="subtituloBanner">Chile 2021 AUFIELDS</h5>
+            </div>
+
             <v-btn dark class="purple accent-1" block :to="{ name: 'Tickets' }"
               >Comprar tickets Aufields</v-btn
             >
@@ -31,8 +35,7 @@
     <div class="PostArtistas">
       <PostArtistas :artistas="artistas" />
     </div>
-    
-   
+
     <!-- PARALLAX -->
     <v-parallax dark src="../assets/img/parallax01.jpg">
       <v-row align="center" justify="center">
@@ -46,10 +49,10 @@
         </v-col>
       </v-row>
     </v-parallax>
-    
+
     <!-- FINAL DE PARALLAX -->
     <!-- AREAS DE CONCIERTO -->
-     <AreaConcierto :areas= "areas" />
+    <AreaConcierto :areas="areas" />
   </div>
 </template>
 
@@ -57,6 +60,7 @@
 import { mapState } from "vuex";
 import PostArtistas from "@/components/inicio/PostArtistas.vue";
 import AreaConcierto from "@/components/inicio/AreaConcierto.vue";
+import CountDown from "@/components/cuenta-regresiva/CountDown.vue";
 
 // @ is an alias to /src
 
@@ -69,12 +73,12 @@ export default {
   }, //final de data
   computed: {
     ...mapState(["artistas"]),
-    ...mapState("Areas",["areas"]),
-
+    ...mapState("Areas", ["areas"]),
   }, //final de computed
   components: {
     PostArtistas,
     AreaConcierto,
+    CountDown,
   },
 };
 </script>
@@ -101,10 +105,14 @@ export default {
 .PostArtistas {
   background: #f5f6f5;
 }
-.titleBanner {
+.cuentaRegresiva {
   display: block;
   margin: auto;
-  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  .subtituloBanner{
+    text-align: center;
+  }
 }
 
 .areasConcierto {
