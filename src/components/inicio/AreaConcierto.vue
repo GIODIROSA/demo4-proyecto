@@ -20,7 +20,7 @@
           <h3 class="tituloArea py-4">
             {{ area.data.titulo }}
           </h3>
-          <p class="textoDescripcion text-sm-body-2">
+          <p class="textoDescripcion text-justify text-sm-body-2">
             {{ area.data.descripcion }}
           </p>
         </v-col>

@@ -11,7 +11,7 @@
       <v-btn icon color="green accent-3">
         <v-icon>mdi-music</v-icon>
       </v-btn>
-      <v-btn icon color="amber darken-3">
+      <v-btn icon :to="{ name: 'Tickets' }" color="amber darken-3">
         <v-icon>mdi-ticket</v-icon>
       </v-btn>
 
@@ -43,8 +43,16 @@
       <!-- button -->
       <v-container>
         <v-row>
-          <v-btn dark color="pink darken-1" block :to="{name: 'Inicio'}">Inicio</v-btn>
-          <v-btn dark color="pink accent-4 my-2" block :to="{name: 'Contact Us'}">Comentarios</v-btn>
+          <v-btn dark color="pink darken-1" block :to="{ name: 'Inicio' }"
+            >Inicio</v-btn
+          >
+          <v-btn
+            dark
+            color="pink accent-4 my-2"
+            block
+            :to="{ name: 'Contact Us' }"
+            >Comentarios</v-btn
+          >
         </v-row>
       </v-container>
     </v-navigation-drawer>
@@ -53,6 +61,7 @@
 
 <script>
 export default {
+  name: "Navbar",
   data() {
     return {
       drawer: false,
@@ -73,6 +82,6 @@ export default {
 
 <style lang="scss" scoped>
 .titleAufields {
-  color: #F50057;
+  color: #f50057;
 }
 </style>
