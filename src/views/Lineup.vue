@@ -2,13 +2,15 @@
   <div>
     <v-container>
       <v-row>
-        <v-col md="6" v-for= "(artista, index) in artistas" :key="index" >
+        <v-col md="6" v-for="(artista, index) in artistas" :key="index">
           <CardLineup :artista="artista" />
         </v-col>
       </v-row>
+      <v-btn block color="pink" @click="logOut">
+        Cerrar sesion
+      </v-btn>
     </v-container>
     <!-- fin dialog -->
-    <button @click="logOut">Log Out</button>
   </div>
 </template>
 
