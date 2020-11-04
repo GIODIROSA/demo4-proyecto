@@ -34,6 +34,7 @@
           </v-timeline>
         </v-col>
       </v-row>
+      <v-divider inset class="py-2"></v-divider>
     </v-container>
   </div>
 </template>
@@ -45,7 +46,7 @@ export default {
     return {
       titulo: "¿Dónde queda AUFIELDS?",
       descripcion:
-        "Aufields Chile es un festival de música electrónica que se celebra anualmente en el mes de noviembre en Santiago de Chile. La primera edición de Aufields Chile, fue realizada en el año 2004 con una asistencia de 12000 personas en Ciudad Empresarial y actualmente se realiza en Club Hípico.",
+        "Aufields Chile, es un festival de música electrónica que se celebra anualmente en el mes de noviembre en Santiago de Chile. La primera edición de Aufields Chile, fue realizada en el año 2004 con una asistencia de 12000 personas en Ciudad Empresarial y actualmente se realiza en Club Hípico.",
     };
   },
 };
@@ -69,11 +70,9 @@ export default {
   font-size: 30px;
   color: #ff80ab;
   font-family: "Montserrat", sans-serif;
-
 }
 .descripcionDondeQueda {
   color: #757575;
   font-family: "Montserrat", sans-serif;
-
 }
 </style>

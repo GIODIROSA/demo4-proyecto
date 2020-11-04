@@ -63,21 +63,38 @@ const routes = [
     name: "Contact Us",
     component: () =>
       import(/* webpackChunkName: "contact us" */ "../views/Contactus.vue"),
+    children: [
+      {
+        path: "simple",
+        name: "Simple",
+        component: () =>
+          import(
+            /* webpackChunkName: "simple" */ "../components/contacto/Simple.vue"
+          ),
+      },
+    ],
   },
   {
     path: "/faqs",
     name: "Faqs",
     component: () => import(/* webpackChunkName: "faqs" */ "../views/Faqs.vue"),
   },
+  // {
+  //   path: "/simple",
+  //   name: "Simple",
+  //   component: () => import(/* webpackChunkName: "simple" */ "../components/contacto/Simple.vue"),
+  // },
   {
     path: "/prueba",
     name: "Prueba",
-    component: () => import(/* webpackChunkName: "Prueba" */ "../components/Prueba.vue"),
+    component: () =>
+      import(/* webpackChunkName: "Prueba" */ "../components/Prueba.vue"),
   },
   {
     path: "/prueba2",
     name: "Prueba2",
-    component: () => import(/* webpackChunkName: "Prueba2" */ "../components/Prueba2.vue"),
+    component: () =>
+      import(/* webpackChunkName: "Prueba2" */ "../components/Prueba2.vue"),
   },
 ];
 

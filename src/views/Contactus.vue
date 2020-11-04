@@ -114,6 +114,10 @@
       </template>
     </v-snackbar>
     <!-- final snackbar -->
+
+    <v-btn :to="{ name: 'Simple' }">
+      Ver Contacto
+    </v-btn>
   </v-container>
 </template>
 

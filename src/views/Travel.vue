@@ -4,14 +4,18 @@
       <img class="imagenTravel" src="../assets/img/mascara01.png" alt="" />
     </div>
     <Timeline />
+    <ModalTravel />
   </div>
 </template>
 
 <script>
 import Timeline from "@/components/travel/Timeline.vue";
+import ModalTravel from "@/components/travel/ModalTravel.vue";
+
 export default {
   components: {
     Timeline,
+    ModalTravel,
   },
 };
 </script>
