@@ -114,7 +114,8 @@
       </template>
     </v-snackbar>
     <!-- final snackbar -->
-
+<router-link :to="{ name: 'Simple' }">Ver contacto</router-link>
+<router-view />
     <v-btn :to="{ name: 'Simple' }">
       Ver Contacto
     </v-btn>

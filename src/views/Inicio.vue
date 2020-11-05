@@ -13,7 +13,7 @@
         <v-container>
           <v-row>
             <div class="cuentaRegresiva font-weight-light white--text pb-2">
-              <CountDown :seconds="31795200" />
+              <CountDown :seconds="1212" />
               <h5 class="subtituloBanner">Chile 2021 AUFIELDS</h5>
             </div>
 
@@ -32,7 +32,7 @@
       </div>
     </section>
     <!-- FINAL BANNER PRINCIPAL -->
-    <div class="PostArtistas">
+    <div class="PostArtistas my-2">
       <PostArtistas :artistas="artistas" />
     </div>
 
@@ -62,7 +62,7 @@ import PostArtistas from "@/components/inicio/PostArtistas.vue";
 import AreaConcierto from "@/components/inicio/AreaConcierto.vue";
 import CountDown from "@/components/cuenta-regresiva/CountDown.vue";
 
-// @ is an alias to /src
+
 
 export default {
   name: "Inicio",
@@ -102,15 +102,13 @@ export default {
     }
   }
 }
-.PostArtistas {
-  background: #f5f6f5;
-}
+
 .cuentaRegresiva {
   display: block;
   margin: auto;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  .subtituloBanner{
+  .subtituloBanner {
     text-align: center;
   }
 }

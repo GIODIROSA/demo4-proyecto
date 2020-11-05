@@ -4,6 +4,8 @@ import firebase from "firebase";
 
 // modules
 import Areas from "../store/areas";
+import Beneficios from "../store/beneficios";
+
 
 Vue.use(Vuex);
 
@@ -101,6 +103,7 @@ export default new Vuex.Store({
   },
   modules: {
     Areas,
+    Beneficios,
 
   },
 });

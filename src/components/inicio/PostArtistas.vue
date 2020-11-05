@@ -23,31 +23,13 @@
           <v-card class="mx-auto" max-width="400">
             <v-img
               class="white--text align-end"
-              height="300px"
+              height="600px"
               :src="artista.data.imagen"
             >
-              <v-card-title>{{ artista.data.name }}</v-card-title>
+              <v-card-title class="NombreArtista">{{
+                artista.data.name
+              }}</v-card-title>
             </v-img>
-
-            <v-card-subtitle class="pb-0">
-             <span  class="categoriaArtista">País: </span> {{ artista.data.country }}
-            </v-card-subtitle>
-
-            <v-card-subtitle class="pb-0 text-sm-body-2">
-              <span class="categoriaArtista"> Website:</span> <br />
-              {{ artista.data.website }}
-            </v-card-subtitle>
-
-            <v-card-subtitle class="pb-0">
-              <span class="categoriaArtista">Genero:</span> <br />
-              {{ artista.data.genres }}
-            </v-card-subtitle>
-
-            <v-card-actions>
-              <v-btn icon color="pink">
-                <v-icon>mdi-heart</v-icon>
-              </v-btn>
-            </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
@@ -74,6 +56,14 @@ export default {
   color: #00e5ff;
   font-weight: 900;
 }
+.NombreArtista {
+  font-size: 20px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
 .tituloPostArtistas {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -84,11 +74,5 @@ export default {
   font-weight: 300;
   color: #ffab40;
   text-align: center;
-}
-.categoriaArtista{
-  font-weight: 600;
-  color: #C51162;
-
-
 }
 </style>

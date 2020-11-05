@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 .prueba{
-    font-size: 250px;
+    font-size: 50px;
 }
 
 </style>
