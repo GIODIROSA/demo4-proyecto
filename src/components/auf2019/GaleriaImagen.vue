@@ -11,11 +11,11 @@
       {{ mensaje }}
     </h1>
     <v-row>
-      <v-col
+      <v-col 
         v-for="(imagen, index) in imagenes"
         :key="index"
         class="d-flex child-flex todoColor"
-        cols="4"
+        cols="6" md="4" lg="4"
         :class="{ imgColorGris: !filter }"
       >
         <v-img
@@ -50,7 +50,7 @@ export default {
       filter: false,
       mensajes: {
         in: "2019 fue un gran año y tu lo viviste al máximo",
-        out: "Si pinchas el botón podrás revivir el AUF2019",
+        out: "Si pinchas el botón, podrás revivir el AUF2019",
       },
     };
   },

@@ -31,31 +31,6 @@
             </v-btn>
           </v-card-text>
         </v-card>
-        <!-- DOS TARJETA -->
-        <!-- <v-card class="mb-3">
-          <v-card-text>
-            <v-chip class="mb-2" color="pink" label text-color="white">
-              <v-icon left>
-                mdi-label
-              </v-icon>
-              AufTalk #2
-            </v-chip>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-              hic voluptatibus pariatur placeat labore, et officia commodi animi
-              porro. Quam vitae numquam maxime labore! Neque modi obcaecati
-              nesciunt iure, quia, accusantium ipsa ratione atque, aspernatur ut
-              voluptates vel. Labore sunt rerum sint, cumque et quasi adipisci
-              nemo non repellat pariatur.
-            </p>
-            <v-btn color="warning">
-              Editar
-            </v-btn>
-            <v-btn color="error" class="mx-4">
-              Eliminar
-            </v-btn>
-          </v-card-text>
-        </v-card> -->
       </v-col>
       <!-- DOS -->
       <v-col cols="12" md="6" v-if="formAgregar">
@@ -114,11 +89,15 @@
       </template>
     </v-snackbar>
     <!-- final snackbar -->
-<router-link :to="{ name: 'Simple' }">Ver contacto</router-link>
-<router-view />
-    <v-btn :to="{ name: 'Simple' }">
-      Ver Contacto
+    <v-btn
+      dark
+      block
+      color="deep-purple lighten-3"
+      :to="{ name: 'Formulario' }"
+    >
+      Ver Formulario de contacto
     </v-btn>
+    <router-view />
   </v-container>
 </template>
 

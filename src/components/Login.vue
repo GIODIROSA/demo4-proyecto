@@ -8,7 +8,7 @@
               LOGIN
             </h1>
             <h4 class="subheading">
-              REGISTRATE PARA ACCEDER
+             AL INICIAR SESIÓN PUEDES ACCEDER A GRANDES SORPRESAS
             </h4>
           </v-col>
         </v-row>
@@ -34,7 +34,7 @@
               </div>
               <v-tex>
                 <h3>
-                  REGISTRATE
+                  INICIAR SESIÓN
                 </h3>
                 <p class="politianLogin">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.

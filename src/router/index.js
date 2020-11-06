@@ -68,11 +68,11 @@ const routes = [
       import(/* webpackChunkName: "contact us" */ "../views/Contactus.vue"),
     children: [
       {
-        path: "simple",
-        name: "Simple",
+        path: "formulario",
+        name: "Formulario",
         component: () =>
           import(
-            /* webpackChunkName: "simple" */ "../components/contacto/Simple.vue"
+            /* webpackChunkName: "formulario" */ "../components/contacto/Formulario.vue"
           ),
       },
     ],
@@ -82,11 +82,6 @@ const routes = [
     name: "Faqs",
     component: () => import(/* webpackChunkName: "faqs" */ "../views/Faqs.vue"),
   },
-  // {
-  //   path: "/simple",
-  //   name: "Simple",
-  //   component: () => import(/* webpackChunkName: "simple" */ "../components/contacto/Simple.vue"),
-  // },
   {
     path: "/prueba",
     name: "Prueba",
