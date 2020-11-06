@@ -5,21 +5,20 @@
         <img class="imgbanner" src="../assets/img/tickets02.png" alt="" />
       </div>
     </section>
-    <BaseTickets />
-    
+    <CardTickets />
   </div>
 </template>
 
 <script>
-
+import CardTickets from "@/components/ticket/CardTickets.vue";
 export default {
   name: "Tickets",
-  data() {
-    return {
-     
-    };
+  components: {
+    CardTickets,
   },
-
+  data() {
+    return {};
+  },
 };
 </script>
 
@@ -40,9 +39,5 @@ export default {
   width: 750px;
   height: 850px;
 }
-.pr{
-  width: 750px;
-  height: 750px;
-  background: red;
-}
+
 </style>

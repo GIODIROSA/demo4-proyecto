@@ -62,8 +62,6 @@ import PostArtistas from "@/components/inicio/PostArtistas.vue";
 import AreaConcierto from "@/components/inicio/AreaConcierto.vue";
 import CountDown from "@/components/cuenta-regresiva/CountDown.vue";
 
-
-
 export default {
   name: "Inicio",
   data() {

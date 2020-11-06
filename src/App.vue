@@ -26,10 +26,12 @@ export default {
   methods: {
     ...mapActions(["getDataArtista"]),
     ...mapActions("Areas", ["obtenerAreasConcierto"]),
+    ...mapActions("Contenidos", ["obtenerData"]),
   },
   created() {
     this.getDataArtista();
     this.obtenerAreasConcierto();
+    this.obtenerData();
   },
 };
 </script>

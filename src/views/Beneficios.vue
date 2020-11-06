@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BeneficiosAuf :beneficios= "beneficios"  />
+    <BeneficiosAuf :contenidos="contenidos" />
   </div>
 </template>
 
@@ -13,8 +13,7 @@ export default {
     BeneficiosAuf,
   },
   computed: {
-    ...mapState("Beneficios", ["beneficios"]),
-
+    ...mapState("Contenidos", ["contenidos"]),
   },
 };
 </script>
