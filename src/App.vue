@@ -28,12 +28,15 @@ export default {
     ...mapActions("Areas", ["obtenerAreasConcierto"]),
     ...mapActions("Contenidos", ["obtenerData"]),
     ...mapActions("Tickets", ["obtenerDataTickets"]),
+    ...mapActions("Imagenes", ["obtenerImagenes"]),
+
   },
   created() {
     this.getDataArtista();
     this.obtenerAreasConcierto();
     this.obtenerData();
     this.obtenerDataTickets();
+    this.obtenerImagenes();
   },
 };
 </script>

@@ -8,7 +8,7 @@ export default {
   getters: {},
   mutations: {
     OBTENER_AREA(state, payload) {
-      console.log(payload);
+      // console.log(payload);
       state.areas = payload;
     },
   },

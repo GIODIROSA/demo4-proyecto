@@ -12,14 +12,14 @@
     </h1>
     <v-row>
       <v-col
-        v-for="n in 9"
-        :key="n"
+        v-for="(imagen, index) in imagenes"
+        :key="index"
         class="d-flex child-flex todoColor"
         cols="4"
         :class="{ imgColorGris: !filter }"
       >
         <v-img
-          src="@/assets/img/casco01.png"
+          :src="imagen"
           aspect-ratio="1"
           class="imgprueba grey lighten-2"
         >
@@ -41,7 +41,10 @@
 </template>
 
 <script>
+import firebase from "firebase";
 export default {
+  name: "GaleriaImagen",
+  props: ["imagenes"],
   data() {
     return {
       filter: false,

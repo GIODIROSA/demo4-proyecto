@@ -57,6 +57,9 @@ const routes = [
     name: "Auf2019",
     component: () =>
       import(/* webpackChunkName: "auf 2019" */ "../views/Auf2019.vue"),
+    meta: {
+      autentificado: true,
+    },
   },
   {
     path: "/contactus",
@@ -106,7 +109,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   let usuario = firebase.auth().currentUser;
-  console.log(usuario);
+  // console.log(usuario);
   let autorizacion = to.matched.some((record) => record.meta.autentificado);
 
   if (autorizacion && !usuario) {

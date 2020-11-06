@@ -118,7 +118,7 @@ export default {
         .auth()
         .signInWithPopup(provider)
         .then((result) => {
-          console.log("result");
+          // console.log("result");
           this.$router.replace("lineup");
 
           let user = {

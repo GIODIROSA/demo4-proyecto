@@ -4,15 +4,19 @@
       Hello <span class="aufTtitulo">AUFIELDS</span> 2019
     </h1>
     <v-container>
-      <GaleriaImagen />
+      <GaleriaImagen :imagenes= "imagenes" />
     </v-container>
   </div>
 </template>
 
 <script>
 import GaleriaImagen from "@/components/auf2019/GaleriaImagen.vue";
+import { mapState } from "vuex";
 export default {
   name: "Auf2019",
+  computed: {
+    ...mapState("Imagenes", ["imagenes"]),
+  },
   components: {
     GaleriaImagen,
   },

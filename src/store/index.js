@@ -6,6 +6,8 @@ import firebase from "firebase";
 import Areas from "../store/areas";
 import Contenidos from "../store/contenido";
 import Tickets from "../store/ticket";
+import Imagenes from "../store/imagenes";
+
 
 Vue.use(Vuex);
 
@@ -105,5 +107,6 @@ export default new Vuex.Store({
     Areas,
     Contenidos,
     Tickets,
+    Imagenes,
   },
 });
