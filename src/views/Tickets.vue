@@ -5,12 +5,13 @@
         <img class="imgbanner" src="../assets/img/tickets02.png" alt="" />
       </div>
     </section>
-    <CardTickets />
+    <CardTickets :tickets= "tickets" />
   </div>
 </template>
 
 <script>
 import CardTickets from "@/components/ticket/CardTickets.vue";
+import { mapState } from "vuex";
 export default {
   name: "Tickets",
   components: {
@@ -18,6 +19,9 @@ export default {
   },
   data() {
     return {};
+  },
+  computed: {
+    ...mapState("Tickets",["tickets"]),
   },
 };
 </script>
@@ -39,5 +43,4 @@ export default {
   width: 750px;
   height: 850px;
 }
-
 </style>

@@ -27,11 +27,13 @@ export default {
     ...mapActions(["getDataArtista"]),
     ...mapActions("Areas", ["obtenerAreasConcierto"]),
     ...mapActions("Contenidos", ["obtenerData"]),
+    ...mapActions("Tickets", ["obtenerDataTickets"]),
   },
   created() {
     this.getDataArtista();
     this.obtenerAreasConcierto();
     this.obtenerData();
+    this.obtenerDataTickets();
   },
 };
 </script>
