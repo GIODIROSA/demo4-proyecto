@@ -1,13 +1,18 @@
 <template>
   <div>
-    
-    <h1 class="titleFaqs">Seleccione una pregunta frecuente</h1>
+    <ImagenFaqs />
     <!-- select vuetify -->
-    <v-container fluid>
-      <v-row align="center">
+    <v-container>
+      <div class="lime accent-4">
+        <h5 class="text-caption text-center">
+          Selecciona la preguntas frecuente que te acontece
+        </h5>
+      </div>
+
+      <v-row class="selectPreguntas">
         <v-col class="d-flex" cols="12" sm="6">
           <v-select
-          @change="setTopTick"
+            @change="setTopTick"
             v-model="question"
             :items="interrogante"
             label="TOPTICK"
@@ -16,25 +21,31 @@
           ></v-select>
         </v-col>
       </v-row>
-    </v-container>
-    <div v-for="(ques, index) in questionAvailable" :key="index">
-      <p>{{ ques.respuesta }}</p>
+      <!-- RESPUESTAS -->
+         <div v-for="(ques, index) in questionAvailable" :key="index">
+      <p class="text-justify font-weight-light my-10">{{ ques.respuesta }}</p>
     </div>
+    </v-container>
+ 
   </div>
 </template>
 
 <script>
+import ImagenFaqs from "@/components/faqs/ImagenFaqs.vue";
 import { mapState } from "vuex";
 export default {
   name: "Faqs",
+  components: {
+    ImagenFaqs,
+  },
   data() {
     return {
       question: null,
       interrogante: [],
     };
   }, //final de data
-  created () {
-    this.setTopTick()
+  created() {
+    this.setTopTick();
   },
   methods: {
     setTopTick() {
@@ -54,8 +65,18 @@ export default {
 </script>
 
 <style scoped>
-.titleFaqs {
+div > *{
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+
+}
+.selectPreguntas {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.titleFaqs {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 }
 </style>

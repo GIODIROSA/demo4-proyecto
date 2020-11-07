@@ -10,7 +10,12 @@
           06 y 07 de NOVIEMBRE/ CLUB HÍPICO
         </h5>
         <!-- BTN DE NORMATIVA -->
-        <v-btn tile class="btnNormativa" color="blue accent-4" @click="accionarNormativa">
+        <v-btn
+          tile
+          class="btnNormativa"
+          color="blue accent-4"
+          @click="accionarNormativa"
+        >
           <v-icon left>
             mdi-police-badge-outline
           </v-icon>
@@ -54,17 +59,15 @@
             {{ entrada }}
           </v-card-text>
           <v-divider></v-divider>
-          <v-card-action>
-            <v-btn
-              dark
-              block
-              color="green lighten-4"
-              class="py-5"
-              @click="accionarNormativa"
-            >
-              Cerrar
-            </v-btn>
-          </v-card-action>
+          <v-btn
+            dark
+            block
+            color="green lighten-4"
+            class="py-5"
+            @click="accionarNormativa"
+          >
+            Cerrar
+          </v-btn>
         </v-card>
       </v-dialog>
 
@@ -75,7 +78,7 @@
           cols="12"
           sm="6"
           md="6"
-          lg="6"
+          lg="3"
           v-for="(ticket, index) in tickets"
           :key="index"
         >

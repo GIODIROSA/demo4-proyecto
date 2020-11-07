@@ -8,7 +8,7 @@
               LOGIN
             </h1>
             <h4 class="subheading">
-             AL INICIAR SESIÓN PUEDES ACCEDER A GRANDES SORPRESAS
+              AL INICIAR SESIÓN PUEDES ACCEDER A GRANDES SORPRESAS
             </h4>
           </v-col>
         </v-row>
@@ -32,7 +32,7 @@
                   <v-icon>mdi-ticket</v-icon>
                 </v-btn>
               </div>
-              <v-tex>
+              <div>
                 <h3>
                   INICIAR SESIÓN
                 </h3>
@@ -45,7 +45,7 @@
                   laborum incidunt perferendis commodi illo, similique, quasi
                   amet consequatur neque nesciunt!
                 </p>
-              </v-tex>
+              </div>
 
               <v-text-field
                 color="teal lighten-1"
