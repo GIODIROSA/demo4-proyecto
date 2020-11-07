@@ -1,41 +1,74 @@
 <template>
   <div>
     <v-container>
-      <div class="normativas">
+      <!-- ENCABEZADO Y NORMATIVA -->
+      <div class="encabezado">
         <h1 class="tituloTicket">
           <span class="modificacionTicket">TI</span>CKETS
         </h1>
         <h5 class="subtituloTicket pb-5">
           06 y 07 de NOVIEMBRE/ CLUB HÍPICO
         </h5>
-        <v-divider inset class="mb-4"></v-divider>
-        <h2
-          class="tituloNormativa pt-2 px-2 font-weight-regular amber accent-1"
-        >
-          Normativas
-        </h2>
-        <p class="textoNormativa tex-justify py-4 font-weight-light">
-          {{ normativas }}
-        </p>
-        <v-divider inset class="mb-4"></v-divider>
-        <h2
-          class="tituloIdentificatoria font-weight-regular light-green lighten-4 pt-2 px-2"
-        >
-          Formas aceptable de identificación
-        </h2>
-        <p class="textoIdentificatorio text-justify py-4 font-weight-light">
-          {{ identificacion }}
-        </p>
-        <v-divider inset class="mb-4"></v-divider>
-        <h2
-          class="tituloEntrada font-weight-regular deep-purple lighten-4 pt-2 px-2"
-        >
-          Venta de entradas
-        </h2>
-        <p class="textoIdentificatorio text-justify py-4 font-weight-light">
-          {{ entrada }}
-        </p>
+        <!-- BTN DE NORMATIVA -->
+        <v-btn tile class="btnNormativa" color="blue accent-4" @click="accionarNormativa">
+          <v-icon left>
+            mdi-police-badge-outline
+          </v-icon>
+          NORMATIVA
+        </v-btn>
       </div>
+      <!-- INICIO DE DIALOG -->
+
+      <v-dialog v-model="dialog" width="800px">
+        <v-card color="cyan lighten-4">
+          <v-card-title
+            class="tituloNormativa pt-2 px-2 font-weight-regular amber accent-1"
+          >
+            Normativas
+          </v-card-title>
+          <v-card-text
+            class="textoNormativa tex-justify py-4 font-weight-light"
+          >
+            {{ normativas }}
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-card-title
+            class="tituloIdentificatoria font-weight-regular light-green lighten-4 pt-2 px-2"
+          >
+            Tipos identificación
+          </v-card-title>
+          <v-card-text
+            class="textoIdentificatorio text-justify py-4 font-weight-light"
+          >
+            {{ identificacion }}
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-card-title
+            class="tituloEntrada font-weight-regular deep-purple lighten-4 pt-2 px-2"
+          >
+            Venta de entradas
+          </v-card-title>
+          <v-card-text
+            class="textoIdentificatorio text-justify py-4 font-weight-light"
+          >
+            {{ entrada }}
+          </v-card-text>
+          <v-divider></v-divider>
+          <v-card-action>
+            <v-btn
+              dark
+              block
+              color="green lighten-4"
+              class="py-5"
+              @click="accionarNormativa"
+            >
+              Cerrar
+            </v-btn>
+          </v-card-action>
+        </v-card>
+      </v-dialog>
+
+      <!-- FIN DEL DIALOG -->
 
       <v-row>
         <v-col
@@ -117,12 +150,19 @@ export default {
     return {
       loading: false,
       selection: 1,
+      dialog: true,
     };
+  },
+  mounted() {
+    this.dialog = true;
   },
   methods: {
     reserve() {
       this.loading = true;
       setTimeout(() => (this.loading = false), 2000);
+    },
+    accionarNormativa() {
+      this.dialog = !this.dialog;
     },
   }, //final de methods
   computed: {
@@ -132,7 +172,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.normativas {
+.encabezado {
   font-family: "Montserrat", sans-serif;
 
   .tituloTicket {
@@ -153,14 +193,19 @@ export default {
     font-size: 16px;
   }
 
-  .tituloNormativa {
-    color: #ffb300;
+  .btnNormativa {
+    display: block;
+    margin: auto;
   }
-  .tituloIdentificatoria {
-    color: #f48fb1;
-  }
-  .tituloEntrada {
-    color: #f48fb1;
-  }
+}
+//DIALOG======>
+.tituloNormativa {
+  color: #ffb300;
+}
+.tituloIdentificatoria {
+  color: #f48fb1;
+}
+.tituloEntrada {
+  color: #f48fb1;
 }
 </style>
