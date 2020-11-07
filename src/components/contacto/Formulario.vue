@@ -44,6 +44,7 @@
 
             <v-btn
               dark
+              block
               :disabled="!valid"
               color="light-blue accent-2"
               class="mr-4"
@@ -53,11 +54,11 @@
               correcto
             </v-btn>
 
-            <v-btn color="error" class="mr-4" @click="reset">
+            <v-btn block color="error" class="mr-4 mt-4" @click="reset">
               borrar
             </v-btn>
 
-            <v-btn dark color="light-green lighten-2" @click="resetValidation">
+            <v-btn block dark color="light-green lighten-2 mt-4" @click="resetValidation">
               borrar validación
             </v-btn>
           </v-form>

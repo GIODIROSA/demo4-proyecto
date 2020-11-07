@@ -1,14 +1,40 @@
 <template>
   <div>
     <v-container>
-      <div>
+      <div class="normativas">
         <h1 class="tituloTicket">
           <span class="modificacionTicket">TI</span>CKETS
         </h1>
         <h5 class="subtituloTicket pb-5">
           06 y 07 de NOVIEMBRE/ CLUB HÍPICO
         </h5>
-        <v-divider inset></v-divider>
+        <v-divider inset class="mb-4"></v-divider>
+        <h2
+          class="tituloNormativa pt-2 px-2 font-weight-regular amber accent-1"
+        >
+          Normativas
+        </h2>
+        <p class="textoNormativa tex-justify py-4 font-weight-light">
+          {{ normativas }}
+        </p>
+        <v-divider inset class="mb-4"></v-divider>
+        <h2
+          class="tituloIdentificatoria font-weight-regular light-green lighten-4 pt-2 px-2"
+        >
+          Formas aceptable de identificación
+        </h2>
+        <p class="textoIdentificatorio text-justify py-4 font-weight-light">
+          {{ identificacion }}
+        </p>
+        <v-divider inset class="mb-4"></v-divider>
+        <h2
+          class="tituloEntrada font-weight-regular deep-purple lighten-4 pt-2 px-2"
+        >
+          Venta de entradas
+        </h2>
+        <p class="textoIdentificatorio text-justify py-4 font-weight-light">
+          {{ entrada }}
+        </p>
       </div>
 
       <v-row>
@@ -83,6 +109,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "CardTickets",
   props: ["tickets"],
@@ -95,32 +122,45 @@ export default {
   methods: {
     reserve() {
       this.loading = true;
-
       setTimeout(() => (this.loading = false), 2000);
     },
+  }, //final de methods
+  computed: {
+    ...mapState("Tickets", ["normativas", "identificacion", "entrada"]),
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.tituloTicket {
-  text-align: center;
+.normativas {
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 30px;
-  color: #00e5ff;
-}
-.modificacionTicket {
-  color: #c6ff00;
-}
-.subtituloTicket {
-  text-align: center;
-  color: #f48fb1;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
 
+  .tituloTicket {
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    color: #00e5ff;
+  }
 
+  .modificacionTicket {
+    color: #c6ff00;
+  }
 
+  .subtituloTicket {
+    text-align: center;
+    color: #f48fb1;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .tituloNormativa {
+    color: #ffb300;
+  }
+  .tituloIdentificatoria {
+    color: #f48fb1;
+  }
+  .tituloEntrada {
+    color: #f48fb1;
+  }
 }
 </style>
