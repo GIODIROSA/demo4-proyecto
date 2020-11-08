@@ -176,8 +176,6 @@ export default {
 
 <style lang="scss" scoped>
 .encabezado {
-  font-family: "Montserrat", sans-serif;
-
   .tituloTicket {
     text-align: center;
     font-weight: 900;

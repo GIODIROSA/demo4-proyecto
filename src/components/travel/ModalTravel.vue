@@ -39,55 +39,40 @@
           >
         </v-list>
         <v-divider></v-divider>
+        <!-- MODAL - DIALOG -->
         <v-container>
           <v-row>
-            <v-col cols="12" sm="12" md="6" lg="6">
-              <v-card class="mx-auto" max-width="344">
-                <v-img
-                  src="https://clustersalud.americaeconomia.com/sites/clustersalud.americaeconomia.com/files/styles/article_main/public/wp-content/uploads/2016/06/avion.jpg?itok=AfH9WeZy"
-                  height="400px"
-                ></v-img>
-              </v-card>
-            </v-col>
-            <v-col cols="12" sm="12" md="6" lg="6">
-              <div class="py-3">
-                <h3>
-                  Llegada en Avion a Santiago
-                </h3>
-                <v-list-item-subtitle
-                  >Aeropuerto Internacional Arturo Merino
-                  Benítez</v-list-item-subtitle
-                >
+            <v-col
+              cols="12"
+              lg="12"
+              v-for="travel in travels"
+              :key="travel.id"
+            >
+              <div class="my-5">
+                <h1>{{ travel.data.titulo }}</h1>
+                <h5>{{ travel.data.medio }}</h5>
               </div>
 
-              <p class="text-justify font-weight-light">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Quibusdam nihil, quisquam, provident expedita, error assumenda
-                laborum tempore esse earum alias itaque quos at delectus
-                adipisci explicabo voluptatem dolore saepe optio laboriosam!
-                Excepturi sed omnis molestias quaerat illo, veniam nam odio ipsa
-                nisi voluptatibus animi saepe est tempore quisquam ex unde
-                itaque? Est qui laudantium optio, commodi et doloremque corrupti
-                neque accusantium placeat iusto ullam repellendus veritatis
-                nostrum vitae officiis a numquam molestias, magni, sed nobis
-                distinctio facere reiciendis repellat! Facilis minus corporis
-                quae tempore eaque expedita fugiat eum ab doloremque omnis dolor
-                sint aliquid ipsum, dolorum accusantium. Ex impedit, rem eaque
-                non delectus harum quibusdam recusandae minima itaque odio
-                voluptatibus obcaecati explicabo dolorum corporis asperiores
-                aliquid exercitationem repellat ad ducimus earum consequuntur
-                culpa debitis dolor iusto? Maiores officia natus excepturi
-                asperiores veniam enim sunt, ullam quam quisquam molestiae
-                dignissimos laboriosam perspiciatis beatae at, sequi autem
-                recusandae? Eos sunt iure perferendis?
+              <img
+                class="imagenTransporte"
+                :src="travel.data.imagen"
+                :alt="travel.id"
+              />
+              <h5>{{ travel.data.lugar }}</h5>
+              <!-- <h5>{{ travel.data.opcional }}</h5> -->
+
+              <p class="textoDescripcionTravel text-justify font-weight-light py-3">
+                {{ travel.data.descripcion }}
               </p>
             </v-col>
           </v-row>
+          <!-- FINAL DE LOS MEDIOS DE TRANSPORTE -->
+          <!-- MENSAJE PARA COMPARTIR VEHICULO -->
           <v-divider inset class="py-2"></v-divider>
           <h1 class="tituloCompartir">
             ¿Porqué no compartes?
           </h1>
-          <p class="text-justify font-weight-light py-3">
+          <p class="text-justify font-weight-light py-3 ">
             Dirígete para encontrar viajeros que se dirigen desde tu área o para
             alquilar tus propios asientos para el automóvil para que otros se
             unan a ti. Los propietarios de automóviles establecen su propio
@@ -102,6 +87,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -111,24 +97,19 @@ export default {
       widgets: false,
       show: false,
     };
+  }, //final de data
+  computed: {
+    ...mapState("Travel", ["travels"]),
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.tituloCompartir {
-  font-weight: 600;
-  font-size: 30px;
-  color: #ff80ab;
-  font-family: "Montserrat", sans-serif;
+.imagenTransporte {
+  width: 800px;
 }
-.botonMedioTransporte {
-  margin-bottom: 50px;
-}
-.notaTravel {
-  color: #64dd17;
-}
-.mensajeTravel {
-  padding: 20px 0;
+.textoDescripcionTravel{
+  font-size: 14px;
+  color: #757575;
 }
 </style>

@@ -7,6 +7,8 @@ import Areas from "../store/areas";
 import Contenidos from "../store/contenido";
 import Tickets from "../store/ticket";
 import Imagenes from "../store/imagenes";
+import Travel from "../store/travel";
+
 
 
 Vue.use(Vuex);
@@ -108,5 +110,6 @@ export default new Vuex.Store({
     Contenidos,
     Tickets,
     Imagenes,
+    Travel
   },
 });
