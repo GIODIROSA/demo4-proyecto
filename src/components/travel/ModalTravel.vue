@@ -9,7 +9,7 @@
       <template v-slot:activator="{ on, attrs }">
         <v-container>
           <div class="botonMedioTransporte">
-            <h5 class="mensajeTravel font-weight-light">
+            <h5 class="mensajeTravel font-weight-light py-3">
               <span class="notaTravel font-weight-bold">Nota: </span> Para
               revisar de que manera puedes llegar al concierto
             </h5>
@@ -18,6 +18,7 @@
             </v-btn>
           </div>
         </v-container>
+        <!-- MODAL BODY -->
       </template>
       <v-card>
         <v-toolbar dark color="purple accent-1">
@@ -40,30 +41,51 @@
         </v-list>
         <v-divider></v-divider>
         <!-- MODAL - DIALOG -->
+        <!-- PARALLAX -->
+        <v-parallax src="@/assets/img/16.png">
+          <h1 class="text-center teal accent-3">
+            "TODOS LOS CAMINOS LLEGAN A
+            <span class="modificacionTituloTravel">AUFIELDS CHILE-2021</span>"
+          </h1>
+        </v-parallax>
+        <!-- FINAL PARALLAX -->
         <v-container>
           <v-row>
             <v-col
+              class="columnaTravel"
               cols="12"
-              lg="12"
+              sm="12"
+              md="6"
+              lg="6"
               v-for="travel in travels"
               :key="travel.id"
             >
-              <div class="my-5">
-                <h1>{{ travel.data.titulo }}</h1>
-                <h5>{{ travel.data.medio }}</h5>
-              </div>
+              <v-card class="mx-auto" max-width="600">
+                <v-img
+                  class="imagenTravel white--text align-end"
+                  height="500px"
+                  :src="travel.data.imagen"
+                >
+                </v-img>
 
-              <img
-                class="imagenTransporte"
-                :src="travel.data.imagen"
-                :alt="travel.id"
-              />
-              <h5>{{ travel.data.lugar }}</h5>
-              <!-- <h5>{{ travel.data.opcional }}</h5> -->
+                <v-card-title class="tituloTravelMedioTransporte">
+                  {{ travel.data.titulo }}
+                </v-card-title>
 
-              <p class="textoDescripcionTravel text-justify font-weight-light py-3">
-                {{ travel.data.descripcion }}
-              </p>
+                <v-card-subtitle class="pb-0">
+                  {{ travel.data.medio }}
+                </v-card-subtitle>
+
+                <v-card-text class="text--primary">
+                  <div>
+                    <p
+                      class="textoDescriptivo py-3 text-justify font-weight-light"
+                    >
+                      {{ travel.data.descripcion }}
+                    </p>
+                  </div>
+                </v-card-text>
+              </v-card>
             </v-col>
           </v-row>
           <!-- FINAL DE LOS MEDIOS DE TRANSPORTE -->
@@ -105,11 +127,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.imagenTransporte {
-  width: 800px;
+.modificacionTituloTravel {
+  color: #fff176;
 }
-.textoDescripcionTravel{
-  font-size: 14px;
+.imagenTravel {
+  filter: grayscale(60%);
+}
+.tituloTravelMedioTransporte {
+  color: #42a5f5;
+}
+.tituloCompartir {
+  color: #ff80ab;
+}
+.textoDescriptivo {
   color: #757575;
 }
 </style>

@@ -69,10 +69,8 @@ export default {
   font-weight: 600;
   font-size: 30px;
   color: #ff80ab;
-  font-family: "Montserrat", sans-serif;
 }
 .descripcionDondeQueda {
   color: #757575;
-  font-family: "Montserrat", sans-serif;
 }
 </style>

@@ -2,7 +2,9 @@
   <nav>
     <v-toolbar dense elevation="1">
       <v-toolbar-title>
-        <h5>Aufields</h5>
+        <h4 class="tituloEvento">
+          AUFIELDS <span class="modificacionTituloEvento">CHILE-2021</span>
+        </h4>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon color="indigo" disabled>
@@ -70,9 +72,17 @@ export default {
         { icon: "mdi-ticket", text: "Line Up", route: "/lineup" },
         { icon: "mdi-music", text: "Tickets", route: "/tickets" },
         { icon: "mdi-airplane", text: "Travel", route: "/travel" },
-        { icon: "mdi-alpha-b-circle", text: "Beneficios", route: "/beneficios" },
+        {
+          icon: "mdi-alpha-b-circle",
+          text: "Beneficios",
+          route: "/beneficios",
+        },
         { icon: "mdi-assistant", text: "Auf 2019", route: "/auf2019" },
-        { icon: "mdi-contactless-payment", text: "Contact Us", route: "/contactus" },
+        {
+          icon: "mdi-contactless-payment",
+          text: "Contact Us",
+          route: "/contactus",
+        },
         { icon: "mdi-comment-question", text: "Faqs", route: "/faqs" },
       ],
     };
@@ -81,7 +91,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.titleAufields {
-  color: #f50057;
+.tituloEvento {
+  color: #40c4ff;
+}
+.modificacionTituloEvento {
+  color: #ffa726;
 }
 </style>

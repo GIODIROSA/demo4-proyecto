@@ -27,7 +27,7 @@
       <v-dialog v-model="dialog" width="800px">
         <v-card color="cyan lighten-4">
           <v-card-title
-            class="tituloNormativa pt-2 px-2 font-weight-regular amber accent-1"
+            class="tituloNormativa pt-2 px-4 font-weight-regular amber accent-1"
           >
             Normativas
           </v-card-title>
@@ -38,7 +38,7 @@
           </v-card-text>
           <v-divider></v-divider>
           <v-card-title
-            class="tituloIdentificatoria font-weight-regular light-green lighten-4 pt-2 px-2"
+            class="tituloIdentificatoria font-weight-regular light-green lighten-4 pt-2 px-4"
           >
             Tipos identificación
           </v-card-title>
@@ -49,7 +49,7 @@
           </v-card-text>
           <v-divider></v-divider>
           <v-card-title
-            class="tituloEntrada font-weight-regular deep-purple lighten-4 pt-2 px-2"
+            class="tituloEntrada font-weight-regular deep-purple lighten-4 pt-2 px-4"
           >
             Venta de entradas
           </v-card-title>

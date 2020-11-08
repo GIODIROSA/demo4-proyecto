@@ -30,8 +30,6 @@ export default {
     ...mapActions("Tickets", ["obtenerDataTickets"]),
     ...mapActions("Imagenes", ["obtenerImagenes"]),
     ...mapActions("Travel", ["obtenerTravel"]),
-
-
   },
   created() {
     this.getDataArtista();
@@ -39,7 +37,7 @@ export default {
     this.obtenerData();
     this.obtenerDataTickets();
     this.obtenerImagenes();
-    this.obtenerTravel()
+    this.obtenerTravel();
   },
 };
 </script>
@@ -47,14 +45,16 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap");
 
-*{
+* {
   font-family: "Montserrat", sans-serif;
-
 }
 
 .barraColorFooter {
-  background: #ff1744;
-  height: 5px;
+  background: #ff0000;
+  background: linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+  background: -webkit-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+  background: -moz-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+  height: 15px;
   width: 100%;
 }
 </style>
