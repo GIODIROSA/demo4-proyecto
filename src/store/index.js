@@ -9,8 +9,6 @@ import Tickets from "../store/ticket";
 import Imagenes from "../store/imagenes";
 import Travel from "../store/travel";
 
-
-
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -90,6 +88,22 @@ export default new Vuex.Store({
     },
   },
   actions: {
+    // CREAR USUARIO---COMPONENTE NAVBAR
+    addUsuario({ commit }, usuario) {
+      try {
+        firebase
+          .auth()
+          .createUserWithEmailAndPassword(usuario.email, usuario.password)
+          .then(() => {
+            const user = usuario;
+            delete user.password;
+            firebase.firestore().collection("usuarioCreado").add(usuario);
+          });
+      } catch (error) {
+        console.log("Tienes un error en Usuario: ", error);
+      }
+    },
+
     getDataArtista({ commit }) {
       firebase
         .firestore()
@@ -110,6 +124,6 @@ export default new Vuex.Store({
     Contenidos,
     Tickets,
     Imagenes,
-    Travel
+    Travel,
   },
 });

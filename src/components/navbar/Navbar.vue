@@ -2,17 +2,21 @@
   <nav>
     <v-toolbar dense elevation="1">
       <v-toolbar-title>
-        <h4 class="tituloEvento" :to="{name: 'Inicio'}">
-          AUFIELDS <span class="modificacionTituloEvento" >CHILE-2021</span>
+        <h4 class="tituloEvento">
+          AUFIELDS <span class="modificacionTituloEvento">CHILE-2021</span>
         </h4>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon color="indigo" disabled>
-        <v-icon>mdi-star</v-icon>
-      </v-btn>
-      <v-btn icon color="green accent-3">
-        <v-icon>mdi-music</v-icon>
-      </v-btn>
+      <v-chip
+        dark
+        class="ma-2"
+        color="light-blue lighten-2"
+        @click="dialog = true"
+      >
+        <v-icon left>mdi-star</v-icon>
+        Crear Usuario
+      </v-chip>
+
       <v-btn icon :to="{ name: 'Tickets' }" color="amber darken-3">
         <v-icon>mdi-ticket</v-icon>
       </v-btn>
@@ -58,10 +62,54 @@
         </v-row>
       </v-container>
     </v-navigation-drawer>
+
+    <!-- DIALOG- MODAL -->
+
+    <v-dialog v-model="dialog" persistent max-width="500">
+      <v-card color="teal lighten-5" class="pa-5">
+        <!-- FORMULARIO -->
+        <div class="mb-5">
+          <v-card-title
+            class="tituloCrearUsuario yellow lighten-1 font-weight-bold"
+          >
+            Crear Usuario
+          </v-card-title>
+        </div>
+
+        <v-text-field v-model="usuario.nombre" label="Nombre"></v-text-field>
+
+        <v-text-field v-model="usuario.email" label="E-mail"></v-text-field>
+
+        <v-text-field
+          v-model="usuario.direccion"
+          label="Dirección"
+        ></v-text-field>
+
+        <v-text-field
+          v-model="usuario.password"
+          :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+          :type="show1 ? 'text' : 'password'"
+          label="Introduce tu contraseña"
+          @click:append="show1 = !show1"
+        ></v-text-field>
+
+        <v-btn
+          dark
+          color="pink lighten-3"
+          block
+          class="py-5 my-2"
+          @click="crearUsuario"
+        >
+          <v-icon left>mdi-star</v-icon>
+          Crear Cuenta
+        </v-btn>
+      </v-card>
+    </v-dialog>
   </nav>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "Navbar",
   data() {
@@ -85,12 +133,33 @@ export default {
         },
         { icon: "mdi-comment-question", text: "Faqs", route: "/faqs" },
       ],
+      dialog: false,
+      show1: false,
+
+      // objeto usuario
+      usuario: {
+        nombre: "",
+        email: "",
+        direccion: "",
+        password: "",
+      },
     };
+  }, //final de data
+  methods: {
+    crearUsuario() {
+      this.dialog = false;
+      alert(this.usuario);
+      this.addUsuario(this.usuario);
+    },
+    ...mapActions(["addUsuario"]),
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.tituloCrearUsuario {
+  color: #ab47bc;
+}
 .tituloEvento {
   color: #40c4ff;
 }
