@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-footer padless>
-      <v-card flat tile class="footerEvento cyan accent-1 white--text text-center">
+      <v-card flat tile class="footerEvento indigo lighten-5 white--text text-center">
         <v-card-text>
           <v-btn
             v-for="(icon, index) in icons"

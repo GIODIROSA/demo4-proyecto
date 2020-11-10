@@ -2,8 +2,8 @@
   <nav>
     <v-toolbar dense elevation="1">
       <v-toolbar-title>
-        <h4 class="tituloEvento">
-          AUFIELDS <span class="modificacionTituloEvento">CHILE-2021</span>
+        <h4 class="tituloEvento" :to="{name: 'Inicio'}">
+          AUFIELDS <span class="modificacionTituloEvento" >CHILE-2021</span>
         </h4>
       </v-toolbar-title>
       <v-spacer></v-spacer>

@@ -107,6 +107,10 @@
                 {{ ticket.data.area }}
               </div>
 
+              <div class="my-4 subtitle-1">
+                {{ ticket.id }}
+              </div>
+
               <div class="text-justify">
                 {{ ticket.data.descripcion }}
               </div>

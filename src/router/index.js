@@ -57,9 +57,6 @@ const routes = [
     name: "Auf2019",
     component: () =>
       import(/* webpackChunkName: "auf 2019" */ "../views/Auf2019.vue"),
-    meta: {
-      autentificado: true,
-    },
   },
   {
     path: "/contactus",
@@ -86,10 +83,17 @@ const routes = [
     path: "/prueba",
     name: "Prueba",
     component: () =>
-      import(/* webpackChunkName: "Prueba" */ "../components/Prueba.vue"),
+      import(/* webpackChunkName: "Prueba" */ "../views/Prueba.vue"),
   },
   {
-    path: "/prueba2",
+    path: "/prueba/:id",
+    name: "Articulo",
+    props: true,
+    component: () =>
+      import(/* webpackChunkName: "Articulo" */ "../views/Articulo.vue"),
+  },
+  {
+    path: "prueba2",
     name: "Prueba2",
     component: () =>
       import(/* webpackChunkName: "Prueba2" */ "../components/Prueba2.vue"),
