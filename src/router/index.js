@@ -39,30 +39,45 @@ const routes = [
     name: "Tickets",
     component: () =>
       import(/* webpackChunkName: "tickets" */ "../views/Tickets.vue"),
+      meta: {
+        autentificado: true,
+      },
   },
   {
     path: "/travel",
     name: "Travel",
     component: () =>
       import(/* webpackChunkName: "travel" */ "../views/Travel.vue"),
+      meta: {
+        autentificado: true,
+      },
   },
   {
     path: "/beneficios",
     name: "Beneficios",
     component: () =>
       import(/* webpackChunkName: "beneficios" */ "../views/Beneficios.vue"),
+      meta: {
+        autentificado: true,
+      },
   },
   {
     path: "/auf2019",
     name: "Auf2019",
     component: () =>
       import(/* webpackChunkName: "auf 2019" */ "../views/Auf2019.vue"),
+      meta: {
+        autentificado: true,
+      },
   },
   {
     path: "/contactus",
     name: "Contact Us",
     component: () =>
       import(/* webpackChunkName: "contact us" */ "../views/Contactus.vue"),
+      meta: {
+        autentificado: true,
+      },
     children: [
       {
         path: "formulario",
@@ -78,6 +93,9 @@ const routes = [
     path: "/faqs",
     name: "Faqs",
     component: () => import(/* webpackChunkName: "faqs" */ "../views/Faqs.vue"),
+    meta: {
+      autentificado: true,
+    },
   },
   {
     path: "/prueba",

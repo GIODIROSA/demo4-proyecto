@@ -137,7 +137,7 @@
             </v-card-text>
 
             <v-card-actions>
-              <v-btn color="deep-purple lighten-2" text @click="reserve">
+              <v-btn color="deep-purple lighten-2" text>
                 COMPRAR
               </v-btn>
             </v-card-actions>
@@ -164,10 +164,6 @@ export default {
     this.dialog = true;
   },
   methods: {
-    reserve() {
-      this.loading = true;
-      setTimeout(() => (this.loading = false), 2000);
-    },
     accionarNormativa() {
       this.dialog = !this.dialog;
     },

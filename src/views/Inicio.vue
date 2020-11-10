@@ -78,6 +78,9 @@ export default {
     AreaConcierto,
     CountDown,
   },
+  created() {
+    this.artistas;
+  },
 };
 </script>
 

@@ -7,19 +7,91 @@
         </h4>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-chip
-        dark
-        class="ma-2"
-        color="light-blue lighten-2"
-        @click="dialog = true"
-      >
-        <v-icon left>mdi-star</v-icon>
-        Crear Usuario
-      </v-chip>
 
-      <v-btn icon :to="{ name: 'Tickets' }" color="amber darken-3">
-        <v-icon>mdi-ticket</v-icon>
-      </v-btn>
+      <!-- INICIAR SESION BTN -->
+
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            dark
+            small
+            class="ma-2"
+            color="teal accent-3"
+            :to="{ name: 'Login' }"
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-account-check</v-icon>
+          </v-btn>
+        </template>
+        <span>Iniciar Sesion</span>
+      </v-tooltip>
+
+      <!-- FINAL DE INICIAR SESION BTN -->
+
+      <!-- CREAR USUARIO BTN -->
+
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            dark
+            small
+            class="ma-2"
+            color="light-blue lighten-2"
+            @click="dialog = true"
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-account-reactivate</v-icon>
+          </v-btn>
+        </template>
+        <span>Registrar</span>
+      </v-tooltip>
+
+      <!-- FINAL DE CREAR USUARIO BTN -->
+
+      <!-- CERRAR SESION BTN -->
+
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            dark
+            small
+            class="ma-2"
+            color="red accent-3"
+            v-bind="attrs"
+            v-on="on"
+            @click="logOut"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </template>
+        <span>Cerrar sesion</span>
+      </v-tooltip>
+
+      <!-- FINAL DE CERRAR SESION BTN -->
+
+      <!-- COMPRAR TICKET BTN -->
+
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            :to="{ name: 'Tickets' }"
+            color="amber darken-3"
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-ticket</v-icon>
+          </v-btn>
+        </template>
+        <span>Tickets</span>
+      </v-tooltip>
+
+      <!-- FINAL DE COMPRAR TICKET BTN -->
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"> </v-app-bar-nav-icon>
     </v-toolbar>
@@ -93,6 +165,8 @@
           @click:append="show1 = !show1"
         ></v-text-field>
 
+        <!-- CREAR USUARIO BTN -->
+
         <v-btn
           dark
           color="pink lighten-3"
@@ -103,12 +177,29 @@
           <v-icon left>mdi-star</v-icon>
           Crear Cuenta
         </v-btn>
+
+        <!-- FINAL DE CREAR USUARIO -->
+        <!-- CREAR USUARIO BTN -->
+
+        <v-btn
+          dark
+          color="red accent-2"
+          block
+          class="py-5 my-2"
+          @click="dialog = false"
+        >
+          <v-icon left>mdi-close</v-icon>
+          Cerrar
+        </v-btn>
+
+        <!-- FINAL DE CREAR USUARIO -->
       </v-card>
     </v-dialog>
   </nav>
 </template>
 
 <script>
+import firebase from "firebase";
 import { mapActions } from "vuex";
 export default {
   name: "Navbar",
@@ -152,6 +243,15 @@ export default {
       this.addUsuario(this.usuario);
     },
     ...mapActions(["addUsuario"]),
+
+    // logOut
+    logOut() {
+      alert("Usuario se ha desconectado");
+      firebase
+        .auth()
+        .signOut()
+        .then(() => this.$router.replace("/"));
+    },
   },
 };
 </script>

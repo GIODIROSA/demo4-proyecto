@@ -28,7 +28,7 @@ export default {
     ...mapActions("Areas", ["obtenerAreasConcierto"]),
     ...mapActions("Contenidos", ["obtenerData"]),
     ...mapActions("Tickets", ["obtenerDataTickets"]),
-    ...mapActions("Imagenes", ["obtenerImagenes"]),
+    ...mapActions("Imagenes", ["obtenerImagenes", "obtenerImagenesSlider"]),
     ...mapActions("Travel", ["obtenerTravel"]),
   },
   created() {
@@ -37,6 +37,7 @@ export default {
     this.obtenerData();
     this.obtenerDataTickets();
     this.obtenerImagenes();
+    this.obtenerImagenesSlider();
     this.obtenerTravel();
   },
 };

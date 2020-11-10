@@ -7,7 +7,7 @@
         dark
         small
         color="yellow"
-        :to="{ name: 'Inicio' }"
+        :to="{ name: 'Tickets' }"
       >
         <v-icon dark>
           mdi-heart

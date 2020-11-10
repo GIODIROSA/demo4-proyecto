@@ -60,7 +60,7 @@
               >
               </v-text-field>
               <v-btn dark block color="cyan lighten-4" type="submit"
-                >Registrar</v-btn
+                >Iniciar Sesion</v-btn
               >
               <v-btn @click="clear" dark block color="teal accent-3 my-3"
                 >Clear</v-btn
@@ -102,7 +102,7 @@ export default {
         .signInWithEmailAndPassword(this.usuario, this.contrasena)
         .then(
           (user) => {
-            alert("usuario conectado"), this.$router.replace("lineup");
+            alert("usuario conectado"), this.$router.push({ name: "Tickets" });
           },
           (error) => console.error(error)
         );
@@ -118,8 +118,7 @@ export default {
         .auth()
         .signInWithPopup(provider)
         .then((result) => {
-          // console.log("result");
-          this.$router.replace("lineup");
+          this.$router.replace("tickets");
 
           let user = {
             name: result.user.displayName,

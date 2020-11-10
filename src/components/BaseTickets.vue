@@ -325,12 +325,7 @@ export default {
 
     };
   }, //final de data
-  methods: {
-    reserve() {
-      this.loading = true;
-      setTimeout(() => (this.loading = false), 2000);
-    },
-  },
+  
 };
 </script>
 

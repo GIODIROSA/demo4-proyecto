@@ -89,9 +89,9 @@ export default new Vuex.Store({
   },
   actions: {
     // CREAR USUARIO---COMPONENTE NAVBAR
-    addUsuario({ commit }, usuario) {
+   async addUsuario({ commit }, usuario) {
       try {
-        firebase
+       await firebase
           .auth()
           .createUserWithEmailAndPassword(usuario.email, usuario.password)
           .then(() => {
