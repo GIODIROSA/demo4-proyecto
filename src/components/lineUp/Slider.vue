@@ -1,11 +1,15 @@
 <template>
   <div class="slider">
-    <div
-      v-for="(imagen, index) in sliderImagen"
-      :key="index"
-      :style="`background-image:url(${imagen})`"
-      class="sliderContenido"
-    ></div>
+    <v-carousel>
+      <v-carousel-item
+        v-for="(item, i) in sliderImagen"
+        :key="i"
+        :src="item"
+        reverse-transition="fade-transition"
+        transition="fade-transition"
+      >
+      </v-carousel-item>
+    </v-carousel>
   </div>
 </template>
 
@@ -23,15 +27,6 @@ export default {
 
 <style lang="scss" scoped>
 .slider {
-  height: 100vh;
-  overflow: scroll;
-  background-color: beige;
-  scroll-snap-type: y mandatory;
-  .sliderContenido {
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    scroll-snap-align: center;
-  }
+  height: 500px;
 }
 </style>

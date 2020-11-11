@@ -28,16 +28,17 @@
           <v-toolbar-title>Medios para llegar a AUFIELDS</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items>
-            <v-btn dark :to="{ name: 'Travel' }" text @click="dialog = false">
-              TRAVEL
+            <v-btn dark :to="{ name: 'Inicio' }" text @click="dialog = false">
+              INICIO
             </v-btn>
           </v-toolbar-items>
         </v-toolbar>
         <v-list three-line subheader>
-          <v-subheader
-            >Diferentes medios para que vengas a disfrutar del evento más grande
-            de música electrónica</v-subheader
-          >
+          <h5 class="text-caption pa-3">
+            Diferentes medios para que vengas a disfrutar del evento más grande
+            de música electrónica
+          </h5>
+          
         </v-list>
         <v-divider></v-divider>
         <!-- MODAL - DIALOG -->
@@ -68,7 +69,7 @@
                 >
                 </v-img>
 
-                <v-card-title class="tituloTravelMedioTransporte">
+                <v-card-title class="tituloTravelMedioTransporte text-caption">
                   {{ travel.data.titulo }}
                 </v-card-title>
 

@@ -102,7 +102,7 @@ export default {
         .signInWithEmailAndPassword(this.usuario, this.contrasena)
         .then(
           (user) => {
-            alert("usuario conectado"), this.$router.push({ name: "Tickets" });
+            alert("usuario conectado"), this.$router.push({ name: "LineUp" });
           },
           (error) => console.error(error)
         );
@@ -118,7 +118,7 @@ export default {
         .auth()
         .signInWithPopup(provider)
         .then((result) => {
-          this.$router.replace("tickets");
+          this.$router.replace("lineup");
 
           let user = {
             name: result.user.displayName,

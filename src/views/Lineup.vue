@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="bannerLineUp">
-      <Slider :sliderImagen = "sliderImagen" />
+      <Slider :sliderImagen="sliderImagen" />
+    </div>
+    <div class="textoCarousel"> 
+      <h1 class="tituloCarousel light-green accent-1">AUFIELDS <span class="modificacionTextoCarousel font-weight-light">CHILE - 2021</span></h1>
     </div>
     <v-container>
       <v-row>
@@ -10,7 +13,6 @@
         </v-col>
       </v-row>
     </v-container>
-    <!-- fin dialog -->
   </div>
 </template>
 
@@ -43,5 +45,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.tituloCarousel{
+  text-align: center;
+  color: #B388FF;
+}
+.modificacionTextoCarousel{
+  color: #FF6D00;
 }
 </style>

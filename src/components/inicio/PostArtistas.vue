@@ -20,7 +20,7 @@
           v-for="(artista, index) in artistas"
           :key="index"
         >
-          <v-card class="mx-auto" max-width="400">
+          <v-card class="mx-auto" max-width="400" :to="{ name: 'LineUp' }">
             <v-img
               class="white--text align-end"
               height="600px"

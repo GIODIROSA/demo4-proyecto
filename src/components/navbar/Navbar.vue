@@ -2,9 +2,9 @@
   <nav>
     <v-toolbar dense elevation="1">
       <v-toolbar-title>
-        <h4 class="tituloEvento">
-          AUFIELDS <span class="modificacionTituloEvento">CHILE-2021</span>
-        </h4>
+        <h5 class="tituloEvento text-caption font-weight-black">
+          AUFIELDS <span class="modificacionTituloEvento">2021</span>
+        </h5>
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
@@ -73,25 +73,6 @@
       </v-tooltip>
 
       <!-- FINAL DE CERRAR SESION BTN -->
-
-      <!-- COMPRAR TICKET BTN -->
-
-      <v-tooltip bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            icon
-            :to="{ name: 'Tickets' }"
-            color="amber darken-3"
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-icon>mdi-ticket</v-icon>
-          </v-btn>
-        </template>
-        <span>Tickets</span>
-      </v-tooltip>
-
-      <!-- FINAL DE COMPRAR TICKET BTN -->
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"> </v-app-bar-nav-icon>
     </v-toolbar>

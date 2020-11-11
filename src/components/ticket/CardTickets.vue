@@ -3,6 +3,30 @@
     <v-container>
       <!-- ENCABEZADO Y NORMATIVA -->
       <div class="encabezado">
+        <!-- BTN INICIO -->
+        <div class="btnInicio">
+          <v-tooltip bottom>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              icon
+              dark
+              small
+              class="ma-2"
+              color="amber darken-1"
+              :to="{ name: 'Inicio' }"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>mdi-heart</v-icon>
+            </v-btn>
+          </template>
+          <span>INICIO</span>
+        </v-tooltip>
+          
+        </div>
+        
+        <!-- BTN FINAL -->
+
         <h1 class="tituloTicket">
           <span class="modificacionTicket">TI</span>CKETS
         </h1>
@@ -74,13 +98,14 @@
       <!-- FIN DEL DIALOG -->
 
       <v-row>
+        <!-- INICIO DE LA COL DE CARD TICKET -->
         <v-col
           cols="12"
           sm="6"
           md="6"
           lg="3"
-          v-for="(ticket, index) in tickets"
-          :key="index"
+          v-for="ticket in tickets"
+          :key="ticket.id"
         >
           <v-card
             color="indigo lighten-4"
@@ -111,7 +136,7 @@
                 {{ ticket.id }}
               </div>
 
-              <div class="text-justify">
+              <div>
                 {{ ticket.data.descripcion }}
               </div>
             </v-card-text>
@@ -136,13 +161,20 @@
               </v-chip-group>
             </v-card-text>
 
-            <v-card-actions>
-              <v-btn color="deep-purple lighten-2" text>
-                COMPRAR
-              </v-btn>
-            </v-card-actions>
+            <!-- BTN DE COMPRAR PARAMS DINAMICA -->
+
+            <div>
+              <router-link :to="`/tickets/${ticket.id}`">
+                <v-btn @click="comprar(ticket.id)">
+                  Comprar
+                </v-btn>
+              </router-link>
+            </div>
+
+            <!-- FINAL BTN DE COMPRAR PARAMS DINAMICA -->
           </v-card>
         </v-col>
+        <!-- FINAL DE LA COL DE CARD TICKET -->
       </v-row>
     </v-container>
   </div>
@@ -157,7 +189,7 @@ export default {
     return {
       loading: false,
       selection: 1,
-      dialog: true,
+      dialog: false,
     };
   },
   mounted() {
@@ -166,6 +198,9 @@ export default {
   methods: {
     accionarNormativa() {
       this.dialog = !this.dialog;
+    },
+    comprar(id) {
+      alert(`Numero de ticket: ${id}`);
     },
   }, //final de methods
   computed: {
@@ -176,6 +211,7 @@ export default {
 
 <style lang="scss" scoped>
 .encabezado {
+  
   .tituloTicket {
     text-align: center;
     font-weight: 900;
@@ -208,5 +244,10 @@ export default {
 }
 .tituloEntrada {
   color: #f48fb1;
+}
+
+.btnInicio{
+  display: flex;
+  justify-content: center;
 }
 </style>
