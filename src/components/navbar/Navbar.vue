@@ -239,7 +239,7 @@ export default {
   methods: {
     crearUsuario() {
       this.dialog = false;
-      alert(this.usuario);
+      alert("Gracias por Registrarse");
       this.addUsuario(this.usuario);
     },
     ...mapActions(["addUsuario"]),

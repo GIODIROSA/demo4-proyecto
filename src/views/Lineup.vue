@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bannerLineUp">
-      <Slider />
+      <Slider :sliderImagen = "sliderImagen" />
     </div>
     <v-container>
       <v-row>
@@ -28,6 +28,7 @@ export default {
   },
   computed: {
     ...mapState(["artistas"]),
+    ...mapState("Imagenes", ["sliderImagen"]),
   },
   components: {
     CardLineup,
@@ -37,7 +38,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .titleDj {
   height: 15.625rem;
   display: flex;

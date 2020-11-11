@@ -1,27 +1,37 @@
 <template>
-  <div>
-    <v-carousel>
-      <v-carousel-item
-        v-for="(item, i) in imagenes"
-        :key="i"
-        :src="item"
-        reverse-transition="fade-transition"
-        transition="fade-transition"
-      ></v-carousel-item>
-    </v-carousel>
+  <div class="slider">
+    <div
+      v-for="(imagen, index) in sliderImagen"
+      :key="index"
+      :style="`background-image:url(${imagen})`"
+      class="sliderContenido"
+    ></div>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
 export default {
+  name: "Slider",
+  props: ["sliderImagen"],
   data() {
     return {};
   },
-  computed: {
-    ...mapState("Imagenes", ["imagenes"]),
-  },
+  computed: {},
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.slider {
+  height: 100vh;
+  overflow: scroll;
+  background-color: beige;
+  scroll-snap-type: y mandatory;
+  .sliderContenido {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    scroll-snap-align: center;
+  }
+}
+</style>
