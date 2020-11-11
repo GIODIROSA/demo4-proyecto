@@ -6,7 +6,9 @@ import vuetify from "./plugins/vuetify";
 import firebase from "firebase";
 
 //SWEET ALERT IMPORT
+import VueSwal from "vue-swal";
 
+Vue.use(VueSwal);
 // FINAL SWEET ALERT
 
 Vue.config.productionTip = false;
