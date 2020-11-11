@@ -6,25 +6,24 @@
         <!-- BTN INICIO -->
         <div class="btnInicio">
           <v-tooltip bottom>
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn
-              icon
-              dark
-              small
-              class="ma-2"
-              color="amber darken-1"
-              :to="{ name: 'Inicio' }"
-              v-bind="attrs"
-              v-on="on"
-            >
-              <v-icon>mdi-heart</v-icon>
-            </v-btn>
-          </template>
-          <span>INICIO</span>
-        </v-tooltip>
-          
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                icon
+                dark
+                small
+                class="ma-2"
+                color="amber darken-1"
+                :to="{ name: 'Inicio' }"
+                v-bind="attrs"
+                v-on="on"
+              >
+                <v-icon>mdi-heart</v-icon>
+              </v-btn>
+            </template>
+            <span>INICIO</span>
+          </v-tooltip>
         </div>
-        
+
         <!-- BTN FINAL -->
 
         <h1 class="tituloTicket">
@@ -200,7 +199,7 @@ export default {
       this.dialog = !this.dialog;
     },
     comprar(id) {
-      alert(`Numero de ticket: ${id}`);
+      this.$swal(`Numero de ticket: ${id}`, "Eres lo máximo!", "success");
     },
   }, //final de methods
   computed: {
@@ -211,7 +210,6 @@ export default {
 
 <style lang="scss" scoped>
 .encabezado {
-  
   .tituloTicket {
     text-align: center;
     font-weight: 900;
@@ -246,7 +244,7 @@ export default {
   color: #f48fb1;
 }
 
-.btnInicio{
+.btnInicio {
   display: flex;
   justify-content: center;
 }

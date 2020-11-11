@@ -43,6 +43,7 @@ const routes = [
   {
     path: "/tickets/:id",
     name: "Carrito",
+    props: true,
     component: () =>
       import(/* webpackChunkName: "carrito" */ "../views/Carrito.vue"),
   },
@@ -109,13 +110,13 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   let usuario = firebase.auth().currentUser;
-  // console.log(usuario);
+  console.log(usuario);
   let autorizacion = to.matched.some((record) => record.meta.autentificado);
 
   if (autorizacion && !usuario) {
     next("login");
   } else if (!autorizacion && usuario) {
-    next("inicio");
+    next();
   } else {
     next();
   }

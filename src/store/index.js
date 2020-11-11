@@ -89,15 +89,18 @@ export default new Vuex.Store({
   },
   actions: {
     // CREAR USUARIO---COMPONENTE NAVBAR
-   async addUsuario({ commit }, usuario) {
+    addUsuario({ commit }, usuario) {
       try {
-       await firebase
+        firebase
           .auth()
           .createUserWithEmailAndPassword(usuario.email, usuario.password)
           .then(() => {
             const user = usuario;
             delete user.password;
-            firebase.firestore().collection("usuarioCreado").add(usuario);
+            firebase
+              .firestore()
+              .collection("usuarioCreado")
+              .add(usuario);
           });
       } catch (error) {
         console.log("Tienes un error en Usuario: ", error);
