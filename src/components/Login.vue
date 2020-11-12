@@ -102,7 +102,8 @@ export default {
         .signInWithEmailAndPassword(this.usuario, this.contrasena)
         .then(
           (user) => {
-            alert("usuario conectado"), this.$router.push({ name: "LineUp" });
+            this.$swal("Gracias!", "Usuario Conectado!", "success"),
+              this.$router.push({ name: "LineUp" });
           },
           (error) => console.error(error)
         );
@@ -125,6 +126,7 @@ export default {
             photoUrl: result.user.providerData[0].photoURL,
             email: result.user.email,
           };
+          
           this.createUser(user);
         })
         .catch((error) => {

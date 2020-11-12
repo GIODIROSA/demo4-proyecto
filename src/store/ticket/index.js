@@ -13,12 +13,7 @@ export default {
   },
   getters: {
     busqueda_ticket: (state) => (idTicket) => {
-      alert(idTicket);
       return state.tickets.filter((t) => t.id === idTicket);
-      // return state.tickets.filter((t)=> {t.id == idTicket})
-      // return state.tickets.find((t) => {
-      //   t.id === idTicket;
-      // });
     },
   },
   mutations: {

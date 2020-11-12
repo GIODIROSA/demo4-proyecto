@@ -16,6 +16,8 @@ export default {
     },
   },
   actions: {
+    // CONCIERTO
+
     obtenerImagenes({ commit }) {
       let storageRef = firebase.storage().ref("concierto");
       storageRef.listAll().then((result) => {
@@ -28,6 +30,8 @@ export default {
         commit("OBTENER_IMAGENES", imagenes);
       });
     },
+
+    // SILDER
 
     obtenerImagenesSlider({ commit }) {
       let storageRef = firebase.storage().ref("slider");

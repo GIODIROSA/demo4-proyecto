@@ -1,11 +1,14 @@
 <template>
   <nav>
     <v-toolbar dense elevation="1">
-      <v-toolbar-title>
-        <h5 class="tituloEvento text-caption font-weight-black">
-          AUFIELDS <span class="modificacionTituloEvento">2021</span>
-        </h5>
-      </v-toolbar-title>
+      <router-link class="linkRouterTitle" :to="{ name: 'Inicio' }">
+        <v-toolbar-title>
+          <h5 class="tituloEvento text-caption font-weight-black">
+            AUFIELDS <span class="modificacionTituloEvento">2021</span>
+          </h5>
+        </v-toolbar-title>
+      </router-link>
+
       <v-spacer></v-spacer>
 
       <!-- INICIAR SESION BTN -->
@@ -220,14 +223,14 @@ export default {
   methods: {
     crearUsuario() {
       this.dialog = false;
-      alert("Gracias por Registrarse");
+      this.$swal("Gracias!", "Te registraste!", "success");
       this.addUsuario(this.usuario);
     },
     ...mapActions(["addUsuario"]),
 
     // logOut
     logOut() {
-      alert("Usuario se ha desconectado");
+      this.$swal("Vuelve pronto!", "Usuario se desconectado!", "success");
       firebase
         .auth()
         .signOut()
@@ -238,10 +241,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.linkRouterTitle {
+  text-decoration: none;
+}
 .tituloCrearUsuario {
   color: #ab47bc;
 }
 .tituloEvento {
+  text-decoration-line: none;
   color: #40c4ff;
 }
 .modificacionTituloEvento {

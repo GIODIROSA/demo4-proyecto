@@ -22,7 +22,7 @@ export default {
   }, //final de computed
   methods: {
     comprar(id) {
-      alert(`Numero de ticket: ${id}`);
+      this.$swal("Numero de ticket: ", "id", "success");
     },
   },
 };

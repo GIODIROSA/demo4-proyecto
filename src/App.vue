@@ -49,6 +49,10 @@ export default {
 * {
   font-family: "Montserrat", sans-serif;
 }
+html,body{
+  font-family: "Montserrat", sans-serif;
+
+}
 
 .barraColorFooter {
   background: #ff0000;
