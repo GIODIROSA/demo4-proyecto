@@ -1,7 +1,5 @@
 <template>
   <div class="bannercarrito">
-    <ParallaxCarrito />
-
     <v-container>
       <v-row>
         <v-col
@@ -15,19 +13,50 @@
           <v-card class="mx-auto yellow accent-4" max-width="500">
             <v-img :src="ticket.data.imagen" height="400px"></v-img>
 
-            <v-card-title>
+            <v-card-title class="tipoTicketSeleccionado font-weight-bold">
               {{ ticket.data.tipo }}
             </v-card-title>
 
-            <v-card-subtitle>
-              {{ ticket.data.area }}
+            <v-card-subtitle class="lime my-2 py-4">
+              Area correspondiente:
+              <span class="areaSeleccionada font-weight-bold">{{
+                ticket.data.area
+              }}</span>
             </v-card-subtitle>
+
+            <v-divider></v-divider>
 
             <v-spacer></v-spacer>
 
-            <v-card-title class="precioTicketSeleccionado d-flex justify-end">
-              Valor: $ {{ ticket.data.precio }}
-            </v-card-title>
+            <div class="valorTicketSeleccionado">
+              <v-card-subtitle>
+                Valor de cada ticket:
+              </v-card-subtitle>
+              <v-card-title
+                class="precioTicketSeleccionado d-flex justify-end amber accent-1"
+              >
+                Valor: $ {{ ticket.data.precio }}
+              </v-card-title>
+            </div>
+
+            <v-divider></v-divider>
+
+            <v-card-subtitle>
+              Elegir la cantidad de Ticket
+            </v-card-subtitle>
+            <div class="contadorTicket amber darken-1 d-flex justify-center">
+              <v-btn small class="ma-5" fab dark color="orange lighten-1">
+                <v-icon dark>
+                  mdi-minus
+                </v-icon>
+              </v-btn>
+
+              <v-btn small class="ma-5" fab dark color="orange lighten-1">
+                <v-icon dark>
+                  mdi-plus
+                </v-icon>
+              </v-btn>
+            </div>
 
             <v-card-actions>
               <v-btn color="orange accent-4" text>
@@ -77,16 +106,29 @@
             </v-card-subtitle>
 
             <v-divider></v-divider>
+            <v-card-title>
+              Cantidad de Ticket:
+            </v-card-title>
+
+            <v-divider></v-divider>
+            <v-card-title>
+              Total: Numeroestatico
+            </v-card-title>
+
+            <v-divider></v-divider>
 
             <v-card-text class="NotaCarrito">
-              (Impuestos Incluidos)
-              <br />
-              Opciones de financiación
-              <br />
-              Hasta 6x $11.495.00 más interés
-              <br />
-              Bancario
+              {{ impuesto }}
             </v-card-text>
+
+            <v-divider></v-divider>
+
+            <v-card-subtitle>
+              <v-btn block>
+                Pagar
+              </v-btn>
+            </v-card-subtitle>
+            
           </v-card>
         </v-col>
 
@@ -97,13 +139,10 @@
 </template>
 
 <script>
-import ParallaxCarrito from "@/components/carrito/ParallaxCarrito.vue";
+import { mapState } from "vuex";
 export default {
   name: "CardCarrito",
   props: ["obtenerTicket"],
-  components: {
-    ParallaxCarrito,
-  },
   data() {
     return {
       show: false,
@@ -115,10 +154,8 @@ export default {
       },
     };
   },
-  mounted() {
-      this.seleccionTicket();
-  },
   computed: {
+    ...mapState("Carrito", ["impuesto"]),
     seleccionTicket() {
       return this.obtenerTicket.forEach((el) => {
         this.ticketSeleccionado.tipoTicket = el.data.tipo;
@@ -127,15 +164,25 @@ export default {
       });
     },
   },
+  //   mounted() {
+  //     this.seleccionTicket();
+  //   },
 };
 </script>
 
 <style lang="scss" scoped>
+.tipoTicketSeleccionado {
+  color: #6a1b9a;
+  font-size: 30px;
+}
+.areaSeleccionada {
+  color: #ff5722;
+}
 .precioTicketSeleccionado {
-  color: #78909C;
+  color: #78909c;
 }
 .descripcionTicketSeleccionado {
-  color: #FF5722;
+  color: #ff5722;
 }
 .tituloBoleta {
   color: #aeea00;

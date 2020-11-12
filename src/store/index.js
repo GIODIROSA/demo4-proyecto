@@ -8,6 +8,7 @@ import Contenidos from "../store/contenido";
 import Tickets from "../store/ticket";
 import Imagenes from "../store/imagenes";
 import Travel from "../store/travel";
+import Carrito from "../store/carrito";
 
 Vue.use(Vuex);
 
@@ -128,5 +129,6 @@ export default new Vuex.Store({
     Tickets,
     Imagenes,
     Travel,
+    Carrito,
   },
 });
