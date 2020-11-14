@@ -5,17 +5,21 @@
         <img class="imgbanner" src="../assets/img/tickets02.png" alt="" />
       </div>
     </section>
+    <LineaTiempo :ticketsDisponibles="ticketsDisponibles" />
     <CardTickets :ticketsDisponibles="ticketsDisponibles" />
   </div>
 </template>
 
 <script>
 import CardTickets from "@/components/ticket/CardTickets.vue";
+import LineaTiempo from "@/components/ticket/LineaTiempo.vue";
+
 import { mapGetters, mapState } from "vuex";
 export default {
   name: "Tickets",
   components: {
     CardTickets,
+    LineaTiempo,
   },
   data() {
     return {};

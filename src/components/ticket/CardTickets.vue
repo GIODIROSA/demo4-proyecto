@@ -122,43 +122,25 @@
 
             <v-img height="450" :src="ticket.data.imagen"></v-img>
 
-            <v-card-title>{{ ticket.data.tipo }}</v-card-title>
+            <v-card-title class="tituloTipo font-weight-bold cyan accent-3">{{
+              ticket.data.tipo
+            }}</v-card-title>
 
             <v-card-text>
               <v-row align="center" class="mx-0"> </v-row>
 
-              <div class="my-4 subtitle-1">
-                {{ ticket.data.area }}
+              <div class="pt-2 subtitle-1 text-caption">
+                Selección de área: {{ ticket.data.area }}
               </div>
 
               <div class="my-4 subtitle-1">
                 {{ ticket.id }}
-              </div>
-
-              <div>
-                {{ ticket.data.descripcion }}
               </div>
             </v-card-text>
 
             <v-divider class="mx-4"></v-divider>
 
             <v-card-title>{{ ticket.data.fecha }}</v-card-title>
-
-            <v-card-text>
-              <v-chip-group
-                v-model="selection"
-                active-class="deep-purple accent-4 white--text"
-                column
-              >
-                <v-chip>5:30PM</v-chip>
-
-                <v-chip>7:30PM</v-chip>
-
-                <v-chip>8:00PM</v-chip>
-
-                <v-chip>9:00PM</v-chip>
-              </v-chip-group>
-            </v-card-text>
 
             <!-- BTN DE COMPRAR PARAMS DINAMICA -->
 
@@ -244,6 +226,10 @@ export default {
   color: #f48fb1;
 }
 
+// TICKET
+.tituloTipo {
+  color: #e0f7fa;
+}
 .btnInicio {
   display: flex;
   justify-content: center;
