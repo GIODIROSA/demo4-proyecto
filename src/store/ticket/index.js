@@ -12,6 +12,11 @@ export default {
       "Para evitar comprar un boleto falso o cancelado, No compre a un agente de venta de entradas no oficial, No compre en sitios de subastas en Internet, No compre de otra persona o promocione, ya sea por adelantado en su ciudad natal o fuera del evento.",
   },
   getters: {
+    ticketsOnStock(state) {
+      return state.tickets.filter((ticket) => {
+        return ticket.data.stock > 0;
+      });
+    },
     busqueda_ticket: (state) => (idTicket) => {
       return state.tickets.filter((t) => t.id === idTicket);
     },

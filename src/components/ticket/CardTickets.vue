@@ -103,7 +103,7 @@
           sm="6"
           md="6"
           lg="3"
-          v-for="ticket in tickets"
+          v-for="ticket in ticketsDisponibles"
           :key="ticket.id"
         >
           <v-card
@@ -183,7 +183,7 @@
 import { mapState } from "vuex";
 export default {
   name: "CardTickets",
-  props: ["tickets"],
+  props: ["ticketsDisponibles"],
   data() {
     return {
       loading: false,
