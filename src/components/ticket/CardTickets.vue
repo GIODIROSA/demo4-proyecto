@@ -107,7 +107,7 @@
           :key="ticket.id"
         >
           <v-card
-            color="indigo lighten-4"
+            :color="ticket.data.color"
             :loading="loading"
             class="mx-auto my-12"
             max-width="474"
@@ -129,24 +129,42 @@
             <v-card-text>
               <v-row align="center" class="mx-0"> </v-row>
 
-              <div class="pt-2 subtitle-1 text-caption">
+              <div class="py-3 subtitle-1 text-caption font-weight-medium">
                 Selección de área: {{ ticket.data.area }}
               </div>
 
-              <div class="my-4 subtitle-1">
-                {{ ticket.id }}
+              <v-divider></v-divider>
+
+              <div class="my-4 pa-2 subtitle-1 text-caption">
+                <span class="modificacionArtista font-weight-bold">
+                  Presentación de artistas:
+                </span>
+                {{ ticket.data.artistas }}
               </div>
             </v-card-text>
 
             <v-divider class="mx-4"></v-divider>
 
-            <v-card-title>{{ ticket.data.fecha }}</v-card-title>
+            <v-card-text
+              ><span class="modificacionFecha font-weight-bold">{{
+                ticket.data.fecha
+              }}</span></v-card-text
+            >
 
             <!-- BTN DE COMPRAR PARAMS DINAMICA -->
 
             <div>
-              <router-link :to="`/tickets/${ticket.id}`">
-                <v-btn @click="comprar(ticket.id)">
+              <router-link
+                class="routerLinkComprar ma-2"
+                :to="`/tickets/${ticket.id}`"
+              >
+                <v-btn
+                  @click="comprar(ticket.id)"
+                  block
+                  depressed
+                  dark
+                  color="indigo accent-1"
+                >
                   Comprar
                 </v-btn>
               </router-link>
@@ -233,5 +251,14 @@ export default {
 .btnInicio {
   display: flex;
   justify-content: center;
+}
+.routerLinkComprar {
+  text-decoration: none;
+}
+.modificacionArtista {
+  color: #e91e63;
+}
+.modificacionFecha {
+  color: #d500f9;
 }
 </style>
