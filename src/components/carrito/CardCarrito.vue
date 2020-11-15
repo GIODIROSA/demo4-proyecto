@@ -128,18 +128,21 @@
                 Pagar
               </v-btn>
             </v-card-subtitle>
-            
           </v-card>
         </v-col>
 
         <!-- FINAL DE CARD BOLETA DE COMPRA -->
       </v-row>
+
+      <v-btn @click="seleccionado">
+        Prueba
+      </v-btn>
     </v-container>
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
   name: "CardCarrito",
   props: ["obtenerTicket"],
@@ -151,8 +154,15 @@ export default {
         tipoTicket: "",
         areaTicket: "",
         idTicketSeleccionado: "",
+        stockTicket: "",
       },
     };
+  },
+  methods: {
+    ...mapActions("Tickets"["addTicketCarrito"]),
+    seleccionado() {
+      this.addTicketCarrito(this.obtenerTicket);
+    },
   },
   computed: {
     ...mapState("Carrito", ["impuesto"]),
@@ -160,6 +170,7 @@ export default {
       return this.obtenerTicket.forEach((el) => {
         this.ticketSeleccionado.tipoTicket = el.data.tipo;
         this.ticketSeleccionado.areaTicket = el.data.area;
+        this.ticketSeleccionado.stockTicket = el.data.stock;
         this.ticketSeleccionado.idTicketSeleccionado = el.id;
       });
     },

@@ -76,6 +76,27 @@
       </v-tooltip>
 
       <!-- FINAL DE CERRAR SESION BTN -->
+      <!-- CARRITO BTN -->
+
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            dark
+            small
+            class="ma-2"
+            color="light-green accent-3"
+            v-bind="attrs"
+            v-on="on"
+            :to="{ name: 'Tickets' }"
+          >
+            <v-icon>mdi-shopping-outline</v-icon>
+          </v-btn>
+        </template>
+        <span>Carrito Ticket</span>
+      </v-tooltip>
+
+      <!-- FINAL DE CARRITO BTN -->
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"> </v-app-bar-nav-icon>
     </v-toolbar>

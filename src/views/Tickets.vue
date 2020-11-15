@@ -14,7 +14,7 @@
 import CardTickets from "@/components/ticket/CardTickets.vue";
 import LineaTiempo from "@/components/ticket/LineaTiempo.vue";
 
-import { mapGetters, mapState } from "vuex";
+import { mapActions, mapGetters, mapState } from "vuex";
 export default {
   name: "Tickets",
   components: {
@@ -24,6 +24,7 @@ export default {
   data() {
     return {};
   },
+
   computed: {
     ...mapState("Tickets", ["tickets"]),
     ...mapGetters("Tickets", ["ticketsOnStock"]),

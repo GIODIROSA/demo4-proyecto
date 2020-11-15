@@ -4,6 +4,7 @@ export default {
   namespaced: true,
   state: {
     tickets: [],
+    carritoStock: [],
     normativas:
       "Aufields es un evento para mayores de 18 años y operará el esquema Challenge 21 con pulseras entregadas a los clientes una vez que hayan proporcionado una prueba satisfactoria de edad.",
     identificacion:
@@ -17,16 +18,29 @@ export default {
         return ticket.data.stock > 0;
       });
     },
-    busqueda_ticket: (state) => (idTicket) => {
-      return state.tickets.filter((t) => t.id === idTicket);
+    // El carrito busca y consume la data que fue transformada por un getters que evalua si hay o no stock de ticket
+    busqueda_ticket: (state, getters) => (idTicket) => {
+      return getters.ticketsOnStock.filter((t) => t.id === idTicket);
     },
   },
   mutations: {
     OBTENER_TICKETS(state, payload) {
       state.tickets = payload;
     },
+    AÑADIR_CARRITO(state, ticket) {
+      console.log(ticket);
+      // state.carritoStock = ticketSeleccionado;
+    },
   },
   actions: {
+    addTicketCarrito({ commit }, ticket) {
+      commit("AÑADIR_CARRITO", ticket);
+      // ¿Hay inventario de ese producto?, si ya fue seleccionado porque hay.
+      // ¿Existe ya en el carrito?, si ya fue seleccionado dicho ticket
+      // ¿si es así, añadir uno más a la compra
+      // si no es así, añadir el producto al carrito
+      // Independientemente, restar el inventario de ese producto
+    },
     async obtenerDataTickets({ commit }) {
       try {
         await firebase

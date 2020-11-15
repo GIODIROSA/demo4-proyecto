@@ -8,6 +8,16 @@
     </div>
 
     <CardCarrito :obtenerTicket="obtenerTicket" />
+
+    <div>
+      <v-container>
+        <v-row>
+          <v-btn dark block color="red accent-1" :to="{ name: 'Tickets' }">
+            Volver a Tickets
+          </v-btn>
+        </v-row>
+      </v-container>
+    </div>
   </div>
 </template>
 
@@ -28,7 +38,8 @@ export default {
     ...mapState("Carrito", ["info"]),
     ...mapGetters("Tickets", ["busqueda_ticket"]),
     obtenerTicket() {
-      return this.busqueda_ticket(this.id);
+      let id = this.id
+      return this.busqueda_ticket(id);
     },
   },
   methods: {
