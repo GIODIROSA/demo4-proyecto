@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import createPersistedState from "vuex-persistedstate";
 import firebase from "firebase";
 
 // modules
@@ -131,4 +132,6 @@ export default new Vuex.Store({
     Travel,
     Carrito,
   },
+
+  plugins: [createPersistedState()],
 });

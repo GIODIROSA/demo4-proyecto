@@ -133,10 +133,6 @@
 
         <!-- FINAL DE CARD BOLETA DE COMPRA -->
       </v-row>
-
-      <v-btn @click="seleccionado">
-        Prueba
-      </v-btn>
     </v-container>
   </div>
 </template>
@@ -159,9 +155,9 @@ export default {
     };
   },
   methods: {
-    ...mapActions("Tickets"["addTicketCarrito"]),
+    ...mapActions("Tickets", ["addTicketCarrito"]),
     seleccionado() {
-      this.addTicketCarrito(this.obtenerTicket);
+      this.addTicketCarrito(this.ticketSeleccionado);
     },
   },
   computed: {
@@ -175,9 +171,9 @@ export default {
       });
     },
   },
-  //   mounted() {
-  //     this.seleccionTicket();
-  //   },
+  mounted() {
+    this.seleccionTicket;
+  },
 };
 </script>
 

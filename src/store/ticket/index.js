@@ -29,7 +29,7 @@ export default {
     },
     AÑADIR_CARRITO(state, ticket) {
       console.log(ticket);
-      // state.carritoStock = ticketSeleccionado;
+      state.carritoStock = ticket;
     },
   },
   actions: {
