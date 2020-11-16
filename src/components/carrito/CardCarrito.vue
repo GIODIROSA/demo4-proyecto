@@ -26,6 +26,14 @@
 
             <v-divider></v-divider>
 
+            <v-card-subtitle class="blue lighten-4 my-2 py-4">
+              Artistas:
+              <span class="areaSeleccionada font-weight-bold">{{
+                ticket.data.artistas
+              }}</span>
+            </v-card-subtitle>
+            <v-divider></v-divider>
+
             <v-spacer></v-spacer>
 
             <div class="valorTicketSeleccionado">
@@ -44,18 +52,20 @@
             <v-card-subtitle>
               Elegir la cantidad de Ticket
             </v-card-subtitle>
-            <div class="contadorTicket amber darken-1 d-flex justify-center">
-              <v-btn small class="ma-5" fab dark color="orange lighten-1">
-                <v-icon dark>
-                  mdi-minus
-                </v-icon>
-              </v-btn>
-
-              <v-btn small class="ma-5" fab dark color="orange lighten-1">
-                <v-icon dark>
-                  mdi-plus
-                </v-icon>
-              </v-btn>
+            <div class="contadorTicket red accent-3 d-flex justify-center py-3">
+              <v-select
+                class="ma-4"
+                @change="calcular"
+                v-model="numeroEntradas"
+                :items="entradas"
+                label="Agregar cantidad de ticket"
+                dense
+                outlined
+              ></v-select>
+              <v-card-subtitle
+                >Solo puedes comprar 5 entradas como número
+                máximo</v-card-subtitle
+              >
             </div>
 
             <v-card-actions>
@@ -86,7 +96,9 @@
           </v-card>
         </v-col>
         <!-- FINAL DE CARD TICKET -->
+
         <!-- INICIO DE CARD BOLETA DE COMPRA -->
+
         <v-col cols="12" sm="6" md="4" lg="4">
           <v-card class="mx-auto" max-width="700">
             <v-card-title class="tituloBoleta font-weight-bold">
@@ -106,14 +118,21 @@
             </v-card-subtitle>
 
             <v-divider></v-divider>
-            <v-card-title>
-              Cantidad de Ticket:
-            </v-card-title>
+
+            <v-card-subtitle class="text-caption font-weight-ligh">
+              <span class="modificacionArtista font-weight-bold"
+                >Artistas:</span
+              >
+              {{ ticketSeleccionado.artistasTicket }}
+            </v-card-subtitle>
 
             <v-divider></v-divider>
             <v-card-title>
-              Total: Numeroestatico
+              Cantidad de Ticket: {{ numeroEntradas }}
             </v-card-title>
+
+            <v-divider></v-divider>
+            <v-card-title> Total: $ {{ calcular }} </v-card-title>
 
             <v-divider></v-divider>
 
@@ -134,11 +153,14 @@
         <!-- FINAL DE CARD BOLETA DE COMPRA -->
       </v-row>
     </v-container>
+    <pre>
+      {{ $data }}
+    </pre>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions, mapGetters, mapState } from "vuex";
 export default {
   name: "CardCarrito",
   props: ["obtenerTicket"],
@@ -146,11 +168,16 @@ export default {
     return {
       show: false,
       tituloBoleta: "Tu carrito AUFIELDS",
+      numeroEntradas: null,
+      entradas: [1, 2, 3, 4, 5],
+      //objeto de ticket seleccionado
       ticketSeleccionado: {
         tipoTicket: "",
         areaTicket: "",
         idTicketSeleccionado: "",
         stockTicket: "",
+        artistasTicket: "",
+        precioticket: "",
       },
     };
   },
@@ -159,14 +186,55 @@ export default {
     seleccionado() {
       this.addTicketCarrito(this.ticketSeleccionado);
     },
+
+    calcular() {
+      let valor = this.ticketSeleccionado.precioticket;
+      let cantidadEntrada = this.numeroEntradas;
+      switch (this.numeroEntradas) {
+        case this.numeroEntradas == 1:
+          alert("que algo pase");
+          // valor = 150000;
+          break;
+        case this.numeroEntradas == 2:
+          alert("probando 1");
+          // valor = 300000;
+          break;
+        case this.numeroEntradas == 3:
+          alert("hola");
+          // valor = 450000;
+          break;
+        case this.numeroEntradas == 4:
+          alert("probando 3");
+
+          // valor = 600000;
+          break;
+        case this.numeroEntradas == 5:
+          alert("probando 4");
+
+          // valor = 750000;
+          break;
+
+        default:
+          console.log("No esta funcionando");
+          break;
+      }
+    },
   },
   computed: {
     ...mapState("Carrito", ["impuesto"]),
+    ...mapGetters("Tickets", ["cantidadEntrada"]),
+
+    cantidadEntradaSeleccionada() {
+      return this.cantidadEntrada(this.numeroEntradas);
+    },
+
     seleccionTicket() {
       return this.obtenerTicket.forEach((el) => {
         this.ticketSeleccionado.tipoTicket = el.data.tipo;
         this.ticketSeleccionado.areaTicket = el.data.area;
         this.ticketSeleccionado.stockTicket = el.data.stock;
+        this.ticketSeleccionado.artistasTicket = el.data.artistas;
+        this.ticketSeleccionado.precioticket = el.data.precio;
         this.ticketSeleccionado.idTicketSeleccionado = el.id;
       });
     },
@@ -196,5 +264,8 @@ export default {
 }
 .NotaCarrito {
   color: #e0e0e0;
+}
+.modificacionArtista {
+  color: #ff1744;
 }
 </style>

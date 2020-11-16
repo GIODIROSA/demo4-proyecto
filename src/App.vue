@@ -28,17 +28,17 @@ export default {
     ...mapActions("Areas", ["obtenerAreasConcierto"]),
     ...mapActions("Contenidos", ["obtenerData"]),
     ...mapActions("Tickets", ["obtenerDataTickets"]),
+    ...mapActions("Tickets", ["obtenerDataNormativas"]),
     ...mapActions("Imagenes", ["obtenerImagenes", "obtenerImagenesSlider"]),
     ...mapActions("Travel", ["obtenerTravel"]),
     ...mapActions("Faqs", ["obtenerFaqs"]),
-
-    
   },
   created() {
     this.getDataArtista();
     this.obtenerAreasConcierto();
     this.obtenerData();
     this.obtenerDataTickets();
+    this.obtenerDataNormativas();
     this.obtenerImagenes();
     this.obtenerImagenesSlider();
     this.obtenerTravel();
@@ -53,9 +53,9 @@ export default {
 * {
   font-family: "Montserrat", sans-serif;
 }
-html,body{
+html,
+body {
   font-family: "Montserrat", sans-serif;
-
 }
 
 .barraColorFooter {

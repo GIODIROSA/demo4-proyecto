@@ -5,6 +5,7 @@ export default {
   state: {
     tickets: [],
     carritoStock: [],
+    normativasConcierto: [],
     normativas:
       "Aufields es un evento para mayores de 18 años y operará el esquema Challenge 21 con pulseras entregadas a los clientes una vez que hayan proporcionado una prueba satisfactoria de edad.",
     identificacion:
@@ -22,6 +23,9 @@ export default {
     busqueda_ticket: (state, getters) => (idTicket) => {
       return getters.ticketsOnStock.filter((t) => t.id === idTicket);
     },
+    cantidadEntrada: (state) => (numeroEntrada) => {
+      return console.log(numeroEntrada);
+    },
   },
   mutations: {
     OBTENER_TICKETS(state, payload) {
@@ -30,6 +34,9 @@ export default {
     AÑADIR_CARRITO(state, ticket) {
       console.log(ticket);
       state.carritoStock = ticket;
+    },
+    OBTENER_NORMATIVA(state, payload) {
+      state.normativasConcierto = payload;
     },
   },
   actions: {
@@ -58,6 +65,25 @@ export default {
           });
       } catch (error) {
         console.log("el error en el contenido es:", error);
+      }
+    },
+
+    async obtenerDataNormativas({ commit }) {
+      try {
+        await firebase
+          .firestore()
+          .collection("normativas")
+          .onSnapshot((snapshot) => {
+            let normativa = [];
+            snapshot.forEach((doc) => {
+              normativa.push({
+                data: doc.data(),
+              });
+            });
+            commit("OBTENER_NORMATIVA", normativa);
+          });
+      } catch (error) {
+        console.log("el error de normativa es: ", error);
       }
     },
   },
