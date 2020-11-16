@@ -30,6 +30,9 @@ export default {
     ...mapActions("Tickets", ["obtenerDataTickets"]),
     ...mapActions("Imagenes", ["obtenerImagenes", "obtenerImagenesSlider"]),
     ...mapActions("Travel", ["obtenerTravel"]),
+    ...mapActions("Faqs", ["obtenerFaqs"]),
+
+    
   },
   created() {
     this.getDataArtista();
@@ -39,6 +42,7 @@ export default {
     this.obtenerImagenes();
     this.obtenerImagenesSlider();
     this.obtenerTravel();
+    this.obtenerFaqs();
   },
 };
 </script>

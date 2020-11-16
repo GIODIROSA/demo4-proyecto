@@ -22,17 +22,22 @@
         </v-col>
       </v-row>
       <!-- RESPUESTAS -->
-         <div v-for="(ques, index) in questionAvailable" :key="index">
-      <p class="text-justify font-weight-light my-10">{{ ques.respuesta }}</p>
-    </div>
+      <div
+        class="lime pa-2"
+        v-for="(ques, index) in questionDisponible"
+        :key="index"
+      >
+        <p class="text-justify font-weight-light my-10">
+          {{ ques.data.respuesta }}
+        </p>
+      </div>
     </v-container>
- 
   </div>
 </template>
 
 <script>
 import ImagenFaqs from "@/components/faqs/ImagenFaqs.vue";
-import { mapState } from "vuex";
+import { mapGetters, mapState } from "vuex";
 export default {
   name: "Faqs",
   components: {
@@ -50,24 +55,24 @@ export default {
   methods: {
     setTopTick() {
       this.topTick.forEach((e) => {
-        this.interrogante.push(e.pregunta);
+        this.interrogante.push(e.data.pregunta);
       });
     },
   },
   computed: {
-    ...mapState(["topTick"]),
+    ...mapState("Faqs", ["topTick"]),
+    ...mapGetters("Faqs", ["questionAvailable"]),
 
-    questionAvailable() {
-      return this.$store.getters.questionAvailable(this.question);
+    questionDisponible() {
+      return this.questionAvailable(this.question);
     },
   },
 };
 </script>
 
 <style scoped>
-div > *{
+div > * {
   font-family: "Montserrat", sans-serif;
-
 }
 .selectPreguntas {
   display: flex;
