@@ -90,10 +90,10 @@
             v-on="on"
             :to="{ name: 'Tickets' }"
           >
-            <v-icon>mdi-shopping-outline</v-icon>
+            <v-icon>mdi-ticket</v-icon>
           </v-btn>
         </template>
-        <span>Carrito Ticket</span>
+        <span>Comprar Ticket</span>
       </v-tooltip>
 
       <!-- FINAL DE CARRITO BTN -->

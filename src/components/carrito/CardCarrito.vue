@@ -130,9 +130,7 @@
             <v-card-title> Cantidad de Ticket: {{ cantidad }} </v-card-title>
 
             <v-divider></v-divider>
-            <v-card-title>
-              Total: $ {{ ticketSeleccionado.precioticket }}
-            </v-card-title>
+            <v-card-title> Total: $ {{ total }} </v-card-title>
 
             <v-divider></v-divider>
 
@@ -144,7 +142,7 @@
 
             <v-card-subtitle>
               <v-btn block>
-                Pagar
+                Comprar
               </v-btn>
             </v-card-subtitle>
           </v-card>
@@ -209,6 +207,12 @@ export default {
         this.ticketSeleccionado.precioticket = el.data.precio;
         this.ticketSeleccionado.idTicketSeleccionado = el.id;
       });
+    },
+
+    total() {
+      const precio = this.ticketSeleccionado.precioticket;
+      const cantidad = this.cantidad;
+      return precio * cantidad;
     },
   },
   mounted() {
