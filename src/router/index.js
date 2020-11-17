@@ -82,6 +82,18 @@ const routes = [
     ],
   },
   {
+    path: "/editar/:id",
+    name: "Editar",
+    component: () =>
+      import(/* webpackChunkName: "Editar" */ "../views/Editar.vue"),
+  },
+  {
+    path: "/agregar",
+    name: "Agregar",
+    component: () =>
+      import(/* webpackChunkName: "Agregar" */ "../views/Agregar.vue"),
+  },
+  {
     path: "/faqs",
     name: "Faqs",
     component: () => import(/* webpackChunkName: "faqs" */ "../views/Faqs.vue"),
@@ -99,7 +111,6 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "Articulo" */ "../views/Articulo.vue"),
   },
-  
 ];
 
 const router = new VueRouter({

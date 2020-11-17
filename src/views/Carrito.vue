@@ -38,8 +38,8 @@ export default {
     ...mapState("Carrito", ["info"]),
     ...mapGetters("Tickets", ["busqueda_ticket"]),
     obtenerTicket() {
-      let id = this.id
-      return this.busqueda_ticket(id);
+      let id = this.id;
+      return this.busqueda_ticket(id) || { data: {} };
     },
   },
   methods: {

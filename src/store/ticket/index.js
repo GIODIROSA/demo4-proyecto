@@ -33,7 +33,26 @@ export default {
     },
   },
   actions: {
-  
+    //(t) es el payload de ticketcomprado en cardCarrito
+    //idTicketSeleccionado
+    comprarTicket({ state }, t) {
+      console.log(t);
+      firebase
+        .firestore()
+        .collection("tickets")
+        .doc(t.id)
+        .update({ stock: t.data.stock - t.cantidad });
+
+      // comprarPolera({ state }, p) {
+      //   console.log(p)
+      //   firebase
+      //     .firestore()
+      //     .collection("poleras")
+      //     .doc(p.id)
+      //     .update({ stock: p.data.stock - p.cant });
+      // },
+    },
+
     async obtenerDataTickets({ commit }) {
       try {
         await firebase

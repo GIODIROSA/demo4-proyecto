@@ -141,7 +141,7 @@
             <v-divider></v-divider>
 
             <v-card-subtitle>
-              <v-btn block>
+              <v-btn block @click="comprar">
                 Comprar
               </v-btn>
             </v-card-subtitle>
@@ -179,7 +179,18 @@ export default {
       },
     };
   },
-  methods: {},
+  methods: {
+    ...mapActions("Tickets", ["comprarTicket"]),
+    comprar() {
+      const ticketComprado = Object.assign({}, this.obtenerTicket);
+      ticketComprado.cantidad = this.cantidad;
+      this.comprarTicket(ticketComprado);
+
+      // const polera = Object.assign({}, this.getPoleraById);
+      // polera.cant = this.cant;
+      // this.comprarPolera(polera);
+    },
+  },
   computed: {
     ...mapState("Carrito", ["impuesto"]),
     ...mapGetters("Tickets", ["cantidadEntrada"]),

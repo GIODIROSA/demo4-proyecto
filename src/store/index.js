@@ -10,6 +10,7 @@ import Tickets from "../store/ticket";
 import Imagenes from "../store/imagenes";
 import Travel from "../store/travel";
 import Carrito from "../store/carrito";
+import Comentarios from "../store/comentarios";
 import Faqs from "../store/faqs";
 
 Vue.use(Vuex);
@@ -66,6 +67,7 @@ export default new Vuex.Store({
     Imagenes,
     Travel,
     Carrito,
+    Comentarios,
     Faqs,
   },
 
