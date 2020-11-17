@@ -15,6 +15,11 @@ export default {
     OBTENER_INDCOMENTARIO(state, payload) {
       state.comentario = payload;
     },
+    ELIMINAR_COMENTARIO(state, payload) {
+      state.comentarios = state.comentarios.filter(
+        (item) => item.id !== payload
+      );
+    },
   },
   actions: {
     async obtenerDataComentarios({ commit }) {
@@ -86,20 +91,8 @@ export default {
         .then(() => {
           console.log("Comentario Eliminado");
           alert("Comentario Eliminado");
+          commit("ELIMINAR_COMENTARIO", id);
         });
     },
   },
 };
-
-// // mutations
-// setEliminarTarea(state, payload){
-//     state.tareas = state.tareas.filter(item => item.id !== payload)
-// }
-// // actions
-// eliminarTarea({commit, dispatch}, id){
-//     db.collection('tareas').doc(id).delete()
-//     .then(() => {
-//         // dispatch('getTareas')
-//         commit('setEliminarTarea', id)
-//     })
-// }
