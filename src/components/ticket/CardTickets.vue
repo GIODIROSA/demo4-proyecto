@@ -48,7 +48,11 @@
       <!-- INICIO DE DIALOG -->
 
       <v-dialog v-model="dialog" width="800px">
-        <v-card color="cyan lighten-4">
+        <v-card
+          color="cyan lighten-4"
+          v-for="(instruccion, index) in normativasConcierto"
+          :key="index"
+        >
           <v-card-title
             class="tituloNormativa pt-2 px-4 font-weight-regular amber accent-1"
           >
@@ -57,7 +61,7 @@
           <v-card-text
             class="textoNormativa tex-justify py-4 font-weight-light"
           >
-            {{ normativas }}
+            {{ instruccion.data.normativas }}
           </v-card-text>
           <v-divider></v-divider>
           <v-card-title
@@ -68,7 +72,7 @@
           <v-card-text
             class="textoIdentificatorio text-justify py-4 font-weight-light"
           >
-            {{ identificacion }}
+            {{ instruccion.data.identificacion }}
           </v-card-text>
           <v-divider></v-divider>
           <v-card-title
@@ -79,7 +83,7 @@
           <v-card-text
             class="textoIdentificatorio text-justify py-4 font-weight-light"
           >
-            {{ entrada }}
+            {{ instruccion.data.ingreso }}
           </v-card-text>
           <v-divider></v-divider>
           <v-btn
@@ -203,7 +207,11 @@ export default {
     },
   }, //final de methods
   computed: {
-    ...mapState("Tickets", ["normativas", "identificacion", "entrada"]),
+    ...mapState("Tickets", [
+      "normativasConcierto",
+      "identificacion",
+      "entrada",
+    ]),
   },
 };
 </script>

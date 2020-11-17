@@ -52,11 +52,11 @@
             <v-card-subtitle>
               Elegir la cantidad de Ticket
             </v-card-subtitle>
-            <div class="contadorTicket red accent-3 d-flex justify-center py-3">
+
+            <div class="d-flex justify-center">
               <v-select
                 class="ma-4"
-                @change="calcular"
-                v-model="numeroEntradas"
+                v-model="cantidad"
                 :items="entradas"
                 label="Agregar cantidad de ticket"
                 dense
@@ -127,12 +127,12 @@
             </v-card-subtitle>
 
             <v-divider></v-divider>
-            <v-card-title>
-              Cantidad de Ticket: {{ numeroEntradas }}
-            </v-card-title>
+            <v-card-title> Cantidad de Ticket: {{ cantidad }} </v-card-title>
 
             <v-divider></v-divider>
-            <v-card-title> Total: $ {{ calcular }} </v-card-title>
+            <v-card-title>
+              Total: $ {{ ticketSeleccionado.precioticket }}
+            </v-card-title>
 
             <v-divider></v-divider>
 
@@ -167,9 +167,9 @@ export default {
   data() {
     return {
       show: false,
-      tituloBoleta: "Tu carrito AUFIELDS",
-      numeroEntradas: null,
-      entradas: [1, 2, 3, 4, 5],
+      tituloBoleta: "",
+      cantidad: 1,
+      entradas: [],
       //objeto de ticket seleccionado
       ticketSeleccionado: {
         tipoTicket: "",
@@ -181,51 +181,23 @@ export default {
       },
     };
   },
-  methods: {
-    ...mapActions("Tickets", ["addTicketCarrito"]),
-    seleccionado() {
-      this.addTicketCarrito(this.ticketSeleccionado);
-    },
-
-    calcular() {
-      let valor = this.ticketSeleccionado.precioticket;
-      let cantidadEntrada = this.numeroEntradas;
-      switch (this.numeroEntradas) {
-        case this.numeroEntradas == 1:
-          alert("que algo pase");
-          // valor = 150000;
-          break;
-        case this.numeroEntradas == 2:
-          alert("probando 1");
-          // valor = 300000;
-          break;
-        case this.numeroEntradas == 3:
-          alert("hola");
-          // valor = 450000;
-          break;
-        case this.numeroEntradas == 4:
-          alert("probando 3");
-
-          // valor = 600000;
-          break;
-        case this.numeroEntradas == 5:
-          alert("probando 4");
-
-          // valor = 750000;
-          break;
-
-        default:
-          console.log("No esta funcionando");
-          break;
-      }
-    },
-  },
+  methods: {},
   computed: {
     ...mapState("Carrito", ["impuesto"]),
     ...mapGetters("Tickets", ["cantidadEntrada"]),
 
     cantidadEntradaSeleccionada() {
-      return this.cantidadEntrada(this.numeroEntradas);
+      const id = this.ticketSeleccionado.idTicketSeleccionado;
+      return this.cantidadEntrada(id);
+    },
+
+    numeroEntradasPermitidas() {
+      let numeroEntrada = [1, 2, 3, 4, 5];
+      return numeroEntrada.forEach((e) => this.entradas.push(e));
+    },
+
+    tituloBoletaCarrito() {
+      this.tituloBoleta = "Resumen de Boleta";
     },
 
     seleccionTicket() {
@@ -241,6 +213,9 @@ export default {
   },
   mounted() {
     this.seleccionTicket;
+    this.numeroEntradasPermitidas;
+    this.tituloBoletaCarrito;
+    this.cantidadEntradaSeleccionada;
   },
 };
 </script>
