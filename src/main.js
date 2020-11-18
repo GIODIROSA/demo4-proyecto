@@ -34,10 +34,28 @@ firebase.initializeApp(firebaseConfig);
 //   }).$mount("#app");
 // });
 
-new Vue({
-  router,
-  store,
-  vuetify,
-  render: (h) => h(App),
-}).$mount("#app");
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    // var email = user.email;
+    // var photoURL = user.photoURL;
+    // var uid = user.uid;
 
+    console.log(user.displayName);
+    store.dispatch("obtenerLogin", user);
+  }
+  new Vue({
+    router,
+    store,
+    vuetify,
+    render: (h) => h(App),
+  }).$mount("#app");
+});
+
+// new Vue({
+//   router,
+//   store,
+//   vuetify,
+//   render: (h) => h(App),
+// }).$mount("#app");

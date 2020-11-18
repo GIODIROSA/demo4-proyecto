@@ -87,6 +87,7 @@
 
 <script>
 import firebase from "firebase";
+import { mapMutations } from "vuex";
 export default {
   name: "login",
   data() {
@@ -96,6 +97,7 @@ export default {
     };
   },
   methods: {
+    ...mapMutations("Chat", ["NUEVO_USUARIO"]),
     login() {
       firebase
         .auth()
@@ -119,25 +121,37 @@ export default {
         .auth()
         .signInWithPopup(provider)
         .then((result) => {
-          this.$router.replace("lineup");
+          this.$router.push("/chat");
 
-          let user = {
-            name: result.user.displayName,
-            photoUrl: result.user.providerData[0].photoURL,
-            email: result.user.email,
+          const user = result.user;
+
+          // construir usuario
+          const usuario = {
+            nombre: user.displayName,
+            email: user.email,
+            uid: user.uid,
+            foto: user.photoURL,
           };
-          
-          this.createUser(user);
+
+          // let user = {
+          //   name: result.user.displayName,
+          //   photoUrl: result.user.providerData[0].photoURL,
+          //   email: result.user.email,
+          // };
+
+          // this.createUser(user);
+          this.NUEVO_USUARIO(usuario);
+          this.createUser(usuario);
         })
         .catch((error) => {
           console.log(error);
         });
     }, //final log in google
-    createUser(user) {
+    createUser(usuario) {
       firebase
         .firestore()
         .collection("usuarios")
-        .add(user);
+        .add(usuario);
     },
   },
 };

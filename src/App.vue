@@ -32,6 +32,7 @@ export default {
     ...mapActions("Imagenes", ["obtenerImagenes", "obtenerImagenesSlider"]),
     ...mapActions("Travel", ["obtenerTravel"]),
     ...mapActions("Comentarios", ["obtenerDataComentarios"]),
+    // ...mapActions("Chat", ['obtenerLogin']),
     ...mapActions("Faqs", ["obtenerFaqs"]),
   },
   created() {
@@ -44,6 +45,7 @@ export default {
     this.obtenerImagenesSlider();
     this.obtenerTravel();
     this.obtenerDataComentarios();
+    // this.obtenerLogin();
     this.obtenerFaqs();
   },
 };

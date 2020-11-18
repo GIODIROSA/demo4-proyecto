@@ -12,6 +12,7 @@ import Travel from "../store/travel";
 import Carrito from "../store/carrito";
 import Comentarios from "../store/comentarios";
 import Faqs from "../store/faqs";
+import Chat from "../store/minichat";
 
 Vue.use(Vuex);
 
@@ -68,6 +69,7 @@ export default new Vuex.Store({
     Travel,
     Carrito,
     Comentarios,
+    Chat,
     Faqs,
   },
 

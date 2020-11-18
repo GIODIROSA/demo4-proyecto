@@ -228,6 +228,7 @@ export default {
           route: "/contactus",
         },
         { icon: "mdi-comment-question", text: "Faqs", route: "/faqs" },
+        { icon: "mdi-chat", text: "Chat", route: "/chat" },
       ],
       dialog: false,
       show1: false,

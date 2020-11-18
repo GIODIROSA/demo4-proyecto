@@ -94,6 +94,14 @@ const routes = [
       import(/* webpackChunkName: "Agregar" */ "../views/Agregar.vue"),
   },
   {
+    path: "/chat",
+    name: "Chat",
+    component: () => import(/* webpackChunkName: "Chat" */ "../views/Chat.vue"),
+    meta: {
+      autentificado: true,
+    },
+  },
+  {
     path: "/faqs",
     name: "Faqs",
     component: () => import(/* webpackChunkName: "faqs" */ "../views/Faqs.vue"),
