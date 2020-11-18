@@ -5,6 +5,12 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import firebase from "firebase";
 
+// IMPORT CHAT SCROLL
+import VueChatScroll from "vue-chat-scroll";
+Vue.use(VueChatScroll);
+
+// FINAL DE CHAT SCROLL
+
 //SWEET ALERT IMPORT
 import VueSwal from "vue-swal";
 
