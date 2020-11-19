@@ -15,7 +15,7 @@ export default {
     },
     // El carrito busca y consume la data que fue transformada por un getters que evalua si hay o no stock de ticket
     busqueda_ticket: (state, getters) => (idTicket) => {
-      return getters.ticketsOnStock.filter((t) => t.id === idTicket);
+      return getters.ticketsOnStock.find((t) => t.id === idTicket);
     },
     cantidadEntrada: (state) => (numeroEntrada) => {
       return console.log(numeroEntrada);
@@ -36,7 +36,6 @@ export default {
     //(t) es el payload de ticketcomprado en cardCarrito
     //idTicketSeleccionado
     comprarTicket({ state }, t) {
-      console.log(t);
       firebase
         .firestore()
         .collection("tickets")

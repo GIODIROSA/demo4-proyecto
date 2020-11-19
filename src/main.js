@@ -49,7 +49,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // var uid = user.uid;
 
     console.log(user.displayName);
-    store.dispatch("obtenerLogin", user);
+    // store.dispatch("obtenerLogin", user);
   }
   new Vue({
     router,

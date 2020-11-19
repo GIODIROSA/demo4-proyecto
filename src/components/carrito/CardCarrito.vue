@@ -2,25 +2,18 @@
   <div class="bannercarrito">
     <v-container>
       <v-row>
-        <v-col
-          cols="12"
-          sm="6"
-          md="8"
-          lg="8"
-          v-for="ticket in obtenerTicket"
-          :key="ticket.id"
-        >
+        <v-col cols="12" sm="6" md="8" lg="8">
           <v-card class="mx-auto yellow accent-4" max-width="500">
-            <v-img :src="ticket.data.imagen" height="400px"></v-img>
+            <v-img :src="obtenerTicket.data.imagen" height="400px"></v-img>
 
             <v-card-title class="tipoTicketSeleccionado font-weight-bold">
-              {{ ticket.data.tipo }}
+              {{ obtenerTicket.data.tipo }}
             </v-card-title>
 
             <v-card-subtitle class="lime my-2 py-4">
               Area correspondiente:
               <span class="areaSeleccionada font-weight-bold">{{
-                ticket.data.area
+                obtenerTicket.data.area
               }}</span>
             </v-card-subtitle>
 
@@ -29,7 +22,7 @@
             <v-card-subtitle class="blue lighten-4 my-2 py-4">
               Artistas:
               <span class="areaSeleccionada font-weight-bold">{{
-                ticket.data.artistas
+                obtenerTicket.data.artistas
               }}</span>
             </v-card-subtitle>
             <v-divider></v-divider>
@@ -43,7 +36,7 @@
               <v-card-title
                 class="precioTicketSeleccionado d-flex justify-end amber accent-1"
               >
-                Valor: $ {{ ticket.data.precio }}
+                Valor: $ {{ obtenerTicket.data.precio }}
               </v-card-title>
             </div>
 
@@ -89,7 +82,7 @@
                 <v-card-text
                   class="descripcionTicketSeleccionado text-justify font-weight-light"
                 >
-                  {{ ticket.data.descripcion }}
+                  {{ obtenerTicket.data.descripcion }}
                 </v-card-text>
               </div>
             </v-expand-transition>
@@ -106,15 +99,15 @@
             </v-card-title>
 
             <v-card-text class="text-caption teal accent-2 text-center py-3">
-              {{ ticketSeleccionado.idTicketSeleccionado }}
+              {{ obtenerTicket.id }}
             </v-card-text>
 
             <v-card-title class="text-caption">
-              Tipo de ticket: {{ ticketSeleccionado.tipoTicket }}
+              Tipo de ticket: {{ obtenerTicket.data.tipo }}
             </v-card-title>
 
             <v-card-subtitle class="text-caption font-weight-ligh">
-              Area seleccionada: {{ ticketSeleccionado.areaTicket }}
+              Area seleccionada: {{ obtenerTicket.data.area }}
             </v-card-subtitle>
 
             <v-divider></v-divider>
@@ -123,7 +116,7 @@
               <span class="modificacionArtista font-weight-bold"
                 >Artistas:</span
               >
-              {{ ticketSeleccionado.artistasTicket }}
+              {{ obtenerTicket.data.artistas }}
             </v-card-subtitle>
 
             <v-divider></v-divider>
@@ -182,7 +175,7 @@ export default {
   methods: {
     ...mapActions("Tickets", ["comprarTicket"]),
     comprar() {
-      const ticketComprado = Object.assign({}, this.obtenerTicket);
+      const ticketComprado = JSON.parse(JSON.stringify(this.obtenerTicket));
       ticketComprado.cantidad = this.cantidad;
       this.comprarTicket(ticketComprado);
 
@@ -209,19 +202,20 @@ export default {
       this.tituloBoleta = "Resumen de Boleta";
     },
 
-    seleccionTicket() {
-      return this.obtenerTicket.forEach((el) => {
-        this.ticketSeleccionado.tipoTicket = el.data.tipo;
-        this.ticketSeleccionado.areaTicket = el.data.area;
-        this.ticketSeleccionado.stockTicket = el.data.stock;
-        this.ticketSeleccionado.artistasTicket = el.data.artistas;
-        this.ticketSeleccionado.precioticket = el.data.precio;
-        this.ticketSeleccionado.idTicketSeleccionado = el.id;
-      });
-    },
+    // seleccionTicket() {
+    //   this.ticketSeleccionado = this.ob
+    //   return this.obtenerTicket.forEach((el) => {
+    //     this.ticketSeleccionado.tipoTicket = el.data.tipo;
+    //     this.ticketSeleccionado.areaTicket = el.data.area;
+    //     this.ticketSeleccionado.stockTicket = el.data.stock;
+    //     this.ticketSeleccionado.artistasTicket = el.data.artistas;
+    //     this.ticketSeleccionado.precioticket = el.data.precio;
+    //     this.ticketSeleccionado.idTicketSeleccionado = el.id;
+    //   });
+    // },
 
     total() {
-      const precio = this.ticketSeleccionado.precioticket;
+      const precio = this.obtenerTicket.data.precio;
       const cantidad = this.cantidad;
       return precio * cantidad;
     },
