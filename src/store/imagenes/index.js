@@ -5,7 +5,6 @@ export default {
   state: {
     imagenes: [],
     sliderImagen: [],
-    ambiente: [],
   },
   getters: {},
   mutations: {
@@ -15,9 +14,7 @@ export default {
     IMAGEN_SLIDER(state, payload) {
       state.sliderImagen = payload;
     },
-    IMAGEN_AMBIENTE(state, payload) {
-      state.ambiente = payload;
-    },
+    
   },
   actions: {
     // CONCIERTO
@@ -50,19 +47,8 @@ export default {
       });
     },
 
-    // AMBIENTE
+    
 
-    obtenerImagenesAmbiente({ commit }) {
-      let storageRef = firebase.storage().ref("ambiente");
-      storageRef.listAll().then((result) => {
-        let ambiente = [];
-        result.items.forEach((imageAmbiente) => {
-          imageAmbiente.getDownloadURL().then((url) => {
-            ambiente.push(url);
-          });
-        });
-        commit("IMAGEN_AMBIENTE", ambiente);
-      });
-    },
+ 
   },
 };

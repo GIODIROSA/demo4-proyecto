@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>Ruta con parametro</h1>
+      <h1>probando</h1>
   </div>
 </template>
 

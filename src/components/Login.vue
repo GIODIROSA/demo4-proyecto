@@ -4,11 +4,11 @@
       <v-parallax dark :src="imagenLogin">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <h1 class="display-1 font-weight-thin mb-4">
-              Vuetify
+            <h1 class="display-1 font-weight-bold mb-4">
+              LOGIN
             </h1>
             <h4 class="subheading">
-              Build your application today!
+            ¡LOGUEATE PARA DISFRUTAR DE AUFIELDS WEB!
             </h4>
           </v-col>
         </v-row>

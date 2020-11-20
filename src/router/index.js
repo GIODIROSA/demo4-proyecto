@@ -6,14 +6,10 @@ import firebase from "firebase";
 Vue.use(VueRouter);
 
 const routes = [
-  // {
-  //   path: "*",
-  //   redirect: "/login",
-  // },
-  // {
-  //   path: "/",
-  //   redirect: "/login",
-  // },
+  {
+    path: "*",
+    redirect: "/login",
+  },
   {
     path: "/login",
     name: "Login",
@@ -107,17 +103,10 @@ const routes = [
     component: () => import(/* webpackChunkName: "faqs" */ "../views/Faqs.vue"),
   },
   {
-    path: "/prueba",
-    name: "Prueba",
+    path: "*",
+    name: "Not_Found",
     component: () =>
-      import(/* webpackChunkName: "Prueba" */ "../views/Prueba.vue"),
-  },
-  {
-    path: "/prueba/:id",
-    name: "Articulo",
-    props: true,
-    component: () =>
-      import(/* webpackChunkName: "Articulo" */ "../views/Articulo.vue"),
+      import(/* webpackChunkName: "error 404" */ "../views/NotFound.vue"),
   },
 ];
 
