@@ -35,6 +35,7 @@
         <!-- BTN DE NORMATIVA -->
         <v-btn
           tile
+          dark
           class="btnNormativa"
           color="blue accent-4"
           @click="accionarNormativa"

@@ -1,112 +1,124 @@
 <template>
-  <v-row justify="center">
-    <v-dialog
-      v-model="dialog"
-      fullscreen
-      hide-overlay
-      transition="dialog-bottom-transition"
-    >
-      <template v-slot:activator="{ on, attrs }">
-        <v-container>
-          <div class="botonMedioTransporte">
-            <h5 class="mensajeTravel font-weight-light py-3">
-              <span class="notaTravel font-weight-bold">Nota: </span> Para
-              revisar de que manera puedes llegar al concierto
+  <div>
+    <v-row justify="center">
+      <v-dialog
+        v-model="dialog"
+        fullscreen
+        hide-overlay
+        transition="dialog-bottom-transition"
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-container>
+            <div class="botonMedioTransporte">
+              <h5 class="mensajeTravel font-weight-light py-3">
+                <span class="notaTravel font-weight-bold">Nota: </span> Para
+                revisar de que manera puedes llegar al concierto
+              </h5>
+              <v-btn block color="lime accent-3" dark v-bind="attrs" v-on="on">
+                Medios de transporte
+              </v-btn>
+            </div>
+          </v-container>
+          <!-- MODAL BODY -->
+        </template>
+        <v-card>
+          <v-toolbar dark color="purple accent-1">
+            <v-btn icon dark @click="dialog = false">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+            <v-toolbar-title>Medios para llegar a AUFIELDS</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+              <v-btn dark :to="{ name: 'Inicio' }" text @click="dialog = false">
+                INICIO
+              </v-btn>
+            </v-toolbar-items>
+          </v-toolbar>
+          <v-list three-line subheader>
+            <h5 class="text-caption pa-3">
+              Diferentes medios para que vengas a disfrutar del evento más
+              grande de música electrónica
             </h5>
-            <v-btn block color="lime accent-3" dark v-bind="attrs" v-on="on">
-              Medios de transporte
-            </v-btn>
-          </div>
-        </v-container>
-        <!-- MODAL BODY -->
-      </template>
-      <v-card>
-        <v-toolbar dark color="purple accent-1">
-          <v-btn icon dark @click="dialog = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-          <v-toolbar-title>Medios para llegar a AUFIELDS</v-toolbar-title>
-          <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn dark :to="{ name: 'Inicio' }" text @click="dialog = false">
-              INICIO
-            </v-btn>
-          </v-toolbar-items>
-        </v-toolbar>
-        <v-list three-line subheader>
-          <h5 class="text-caption pa-3">
-            Diferentes medios para que vengas a disfrutar del evento más grande
-            de música electrónica
-          </h5>
-          
-        </v-list>
-        <v-divider></v-divider>
-        <!-- MODAL - DIALOG -->
-        <!-- PARALLAX -->
-        <v-parallax src="@/assets/img/16.png">
-          <h1 class="text-center teal accent-3">
-            "TODOS LOS CAMINOS LLEGAN A
-            <span class="modificacionTituloTravel">AUFIELDS CHILE-2021</span>"
-          </h1>
-        </v-parallax>
-        <!-- FINAL PARALLAX -->
-        <v-container>
-          <v-row>
-            <v-col
-              class="columnaTravel"
-              cols="12"
-              sm="12"
-              md="6"
-              lg="6"
-              v-for="travel in travels"
-              :key="travel.id"
-            >
-              <v-card class="mx-auto" max-width="600">
-                <v-img
-                  class="imagenTravel white--text align-end"
-                  height="500px"
-                  :src="travel.data.imagen"
-                >
-                </v-img>
+          </v-list>
+          <v-divider></v-divider>
+          <!-- MODAL - DIALOG -->
+          <!-- PARALLAX -->
+          <v-parallax src="@/assets/img/16.png">
+            <h1 class="text-center teal accent-3">
+              "TODOS LOS CAMINOS LLEGAN A
+              <span class="modificacionTituloTravel">AUFIELDS CHILE-2021</span>"
+            </h1>
+          </v-parallax>
+          <!-- FINAL PARALLAX -->
+          <v-container>
+            <v-row>
+              <v-col
+                class="columnaTravel"
+                cols="12"
+                sm="12"
+                md="6"
+                lg="6"
+                v-for="travel in travels"
+                :key="travel.id"
+              >
+                <v-card class="mx-auto" max-width="600">
+                  <v-img
+                    class="imagenTravel white--text align-end"
+                    height="500px"
+                    :src="travel.data.imagen"
+                  >
+                  </v-img>
 
-                <v-card-title class="tituloTravelMedioTransporte text-caption">
-                  {{ travel.data.titulo }}
-                </v-card-title>
+                  <v-card-title
+                    class="tituloTravelMedioTransporte text-caption"
+                  >
+                    {{ travel.data.titulo }}
+                  </v-card-title>
 
-                <v-card-subtitle class="pb-0">
-                  {{ travel.data.medio }}
-                </v-card-subtitle>
+                  <v-card-subtitle class="pb-0">
+                    {{ travel.data.medio }}
+                  </v-card-subtitle>
 
-                <v-card-text class="text--primary">
-                  <div>
-                    <p
-                      class="textoDescriptivo py-3 text-justify font-weight-light"
-                    >
-                      {{ travel.data.descripcion }}
-                    </p>
-                  </div>
-                </v-card-text>
-              </v-card>
-            </v-col>
-          </v-row>
-          <!-- FINAL DE LOS MEDIOS DE TRANSPORTE -->
-          <!-- MENSAJE PARA COMPARTIR VEHICULO -->
-          <v-divider inset class="py-2"></v-divider>
-          <h1 class="tituloCompartir">
-            ¿Porqué no compartes?
-          </h1>
-          <p class="text-justify font-weight-light py-3 ">
-            Dirígete para encontrar viajeros que se dirigen desde tu área o para
-            alquilar tus propios asientos para el automóvil para que otros se
-            unan a ti. Los propietarios de automóviles establecen su propio
-            precio para compartir el costo del combustible, y es una forma
-            barata y ecológica de hacer nuevos amigos y encontrar socios
-            delirantes para toda la vida.
-          </p>
-        </v-container>
-      </v-card>
-    </v-dialog>
-  </v-row>
+                  <v-card-text class="text--primary">
+                    <div>
+                      <p
+                        class="textoDescriptivo py-3 text-justify font-weight-light"
+                      >
+                        {{ travel.data.descripcion }}
+                      </p>
+                    </div>
+                  </v-card-text>
+                </v-card>
+              </v-col>
+            </v-row>
+            <!-- FINAL DE LOS MEDIOS DE TRANSPORTE -->
+            <!-- MENSAJE PARA COMPARTIR VEHICULO -->
+            <v-divider inset class="py-2"></v-divider>
+            <h1 class="tituloCompartir">
+              ¿Porqué no compartes?
+            </h1>
+            <p class="text-justify font-weight-light py-3 ">
+              Dirígete para encontrar viajeros que se dirigen desde tu área o
+              para alquilar tus propios asientos para el automóvil para que
+              otros se unan a ti. Los propietarios de automóviles establecen su
+              propio precio para compartir el costo del combustible, y es una
+              forma barata y ecológica de hacer nuevos amigos y encontrar socios
+              delirantes para toda la vida.
+            </p>
+          </v-container>
+        </v-card>
+      </v-dialog>
+    </v-row>
+    <div class="d-flex justify-center ma-3">
+      <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
+        <a :href="icon.link">
+          <v-icon color="purple lighten-3" size="24px"
+            >{{ icon.redes }}
+          </v-icon></a
+        >
+      </v-btn>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -119,6 +131,12 @@ export default {
       sound: true,
       widgets: false,
       show: false,
+      icons: [
+        { redes: "mdi-facebook", link: "https://www.facebook.com/" },
+        { redes: "mdi-twitter", link: "https://twitter.com/?lang=en" },
+        { redes: "mdi-linkedin", link: "https://www.linkedin.com/" },
+        { redes: "mdi-instagram", link: "https://www.instagram.com/" },
+      ],
     };
   }, //final de data
   computed: {

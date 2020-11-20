@@ -4,6 +4,15 @@
       <div class="bannerTickets">
         <img class="imgbanner" src="../assets/img/tickets02.png" alt="" />
       </div>
+      <div class="d-flex justify-center mt-3">
+        <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
+          <a :href="icon.link">
+            <v-icon color="red accent-3" size="24px"
+              >{{ icon.redes }}
+            </v-icon></a
+          >
+        </v-btn>
+      </div>
     </section>
     <CardTickets :ticketsDisponibles="ticketsDisponibles" />
   </div>
@@ -19,7 +28,14 @@ export default {
     CardTickets,
   },
   data() {
-    return {};
+    return {
+      icons: [
+        { redes: "mdi-facebook", link: "https://www.facebook.com/" },
+        { redes: "mdi-twitter", link: "https://twitter.com/?lang=en" },
+        { redes: "mdi-linkedin", link: "https://www.linkedin.com/" },
+        { redes: "mdi-instagram", link: "https://www.instagram.com/" },
+      ],
+    };
   },
 
   computed: {

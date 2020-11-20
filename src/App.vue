@@ -6,18 +6,16 @@
       <router-view />
     </v-main>
     <div class="barraColorFooter"></div>
-    <Footer />
   </v-app>
 </template>
 
 <script>
 import { mapActions } from "vuex";
-import Footer from "@/components/footer/Footer.vue";
+// import Footer from "@/components/footer/Footer.vue";
 import Navbar from "@/components/navbar/Navbar.vue";
 export default {
   name: "App",
   components: {
-    Footer,
     Navbar,
   },
   data: () => ({

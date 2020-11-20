@@ -1,8 +1,12 @@
 <template>
   <div>
     <v-footer padless>
-      <v-card flat tile class="footerEvento indigo lighten-5 white--text text-center">
-        <v-card-text>
+      <v-card
+        flat
+        tile
+        class="footerEvento indigo lighten-5 white--text text-center"
+      >
+        <v-card-text class="d-flex justify-center">
           <v-btn
             v-for="(icon, index) in icons"
             :key="index"
@@ -13,17 +17,6 @@
               {{ icon.redes }}
             </v-icon>
           </v-btn>
-        </v-card-text>
-
-        <v-card-text class=" pt-0">
-          Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
-          Mauris cursus commodo interdum. Praesent ut risus eget metus luctus
-          accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim
-          a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula
-          lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus
-          iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum
-          tempor vel ut orci. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
         </v-card-text>
 
         <v-divider></v-divider>
@@ -52,7 +45,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
-
-</style>
+<style lang="scss" scoped></style>

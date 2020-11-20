@@ -18,21 +18,32 @@
             label="TOPTICK"
             dense
             outlined
+            color="lime darken-3"
           ></v-select>
         </v-col>
       </v-row>
       <!-- RESPUESTAS -->
-      <div
-        class="lime pa-2"
-        v-for="(ques, index) in questionDisponible"
-        :key="index"
-      >
-        <p class="text-justify font-weight-light my-10">
-          {{ ques.data.respuesta }}
-        </p>
-      </div>
+      <v-card class="lime">
+        <div
+          class="pa-5"
+          v-for="(ques, index) in questionDisponible"
+          :key="index"
+        >
+          <v-card-text class="text-justify font-weight-light my-10">
+            {{ ques.data.respuesta }}
+          </v-card-text>
+        </div>
+      </v-card>
     </v-container>
-   
+    <div class="d-flex justify-center mt-3">
+      <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
+        <a :href="icon.link">
+          <v-icon color="lime darken-4" size="24px"
+            >{{ icon.redes }}
+          </v-icon></a
+        >
+      </v-btn>
+    </div>
   </div>
 </template>
 
@@ -48,6 +59,12 @@ export default {
     return {
       question: null,
       interrogante: [],
+      icons: [
+        { redes: "mdi-facebook", link: "https://www.facebook.com/" },
+        { redes: "mdi-twitter", link: "https://twitter.com/?lang=en" },
+        { redes: "mdi-linkedin", link: "https://www.linkedin.com/" },
+        { redes: "mdi-instagram", link: "https://www.instagram.com/" },
+      ],
     };
   }, //final de data
   created() {

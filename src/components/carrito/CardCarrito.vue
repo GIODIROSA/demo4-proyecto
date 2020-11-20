@@ -134,7 +134,7 @@
             <v-divider></v-divider>
 
             <v-card-subtitle>
-              <v-btn block @click="comprar">
+              <v-btn color="light-blue lighten-5" block @click="comprar">
                 Comprar
               </v-btn>
             </v-card-subtitle>
@@ -143,10 +143,16 @@
 
         <!-- FINAL DE CARD BOLETA DE COMPRA -->
       </v-row>
+      <div class="d-flex justify-center mt-3">
+        <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
+          <a :href="icon.link">
+            <v-icon color="light-blue lighten-4" size="24px"
+              >{{ icon.redes }}
+            </v-icon></a
+          >
+        </v-btn>
+      </div>
     </v-container>
-    <pre>
-      {{ $data }}
-    </pre>
   </div>
 </template>
 
@@ -161,6 +167,12 @@ export default {
       tituloBoleta: "",
       cantidad: 1,
       entradas: [],
+      icons: [
+        { redes: "mdi-facebook", link: "https://www.facebook.com/" },
+        { redes: "mdi-twitter", link: "https://twitter.com/?lang=en" },
+        { redes: "mdi-linkedin", link: "https://www.linkedin.com/" },
+        { redes: "mdi-instagram", link: "https://www.instagram.com/" },
+      ],
       //objeto de ticket seleccionado
       ticketSeleccionado: {
         tipoTicket: "",

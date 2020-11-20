@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <h1 class="tituloComentario deep-purple lighten-2">
+      <h1 class="tituloComentario">
         <span class="modificarTituloComentario">{{ comentario }}</span>
       </h1>
     </div>
@@ -109,8 +109,13 @@ export default {
   justify-content: center;
   align-content: center;
   padding: 60px 0;
+
+  background: #6e60f1;
+  background: linear-gradient(49deg, #6e60f1 0%, #7ec4f7 80%);
+  background: -webkit-linear-gradient(49deg, #6e60f1 0%, #7ec4f7 80%);
+  background: -moz-linear-gradient(49deg, #6e60f1 0%, #7ec4f7 80%);
   .modificarTituloComentario {
-    color: #b39ddb;
+    color: #f3e5f5;
   }
 }
 .textoDataNombre {
