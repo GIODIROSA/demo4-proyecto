@@ -11,8 +11,10 @@
           <v-container>
             <div class="botonMedioTransporte">
               <h5 class="mensajeTravel font-weight-light py-3">
-                <span class="notaTravel font-weight-bold">Nota: </span> Para
-                revisar de que manera puedes llegar al concierto
+                <span class="notaTravel font-weight-bold">
+                  <span class="modificarNota">Nota:</span>
+                </span>
+                Para revisar de que manera puedes llegar al concierto
               </h5>
               <v-btn block color="lime accent-3" dark v-bind="attrs" v-on="on">
                 Medios de transporte
@@ -43,7 +45,7 @@
           <v-divider></v-divider>
           <!-- MODAL - DIALOG -->
           <!-- PARALLAX -->
-          <v-parallax src="@/assets/img/16.png">
+          <v-parallax :src="imagenInterna">
             <h1 class="text-center teal accent-3">
               "TODOS LOS CAMINOS LLEGAN A
               <span class="modificacionTituloTravel">AUFIELDS CHILE-2021</span>"
@@ -137,6 +139,8 @@ export default {
         { redes: "mdi-linkedin", link: "https://www.linkedin.com/" },
         { redes: "mdi-instagram", link: "https://www.instagram.com/" },
       ],
+      imagenInterna:
+        "https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/ambiente%2Ftravelinterno.png?alt=media&token=644072e0-e59c-47f1-a096-948dca39bcc8",
     };
   }, //final de data
   computed: {
@@ -160,5 +164,8 @@ export default {
 }
 .textoDescriptivo {
   color: #757575;
+}
+.modificarNota{
+  color: #FF1744;
 }
 </style>

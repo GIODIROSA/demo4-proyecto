@@ -1,19 +1,19 @@
 <template>
   <div>
-    <section class="parallaxLogin">
-      <v-parallax dark src="../assets/img/bannerlogin01.png">
+    <div>
+      <v-parallax dark :src="imagenLogin">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
             <h1 class="display-1 font-weight-thin mb-4">
-              LOGIN
+              Vuetify
             </h1>
             <h4 class="subheading">
-              AL INICIAR SESIÓN PUEDES ACCEDER A GRANDES SORPRESAS
+              Build your application today!
             </h4>
           </v-col>
         </v-row>
       </v-parallax>
-    </section>
+    </div>
 
     <section class="formularioLogin">
       <v-container>
@@ -87,13 +87,15 @@
 
 <script>
 import firebase from "firebase";
-import { mapMutations } from "vuex";
+import { mapMutations, mapState } from "vuex";
 export default {
   name: "login",
   data() {
     return {
       usuario: "",
       contrasena: "",
+      imagenLogin:
+        "https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/ambiente%2Fbannerlogin01.png?alt=media&token=28ab803f-698f-4291-987d-6c029848fb0a",
     };
   },
   methods: {

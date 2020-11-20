@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-parallax height="550" src="@/assets/img/beneficios.jpg">
+    <v-parallax height="550" :src="imagenBeneficio">
       <v-btn
         class="mx-auto"
         fab
@@ -67,6 +67,8 @@ export default {
     return {
       mensaje:
         "Los tickets son automáticamente válidos para la próxima edición, no tienen que hacer nada para re-confirmar, y tienen los siguientes beneficios:",
+      imagenBeneficio:
+        "https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/ambiente%2Fbeneficios.jpg?alt=media&token=05ff2588-a389-4696-925e-66eaf07201a8",
     };
   },
 };

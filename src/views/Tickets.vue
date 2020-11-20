@@ -1,9 +1,17 @@
 <template>
   <div>
+    <div>
+      <v-parallax dark :src="figuraUno">
+        <v-row align="center" justify="center">
+          <v-col class="text-center" cols="12">
+            <h1 class="display-1 font-weight-bold mb-4">
+              {{ titulo }}
+            </h1>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
     <section>
-      <div class="bannerTickets">
-        <img class="imgbanner" src="../assets/img/tickets02.png" alt="" />
-      </div>
       <div class="d-flex justify-center mt-3">
         <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
           <a :href="icon.link">
@@ -35,6 +43,9 @@ export default {
         { redes: "mdi-linkedin", link: "https://www.linkedin.com/" },
         { redes: "mdi-instagram", link: "https://www.instagram.com/" },
       ],
+      figuraUno:
+        "https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/ambiente%2F16.png?alt=media&token=6a8e8e16-e56a-4bd8-b048-9dbd948e58a0",
+      titulo: "TICKETS",
     };
   },
 
@@ -48,21 +59,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.bannerTickets {
-  background-image: url("../assets/img/bannertickets01.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 100%;
-  height: 550px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.imgbanner {
-  padding: 150px;
-  width: 750px;
-  height: 850px;
-}
-</style>
+<style lang="scss" scoped></style>

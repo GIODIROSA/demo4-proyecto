@@ -214,18 +214,6 @@ export default {
       this.tituloBoleta = "Resumen de Boleta";
     },
 
-    // seleccionTicket() {
-    //   this.ticketSeleccionado = this.ob
-    //   return this.obtenerTicket.forEach((el) => {
-    //     this.ticketSeleccionado.tipoTicket = el.data.tipo;
-    //     this.ticketSeleccionado.areaTicket = el.data.area;
-    //     this.ticketSeleccionado.stockTicket = el.data.stock;
-    //     this.ticketSeleccionado.artistasTicket = el.data.artistas;
-    //     this.ticketSeleccionado.precioticket = el.data.precio;
-    //     this.ticketSeleccionado.idTicketSeleccionado = el.id;
-    //   });
-    // },
-
     total() {
       const precio = this.obtenerTicket.data.precio;
       const cantidad = this.cantidad;
