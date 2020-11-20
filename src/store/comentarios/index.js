@@ -90,7 +90,6 @@ export default {
         .delete()
         .then(() => {
           console.log("Comentario Eliminado");
-          alert("Comentario Eliminado");
           commit("ELIMINAR_COMENTARIO", id);
         });
     },

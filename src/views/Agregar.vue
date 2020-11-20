@@ -1,17 +1,44 @@
 <template>
   <div>
-    <h1>Agregar Comentario</h1>
-    <form @submit.prevent="agregarComentario(nombre)">
-      <div>
-        <v-text-field
-          type="text"
-          v-model="nombre"
-          label="Agregar comentario"
-          hide-details="auto"
-        ></v-text-field>
-      </div>
-      <button type="submit">AGREGAR</button>
-    </form>
+    <div>
+      <router-link :to="{ name: 'Contact Us' }">
+        <Parallaxagregar />
+      </router-link>
+    </div>
+    <v-container>
+      <v-row>
+        <v-col>
+          <v-card color="teal accent-1">
+            <v-card-title class="tituloAgregar">
+              AGREGAR
+            </v-card-title>
+            <v-card-subtitle>
+              Podrás agregar un comentario para los artistas
+            </v-card-subtitle>
+            <!-- FORM DE AGREGAR COMENTARIO -->
+            <form class="mx-4" @submit.prevent="agregarComentario(nombre)">
+              <div>
+                <v-text-field
+                  color="teal lighten-2"
+                  type="text"
+                  v-model="nombre"
+                  label="Agregar comentario"
+                  hide-details="auto"
+                ></v-text-field>
+                <p class="vistaPreviaAgregar text-caption">
+                  Vista previa del comentario: {{ nombre }}
+                </p>
+              </div>
+              <button class="my-5" icon type="submit">
+                <v-icon color="teal accent-4">mdi-check</v-icon> Debes dar click
+                para agregar
+              </button>
+            </form>
+          </v-card>
+          <!-- FINAL DE CARD DE AGREGAR COMENTARIO -->
+        </v-col>
+      </v-row>
+    </v-container>
 
     <pre>
         {{ $data }}
@@ -21,8 +48,12 @@
 
 <script>
 import { mapActions } from "vuex";
+import Parallaxagregar from "@/components/comentarios/Parallaxagregar.vue";
 export default {
   name: "Agregar",
+  components: {
+    Parallaxagregar,
+  },
   data() {
     return {
       nombre: "",
@@ -34,4 +65,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.vistaPreviaAgregar {
+  color: #00695c;
+}
+.tituloAgregar {
+  color: #26a69a;
+}
+</style>
