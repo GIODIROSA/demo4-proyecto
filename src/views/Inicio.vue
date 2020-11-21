@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <v-parallax class="parallaxInicio" dark :src="imagenInicio">
+      <v-parallax height="850" class="parallaxInicio" dark :src="imagenInicio">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
             <!-- LOGOTIPO -->

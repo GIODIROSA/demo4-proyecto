@@ -11,18 +11,16 @@
       {{ mensaje }}
     </h1>
     <v-row>
-      <v-col 
+      <v-col
         v-for="(imagen, index) in imagenes"
         :key="index"
         class="d-flex child-flex todoColor"
-        cols="6" md="4" lg="4"
+        cols="6"
+        md="4"
+        lg="4"
         :class="{ imgColorGris: !filter }"
       >
-        <v-img
-          :src="imagen"
-          aspect-ratio="1"
-          class="imgprueba grey lighten-2"
-        >
+        <v-img :src="imagen" aspect-ratio="1" class="imgprueba grey lighten-2">
           <template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular
@@ -34,9 +32,6 @@
         </v-img>
       </v-col>
     </v-row>
-    <pre>
-        {{ $data }}
-    </pre>
   </v-container>
 </template>
 

@@ -8,7 +8,7 @@
               LOGIN
             </h1>
             <h4 class="subheading">
-            ¡LOGUEATE PARA DISFRUTAR DE AUFIELDS WEB!
+              ¡LOGUEATE PARA DISFRUTAR DE AUFIELDS WEB!
             </h4>
           </v-col>
         </v-row>
@@ -33,23 +33,17 @@
                 </v-btn>
               </div>
               <div>
-                <h3>
+                <h3 class="tituloIniciar font-weight-bold my-5">
                   INICIAR SESIÓN
                 </h3>
-                <p class="politianLogin">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Distinctio reprehenderit ipsum quas aliquid cum placeat
-                  voluptas repellendus voluptatibus totam, incidunt fugit minus
-                  quos tenetur ipsam tempora facilis hic natus consequuntur
-                  nobis quia praesentium iusto omnis vero maxime! Aliquam alias
-                  laborum incidunt perferendis commodi illo, similique, quasi
-                  amet consequatur neque nesciunt!
+                <p class="mensajeLogin text-caption">
+                  {{ parrafoRegistro }}
                 </p>
               </div>
 
               <v-text-field
                 color="teal lighten-1"
-                label="Usuario"
+                label="Email"
                 v-model="usuario"
               >
               </v-text-field>
@@ -65,23 +59,33 @@
               <v-btn @click="clear" dark block color="teal accent-3 my-3"
                 >Clear</v-btn
               >
+              <hr />
+
+              <h4 class="my-5 pa-5 pink accent-1 white--text">
+                La mejor manera de <span class="modificarChatear">CHATEAR</span>
+              </h4>
+              <p class="text-caption">
+                Tenemos la mejor forma de comunicarse directamente con nuestros
+                artistas y chatear con ellos.
+              </p>
+              <p class="text-caption">
+                Solo debes loguear por medio de ¡tu cuenta GOOGLE!
+              </p>
               <v-btn
+                class="d-flex justify-center"
                 dark
-                block
                 @click="logInGoogle"
                 depressed
-                color="deep-purple accent-3"
+                color="amber accent-2"
               >
-                google
+                <v-icon left>mdi-google</v-icon>
+                INICIAR SESIÓN
               </v-btn>
             </v-form>
           </v-col>
         </v-row>
       </v-container>
     </section>
-    <pre>
-        {{ $data }}
-    </pre>
   </div>
 </template>
 
@@ -96,6 +100,8 @@ export default {
       contrasena: "",
       imagenLogin:
         "https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/ambiente%2Fbannerlogin01.png?alt=media&token=28ab803f-698f-4291-987d-6c029848fb0a",
+      parrafoRegistro:
+        "Si no puede encontrar su respuesta en nuestra página de preguntas frecuentes, envíe un correo electrónico a cualquier consulta general Correo electrónico: info@aufields.cl. Para cualquier pregunta relacionada con sus boletos,comuníquese con su agente de boletos. Se puede encontrar una lista de contactos de servicio al cliente de los agentes de venta de entradas oficiales en la parte inferior de la página de Entradas.!",
     };
   },
   methods: {
@@ -164,12 +170,14 @@ export default {
   width: 450px;
   margin: auto;
 }
+.tituloIniciar {
+  color: #80deea;
+}
 .politianLogin {
   padding: 20px 0;
   font-weight: 300;
   font-size: 12px;
 }
-
 .loginForm {
   width: 300px;
   padding: 10px 0;
@@ -178,6 +186,12 @@ export default {
   widows: 350px;
   height: 350px;
   margin: 150px 0;
+}
+.modificarChatear {
+  color: #039be5;
+}
+.mensajeLogin {
+  color: #757575;
 }
 
 form > * {

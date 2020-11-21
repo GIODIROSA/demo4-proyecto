@@ -1,6 +1,8 @@
 <template>
   <div>
-    <ParallaxCarrito />
+    <router-link class="linkCarrito" :to="{ name: 'Tickets' }">
+      <ParallaxCarrito />
+    </router-link>
     <div>
       <p class="light-blue lighten-4 pa-3 font-weight-light text-caption">
         {{ info }}
@@ -50,4 +52,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.linkCarrito {
+  text-decoration: none;
+}
+</style>

@@ -39,10 +39,6 @@
         </v-col>
       </v-row>
     </v-container>
-
-    <pre>
-        {{ $data }}
-    </pre>
   </div>
 </template>
 
