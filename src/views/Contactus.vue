@@ -14,19 +14,29 @@
         color="deep-purple lighten-3"
         :to="{ name: 'Formulario' }"
       >
-        Ver Formulario de contacto
+        CONTÁCTANOS
       </v-btn>
       <router-view />
       <!-- FINAL DE FORMULARIO -->
-      <!-- ENVIAR COMENTARIOS A LOS ARTISTAS -->
 
+      <!-- ENVIAR COMENTARIOS A LOS ARTISTAS -->
+      <div>
+        <h3 class="tituloEscribele font-weight-thin text-center my-5">
+          📜 ESCRIBELE A NUESTROS ARTISTAS DE
+          <span class="modificacionEscribele font-weight-bold"
+            >AUFIELDS CHILE 2021 📜</span
+          >
+        </h3>
+      </div>
       <div class="ma-10">
-        <p class="text-caption">
-          Puedes agregar un comentario para los artistas invitados al AUFIELDS
-          2021
+        <p class="text-caption text-justify">
+          {{ discapacitado }}
         </p>
-        <router-link to="/agregar">
-          <v-btn color="purple accent-4" block> AGREGAR </v-btn>
+        <p class="text-caption">
+          {{ notaComentarios }}
+        </p>
+        <router-link class="linkAgregar" to="/agregar">
+          <v-btn dark color="purple accent-4" block> AGREGAR </v-btn>
         </router-link>
       </div>
 
@@ -85,6 +95,10 @@ export default {
   data() {
     return {
       comentario: "COMENTARIOS",
+      discapacitado:
+        " Si tiene alguna pregunta relacionada con el acceso para discapacitados y / o desea registrarse en el programa, o si tiene preguntas sobre la entrada de medicamentos al evento, comuníquese con el equipo de acceso en acceso@aufields.cl o llame al 0207009 3490.",
+      notaComentarios:
+        "Puedes agregar un comentario para los artistas invitados al AUFIELDS 2021",
     };
   }, //final de data
   computed: {
@@ -120,5 +134,14 @@ export default {
 }
 .textoDataNombre {
   color: #6a1b9a;
+}
+.linkAgregar {
+  text-decoration: none;
+}
+.tituloEscribele {
+  color: #ffc107;
+}
+.modificacionEscribele {
+  color: #7c4dff;
 }
 </style>

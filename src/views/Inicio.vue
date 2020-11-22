@@ -57,7 +57,7 @@
             AUFIELDS
           </h1>
           <h4 class="subheading">
-            CONCIERTO DE MÚSICA ELECTRÓNICA MÁS GRANDE DE SUR AMÉRICA
+            ❤️ CONCIERTO DE MÚSICA ELECTRÓNICA MÁS GRANDE DE SUR AMÉRICA ❤️
           </h4>
         </v-col>
       </v-row>

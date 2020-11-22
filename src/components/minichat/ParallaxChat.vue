@@ -3,8 +3,8 @@
     <v-parallax dark :src="imagenParallaxChat">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
-          <h1 class="tituloChat">CHAT</h1>
-          <p class="text-caption">
+          <h1 class="tituloChat">📌CHAT</h1>
+          <p class="text-caption font-weight-bold">
             Podrás chatear en directo con tus artistas favorito, AUFIELDS 2021
           </p>
         </v-col>

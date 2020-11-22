@@ -3,65 +3,55 @@
     <ImagenFormulario />
 
     <v-container>
-      <h1 class="tituloFormulario">
-        Formulario
-      </h1>
-      <h5 class="subtituloFormulario text-subtitle font-weight-light">
-        Nos preocupamos por ti, podemos ayudarte
-      </h5>
       <v-row>
         <v-col>
-          <v-form ref="form" v-model="valid" lazy-validation>
-            <v-text-field
-              v-model="name"
-              :counter="10"
-              :rules="nameRules"
-              label="Nombre"
-              required
-            ></v-text-field>
-
-            <v-text-field
-              v-model="email"
-              :rules="emailRules"
-              label="E-mail"
-              required
-            ></v-text-field>
-
-            <v-select
-              v-model="select"
-              :items="items"
-              :rules="[(v) => !!v || 'Item is required']"
-              label="¿En qué te podemos ayudar?"
-              required
-            ></v-select>
-
-            <v-checkbox
-              v-model="checkbox"
-              :rules="[(v) => !!v || 'You must agree to continue!']"
-              label="¿Están correcto todos tus datos?"
-              required
-            ></v-checkbox>
-
-            <v-btn
-              dark
-              block
-              :disabled="!valid"
-              color="light-blue accent-2"
-              class="mr-4"
-              @click="validate"
-            >
-              <v-icon>mdi-alert-circle-check-outline</v-icon>
-              correcto
-            </v-btn>
-
-            <v-btn block color="error" class="mr-4 mt-4" @click="reset">
-              borrar
-            </v-btn>
-
-            <v-btn block dark color="light-green lighten-2 mt-4" @click="resetValidation">
-              borrar validación
-            </v-btn>
-          </v-form>
+          <v-card>
+            <v-card-title class="tituloContacto blue-grey lighten-4">
+              CONSULTAS GENERALES
+            </v-card-title>
+            <v-card-text class="text-justify my-5">
+              Si no puede encontrar su respuesta en nuestra página de preguntas
+              frecuentes, envíe un correo electrónico a cualquier consulta
+              general Correo electrónico: info@aufields.cl Para cualquier
+              pregunta relacionada con sus boletos, comuníquese con su agente de
+              boletos. Se puede encontrar una lista de contactos de servicio al
+              cliente de los agentes de venta de entradas oficiales en la parte
+              inferior de la página de Entradas.
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-title class="tituloContacto blue-grey lighten-4">
+              RESIDENTES
+            </v-card-title>
+            <v-card-text class="text-justify my-5">
+              Para cualquier consulta de los residentes, envíe un correo
+              electrónico a resident@aufields.cl
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-title class="tituloContacto blue-grey lighten-4">
+              ACCESO PARA DISCAPACITADOS Y MEDICACIÓN
+            </v-card-title>
+            <v-card-text class="text-justify my-5">
+              Si tiene alguna pregunta relacionada con el acceso para
+              discapacitados y / o desea registrarse en el programa, o si tiene
+              preguntas sobre la entrada de medicamentos al evento, comuníquese
+              con el equipo de acceso en access@aufields.cl o llame al 0207009
+              3490.
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-title class="tituloContacto blue-grey lighten-4">
+              COMERCIANTES DE FESTIVALES
+            </v-card-title>
+            <v-card-text class="text-justify my-5">
+              Concesiones no alimentarias: - Si está interesado en operar un
+              concesión (no alimentaria solamente) en Creamfields, póngase en
+              contacto con Lyndsey Doel @ 5D Events, correo electrónico:
+              info@5dcuk.com para más información Concesiones de alimentos: - Si
+              está interesado en operar un concesión en AUFIELDS, comuníquese
+              con Beth Greaves @ D&J Catering, correo electrónico:
+              beth@djcatering.cl / Tel: 0116247 8177
+            </v-card-text>
+            <v-divider></v-divider>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -119,6 +109,9 @@ export default {
 }
 .subtituloFormulario {
   text-align: center;
+  color: #bdbdbd;
+}
+.tituloContacto {
   color: #bdbdbd;
 }
 </style>

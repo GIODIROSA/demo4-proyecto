@@ -13,7 +13,6 @@
 
 <script>
 import { mapActions } from "vuex";
-// import Footer from "@/components/footer/Footer.vue";
 import Navbar from "@/components/navbar/Navbar.vue";
 export default {
   name: "App",
@@ -32,7 +31,6 @@ export default {
     ...mapActions("Imagenes", ["obtenerImagenes", "obtenerImagenesSlider"]),
     ...mapActions("Travel", ["obtenerTravel"]),
     ...mapActions("Comentarios", ["obtenerDataComentarios"]),
-    // ...mapActions("Chat", ['obtenerLogin']),
     ...mapActions("Faqs", ["obtenerFaqs"]),
   },
   created() {
@@ -45,7 +43,6 @@ export default {
     this.obtenerImagenesSlider();
     this.obtenerTravel();
     this.obtenerDataComentarios();
-    // this.obtenerLogin();
     this.obtenerFaqs();
   },
 };
