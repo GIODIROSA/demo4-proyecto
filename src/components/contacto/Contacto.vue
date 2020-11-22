@@ -1,6 +1,6 @@
 <template>
   <div class="py-3">
-    <ImagenFormulario />
+    <ImagenContacto />
 
     <v-container>
       <v-row>
@@ -59,58 +59,19 @@
 </template>
 
 <script>
-import ImagenFormulario from "@/components/contacto/ImagenFormulario.vue";
+import ImagenContacto from "@/components/contacto/ImagenContacto.vue";
 export default {
-  data: () => ({
-    valid: true,
-    name: "",
-    nameRules: [
-      (v) => !!v || "Name is required",
-      (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
-    ],
-    email: "",
-    emailRules: [
-      (v) => !!v || "E-mail is required",
-      (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
-    ],
-    select: null,
-    items: [
-      "Problema con tu ticket",
-      "Duda el día del evento",
-      "Tienes algún problema en como llegar",
-      "¿Quieres reembolsar tu ticket?",
-    ],
-    checkbox: false,
-  }),
+  name: "Contacto",
+  data: () => ({}),
 
-  methods: {
-    validate() {
-      this.$refs.form.validate();
-    },
-    reset() {
-      this.$refs.form.reset();
-    },
-    resetValidation() {
-      this.$refs.form.resetValidation();
-    },
-  }, //final de data
+  methods: {},
   components: {
-    ImagenFormulario,
+    ImagenContacto,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.tituloFormulario {
-  font-size: 30px;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  color: #81d4fa;
-}
-.subtituloFormulario {
-  text-align: center;
-  color: #bdbdbd;
-}
 .tituloContacto {
   color: #bdbdbd;
 }

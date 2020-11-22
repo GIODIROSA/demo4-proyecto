@@ -6,7 +6,7 @@
             AUFIELDS CHILE 2021
           </h1>
           <h4 class="subheading">
-           Siempre estamos atento
+           SIEMPRE ESTAMOS ATENTOS 
           </h4>
         </v-col>
       </v-row>
@@ -14,7 +14,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name:"ImagenContacto"
+};
 </script>
 
 <style lang="scss" scoped></style>

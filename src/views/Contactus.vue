@@ -7,24 +7,24 @@
     </div>
 
     <v-container>
-      <!-- INICIO DE FORMULARIO -->
+      <!-- INICIO DE CONTACTO -->
       <v-btn
         dark
         block
         color="deep-purple lighten-3"
-        :to="{ name: 'Formulario' }"
+        :to="{ name: 'Contacto' }"
       >
         CONTÁCTANOS
       </v-btn>
       <router-view />
-      <!-- FINAL DE FORMULARIO -->
+      <!-- FINAL DE CONTACTO -->
 
       <!-- ENVIAR COMENTARIOS A LOS ARTISTAS -->
       <div>
         <h3 class="tituloEscribele font-weight-thin text-center my-5">
-          📜 ESCRIBELE A NUESTROS ARTISTAS DE
+           ESCRIBELE A NUESTROS ARTISTAS DE
           <span class="modificacionEscribele font-weight-bold"
-            >AUFIELDS CHILE 2021 📜</span
+            >AUFIELDS CHILE 2021 </span
           >
         </h3>
       </div>
