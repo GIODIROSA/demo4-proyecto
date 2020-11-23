@@ -1,71 +1,94 @@
 <template>
   <div>
-    <div>
-      <v-parallax height="850" class="parallaxInicio" dark :src="imagenInicio">
+    <!-- BANNER PARALLAX INICIO -->
+    <section class="bannerInicio">
+      <div>
+        <v-parallax
+          height="850"
+          class="parallaxInicio"
+          dark
+          :src="imagenInicio"
+        >
+          <v-row align="center" justify="center">
+            <v-col class="text-center" cols="12">
+              <!-- LOGOTIPO -->
+              <div class="logotipo">
+                <img
+                  class="imagenLogotipo"
+                  src="../assets/img/logotipo03-02-02.svg"
+                  alt="logotipo"
+                />
+              </div>
+              <!-- FINAL LOGOTIPO -->
+
+              <p class="text-caption">
+                {{ subtitulo }}
+              </p>
+
+              <v-btn
+                dark
+                class="purple accent-1"
+                block
+                :to="{ name: 'Tickets' }"
+              >
+                Comprar tickets Aufields
+              </v-btn>
+
+              <v-btn
+                dark
+                class="teal accent-3 my-3"
+                block
+                :to="{ name: 'LineUp' }"
+              >
+                LineUp
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-parallax>
+      </div>
+    </section>
+    <!-- FINAL BANNER PARALLAX INICIO -->
+
+    <section class="redesInicio">
+      <div class="d-flex justify-center mt-3">
+        <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
+          <a :href="icon.link">
+            <v-icon color="light-blue lighten-4" size="24px"
+              >{{ icon.redes }}
+            </v-icon></a
+          >
+        </v-btn>
+      </div>
+    </section>
+
+    <section class="cardArtistasInicio">
+      <div class="PostArtistas my-2">
+        <PostArtistas :artistas="artistas" />
+      </div>
+    </section>
+
+    <!-- PARALLAX -->
+    <section class="descansoParallaxInicio">
+      <v-parallax dark :src="parallaxInicio">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <!-- LOGOTIPO -->
-            <div class="logotipo">
-              <img
-                class="imagenLogotipo"
-                src="../assets/img/logotipo03-02-02.svg"
-                alt="logotipo"
-              />
-            </div>
-            <!-- FINAL LOGOTIPO -->
-
-            <p class="text-caption">
-              {{ subtitulo }}
-            </p>
-
-            <v-btn dark class="purple accent-1" block :to="{ name: 'Tickets' }">
-              Comprar tickets Aufields
-            </v-btn>
-
-            <v-btn
-              dark
-              class="teal accent-3 my-3"
-              block
-              :to="{ name: 'LineUp' }"
-            >
-              LineUp
-            </v-btn>
+            <h1 class="tituloConciertoInicio display-1 font-weight-thin mb-4">
+              AUFIELDS
+            </h1>
+            <h4 class="subtituloConciertoInicio subheading">
+              ❤️ CONCIERTO DE MÚSICA ELECTRÓNICA MÁS GRANDE DE SUR AMÉRICA ❤️
+            </h4>
           </v-col>
         </v-row>
       </v-parallax>
-    </div>
-
-    <div class="d-flex justify-center mt-3">
-      <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
-        <a :href="icon.link">
-          <v-icon color="light-blue lighten-4" size="24px"
-            >{{ icon.redes }}
-          </v-icon></a
-        >
-      </v-btn>
-    </div>
-
-    <div class="PostArtistas my-2">
-      <PostArtistas :artistas="artistas" />
-    </div>
-
-    <!-- PARALLAX -->
-    <v-parallax dark :src="parallaxInicio">
-      <v-row align="center" justify="center">
-        <v-col class="text-center" cols="12">
-          <h1 class="display-1 font-weight-thin mb-4">
-            AUFIELDS
-          </h1>
-          <h4 class="subheading">
-            ❤️ CONCIERTO DE MÚSICA ELECTRÓNICA MÁS GRANDE DE SUR AMÉRICA ❤️
-          </h4>
-        </v-col>
-      </v-row>
-    </v-parallax>
-
+    </section>
     <!-- FINAL DE PARALLAX -->
+
     <!-- AREAS DE CONCIERTO -->
-    <AreaConcierto :areas="areas" />
+    <section class="areaConciertoInicio blue lighten-5">
+      <AreaConcierto :areas="areas" />
+    </section>
+    <!-- FINAL AREAS DE CONCIERTO -->
   </div>
 </template>
 
@@ -97,6 +120,7 @@ export default {
     ...mapState(["artistas"]),
     ...mapState("Areas", ["areas"]),
   }, //final de computed
+
   components: {
     PostArtistas,
     AreaConcierto,
@@ -115,34 +139,14 @@ export default {
     height: 350px;
   }
 }
-.heroSection {
-  background-image: url("../assets/img/banner-inicial02.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 750px;
-  .logotipo {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-top: 100px;
-  }
+
+.logotipo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-.areasConcierto {
-  padding: 120px 0;
-
-  .areaGeneraltitle {
-    color: #80deea;
-  }
-  .hospitalityAreaTitle {
-    color: #f48fb1;
-  }
-  .textoAreaGeneral {
-    color: gray;
-    font-weight: 300;
-    font-family: "Montserrat", sans-serif;
-  }
+.areaConciertoInicio {
+  padding: 20px 0;
 }
 </style>
