@@ -8,9 +8,31 @@
 
 https://loquesea.cl
 
-## Vista previa
+## Vista previa INICIO
 
 ![Inicio](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreen01.png?alt=media&token=ac05ee1e-af2b-492f-8558-641b8a168606 "Vista de inicio")
+
+## Vista previa TICKET
+
+![COMPRA TICKET](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreen02.png?alt=media&token=3b803627-4122-4361-a4a6-194a7cd88f13 "Vista de tickets")
+
+## Vista previa Selección de Tickets / resumen de boleta
+
+![Resumen de Boleta](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreen03.png?alt=media&token=aa34c112-c3fe-46d2-a376-dd4fa92089b8g "Vista de resumen de boleta")
+
+## Vista previa de evento pasados. Galería de imagenes
+
+![Galeria de Imagenes](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreen04.png?alt=media&token=9f3e42a4-8662-45a1-a217-c821d17456f7 "Vista de concierto pasado")
+
+## Vista previa CHAT
+
+![CHAT](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreen06.png?alt=media&token=265ff0fb-52a5-4eb4-8c6a-eb26bb269adc "Vista de chat")
+
+## Vista previa faqs
+
+![FAQS](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreen09.png?alt=media&token=3beec36d-1953-4f50-b2e2-6874e2da6f2c "Vista de faqs")
+
+
 
 # Construido con 🔧
 
@@ -28,7 +50,7 @@ https://loquesea.cl
 
 > El autor de este proyecto es:
 
-- **Giovanni Di Rosa** - \*Desarrollo de prototipo y App - (https://github.com/GIODIROSA)
+- **Giovanni Di Rosa** - _*Desarrollo de prototipo y App*_ - (https://github.com/GIODIROSA)
 
 # Licencia 📋
 
