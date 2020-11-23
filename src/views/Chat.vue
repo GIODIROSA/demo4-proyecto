@@ -63,7 +63,7 @@
       </v-row>
       <div class="d-flex justify-center mt-3">
         <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
-          <a :href="icon.link">
+          <a class="redesLink" :href="icon.link">
             <v-icon color="amber darken-2" size="24px"
               >{{ icon.redes }}
             </v-icon></a
@@ -164,5 +164,8 @@ export default {
 }
 .modificarMensajeChat {
   color: #ff7043;
+}
+.redesLink {
+  text-decoration: none;
 }
 </style>

@@ -37,7 +37,7 @@
     </v-container>
     <div class="d-flex justify-center mt-3">
       <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
-        <a :href="icon.link">
+        <a class="redesLink" :href="icon.link">
           <v-icon color="lime darken-4" size="24px"
             >{{ icon.redes }}
           </v-icon></a
@@ -101,5 +101,8 @@ div > * {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
+}
+.redesLink {
+  text-decoration: none;
 }
 </style>

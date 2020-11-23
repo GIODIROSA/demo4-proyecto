@@ -52,7 +52,7 @@
     <section class="redesInicio">
       <div class="d-flex justify-center mt-3">
         <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
-          <a :href="icon.link">
+          <a class="linkRedes" :href="icon.link">
             <v-icon color="light-blue lighten-4" size="24px"
               >{{ icon.redes }}
             </v-icon></a
@@ -148,5 +148,9 @@ export default {
 
 .areaConciertoInicio {
   padding: 20px 0;
+}
+
+.linkRedes {
+  text-decoration: none;
 }
 </style>

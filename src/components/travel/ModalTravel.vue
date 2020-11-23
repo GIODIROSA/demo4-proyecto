@@ -16,18 +16,17 @@
                 </span>
                 Para revisar de que manera puedes llegar al concierto
               </h5>
-             
-                <v-btn
-                  block
-                  class="ma-5"
-                  color="lime accent-3"
-                  dark
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  Medios de transporte
-                </v-btn>
-           
+
+              <v-btn
+                block
+                class="ma-5"
+                color="lime accent-3"
+                dark
+                v-bind="attrs"
+                v-on="on"
+              >
+                Medios de transporte
+              </v-btn>
             </div>
           </v-container>
           <!-- MODAL BODY -->
@@ -123,7 +122,7 @@
     </v-row>
     <div class="d-flex justify-center ma-3">
       <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
-        <a :href="icon.link">
+        <a class="linkRedes" :href="icon.link">
           <v-icon color="purple lighten-3" size="24px"
             >{{ icon.redes }}
           </v-icon></a
@@ -177,5 +176,8 @@ export default {
 }
 .modificarNota {
   color: #ff1744;
+}
+.linkRedes {
+  text-decoration: none;
 }
 </style>

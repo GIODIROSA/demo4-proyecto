@@ -5,10 +5,13 @@
 #### Puedes ingresar dedes éste enlace:
 https://loquesea.cl
 
+## Vista previa
+  <img src="" alt="">
+
 # Construido con 🔧
 >Este proyecto está construido con la ayuda de Vuetify. -A MATERIAL DESIGN FRAMEWORK, un gran recurso para desarrollar aplicaciones y su aspecto profesional con VueJS. Éstas y otras tecnologías se han utilizado en el proyecto:
 
-1. VueJS- El framework web escrito en javascript más versátil, simple y amigable de usar; además, progresivo para crear interfaces de usuario. Construido por medio de la comunidad desarrolladora. Bajo la autoria y visión programática de Evan You. 
+1. VueJS- El framework web escrito en javascript más versátil, simple y amigable de usar; además, progresivo para crear interfaces de usuario. Construido por medio de la comunidad desarrolladora. Bajo, la autoria y visión programática de Evan You. 
 2. Vue-CLI- Herramienta para complementar VueJS. 
 3.Vue-Router - Herramienta para complementar VueJs. 
 4. Vueity v2.3.18 - Framework para CSS.

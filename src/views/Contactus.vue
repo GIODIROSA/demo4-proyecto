@@ -22,10 +22,10 @@
       <!-- ENVIAR COMENTARIOS A LOS ARTISTAS -->
       <div>
         <h3 class="tituloEscribele font-weight-thin text-center my-5">
-           ESCRIBELE A NUESTROS ARTISTAS DE
+          ESCRIBELE A NUESTROS ARTISTAS DE
           <span class="modificacionEscribele font-weight-bold"
-            >AUFIELDS CHILE 2021 </span
-          >
+            >AUFIELDS CHILE 2021
+          </span>
         </h3>
       </div>
       <div class="ma-10">
@@ -66,7 +66,7 @@
           <v-divider></v-divider>
 
           <div class="purple lighten-3">
-            <router-link :to="`/editar/${item.id}`">
+            <router-link class="linkEditar" :to="`/editar/${item.id}`">
               <v-btn
                 @click="editar(item.id)"
                 class="ma-2"
@@ -143,5 +143,8 @@ export default {
 }
 .modificacionEscribele {
   color: #7c4dff;
+}
+.linkEditar {
+  text-decoration: none;
 }
 </style>
