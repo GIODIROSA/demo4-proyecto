@@ -20,5 +20,6 @@ describe("Prueba de compra de tickets seleccionado", () => {
     cy.get(
       ".v-card__actions > .v-btn--icon > .v-btn__content > .v-icon"
     ).click();
+    cy.reload();
   });
 });
