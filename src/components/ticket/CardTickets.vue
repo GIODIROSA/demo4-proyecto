@@ -114,7 +114,7 @@
           <v-card
             :color="ticket.data.color"
             :loading="loading"
-            class="mx-auto my-12"
+            class="cardtickets_test mx-auto my-12"
             max-width="474"
           >
             <template slot="progress">
@@ -140,7 +140,7 @@
 
               <v-divider></v-divider>
 
-              <div class="my-4 pa-2 subtitle-1 text-caption">
+              <div class="nombreArtistas_test my-4 pa-2 subtitle-1 text-caption">
                 <span class="modificacionArtista font-weight-bold">
                   Presentación de artistas:
                 </span>
@@ -165,6 +165,7 @@
               >
                 <v-btn
                   @click="comprar(ticket.id)"
+                  class="comprar_test"
                   block
                   depressed
                   dark

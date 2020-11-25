@@ -46,6 +46,17 @@ https://loquesea.cl
 5. HTML5 y CSS3 - Como lenguajes de etiquetas y estilos.
 6. Firebase - Usado para hacer deploy y como hosting de la aplicación.
 
+# Testing e2e, **cypress** ✔️
+
+#### Ventajas de cypress
+1. No usa Selenium
+2. Se enfoca en hacer E2E muy bien.
+3. Funciona con cualquier front end.
+4. Tests escritos en JavaScript
+5. Es todo en uno.
+6. Amigables con desarrolladores y QA
+7. Mucho más rápido que las demás alternativas.
+
 # Autor 💊
 
 > El autor de este proyecto es:

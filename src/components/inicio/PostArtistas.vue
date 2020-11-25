@@ -5,7 +5,7 @@
         ARTISTAS INVITADOS
         <span class="edicionConcierto">2021</span>
       </h1>
-      <h5 class="subtitutloPostArtista">
+      <h5 class="subtituloPostArtista">
         CONCIERTO DE MÚSICA ELECTRÓNICA MÁS GRANDE DE SUR AMÉRICA
       </h5>
     </div>
@@ -20,7 +20,7 @@
           v-for="(artista, index) in artistas"
           :key="index"
         >
-          <v-card class="mx-auto" max-width="400" :to="{ name: 'LineUp' }">
+          <v-card class="cardDj_test mx-auto" max-width="400" :to="{ name: 'LineUp' }">
             <v-img
               class="white--text align-end"
               height="600px"
@@ -69,7 +69,7 @@ export default {
   font-weight: 600;
   color: #ffab40;
 }
-.subtitutloPostArtista {
+.subtituloPostArtista {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #ffab40;

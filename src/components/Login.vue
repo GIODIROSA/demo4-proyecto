@@ -53,26 +53,36 @@
                 v-model="contrasena"
               >
               </v-text-field>
-              <v-btn dark block color="cyan lighten-4" type="submit"
+              <v-btn
+                dark
+                block
+                class="btn-iniciarSesion_test"
+                color="cyan lighten-4"
+                type="submit"
                 >Iniciar Sesion</v-btn
               >
-              <v-btn @click="clear" dark block color="teal accent-3 my-3"
+              <v-btn
+                @click="clear"
+                dark
+                block
+                color="teal accent-3"
+                class="btn_clear_test my-3"
                 >Clear</v-btn
               >
               <hr />
 
-              <h4 class="my-5 pa-5 pink accent-1 white--text">
+              <h4 class="textManeraChatear my-5 pa-5 pink accent-1 white--text">
                 La mejor manera de <span class="modificarChatear">CHATEAR</span>
               </h4>
-              <p class="text-caption">
+              <p class="textoChatearUno text-caption">
                 Tenemos la mejor forma de comunicarse directamente con nuestros
                 artistas y chatear con ellos.
               </p>
-              <p class="text-caption">
+              <p class="textoChatearDos text-caption">
                 Solo debes loguear por medio de ¡tu cuenta GOOGLE!
               </p>
               <v-btn
-                class="d-flex justify-center"
+                class="btn_iniciarSesion_google d-flex justify-center"
                 dark
                 @click="logInGoogle"
                 depressed

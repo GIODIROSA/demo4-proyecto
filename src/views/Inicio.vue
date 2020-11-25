@@ -27,7 +27,7 @@
 
               <v-btn
                 dark
-                class="purple accent-1"
+                class="compararticket_btn_test purple accent-1"
                 block
                 :to="{ name: 'Tickets' }"
               >
@@ -36,7 +36,7 @@
 
               <v-btn
                 dark
-                class="teal accent-3 my-3"
+                class="lineUp_btn_test teal accent-3 my-3"
                 block
                 :to="{ name: 'LineUp' }"
               >

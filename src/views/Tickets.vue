@@ -4,7 +4,7 @@
       <v-parallax dark :src="figuraUno">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <h1 class="display-1 font-weight-bold mb-4">
+            <h1 class="tituloTickets_test display-1 font-weight-bold mb-4">
               {{ titulo }}
             </h1>
           </v-col>
