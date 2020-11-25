@@ -37,12 +37,23 @@
           {{ notaComentarios }}
         </p>
         <router-link class="linkAgregar" to="/agregar">
-          <v-btn class="btnAgregar_test" dark color="purple accent-4" block> AGREGAR </v-btn>
+          <v-btn class="btnAgregar_test" dark color="purple accent-4" block>
+            AGREGAR
+          </v-btn>
         </router-link>
       </div>
 
       <!-- CARD COMENTARIOS -->
       <div>
+        <div class="tegustaComentarios">
+          <h5 class="text-caption mx-5 pa-3 purple lighten-4">¿Te gusta esta sección de comentarios?</h5>
+          <v-btn class="ma-5" icon text @click="likes">
+          <v-icon color="yellow">mdi-star</v-icon> {{ count }}
+        </v-btn>
+
+        </div>
+        
+
         <v-card
           class="ma-2 purple accent-1"
           v-for="(item, index) in comentarios"
@@ -96,6 +107,7 @@ export default {
   data() {
     return {
       comentario: "COMENTARIOS",
+      count: 0,
       discapacitado:
         "Si tiene alguna pregunta relacionada con el acceso para discapacitados y / o desea registrarse en el programa, o si tiene preguntas sobre la entrada de medicamentos al evento, comuníquese con el equipo de acceso en acceso@aufields.cl o llame al 0207009 3490.",
       notaComentarios:
@@ -114,11 +126,15 @@ export default {
       this.eliminarComentario(id);
       this.$swal("Cuidado!", "Borraste el comentario!", "error");
     },
+    likes() {
+      this.count++;
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+
 .tituloComentario {
   display: flex;
   justify-content: center;
