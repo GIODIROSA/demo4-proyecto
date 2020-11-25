@@ -91,7 +91,7 @@
             dark
             block
             color="green lighten-4"
-            class="py-5"
+            class="btnCerrar_test py-5"
             @click="accionarNormativa"
           >
             Cerrar
@@ -165,6 +165,7 @@
               >
                 <v-btn
                   @click="comprar(ticket.id)"
+                  id="comprarTest"
                   class="comprar_test"
                   block
                   depressed

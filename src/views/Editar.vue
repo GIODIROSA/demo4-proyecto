@@ -44,7 +44,7 @@
                   vista previa del comentario: {{ comentario.nombre }}
                 </p>
               </div>
-              <button icon type="submit" class="my-5">
+              <button icon type="submit" class="btnEditar_test my-5">
                 <v-icon color="cyan darken-2">mdi-pencil</v-icon>
                 Debes dar click
               </button>

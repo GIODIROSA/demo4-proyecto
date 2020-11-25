@@ -12,11 +12,11 @@
             <v-card-title class="tituloAgregar">
               AGREGAR
             </v-card-title>
-            <v-card-subtitle>
+            <v-card-subtitle class="subtituloAgregar">
               Podrás agregar un comentario para los artistas
             </v-card-subtitle>
             <!-- FORM DE AGREGAR COMENTARIO -->
-            <form class="mx-4" @submit.prevent="agregarComentario(nombre)">
+            <form class="form_test mx-4" @submit.prevent="agregarComentario(nombre)">
               <div>
                 <v-text-field
                   color="teal lighten-2"
@@ -24,12 +24,13 @@
                   v-model="nombre"
                   label="Agregar comentario"
                   hide-details="auto"
+                  class="agregarComentario_test"
                 ></v-text-field>
                 <p class="vistaPreviaAgregar text-caption">
                   Vista previa del comentario: {{ nombre }}
                 </p>
               </div>
-              <button class="my-5" icon type="submit">
+              <button class="btnAgregar_test my-5" icon type="submit">
                 <v-icon color="teal accent-4">mdi-check</v-icon> Debes dar click
                 para agregar
               </button>

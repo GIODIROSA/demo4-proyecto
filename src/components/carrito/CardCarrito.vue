@@ -55,7 +55,7 @@
                 dense
                 outlined
               ></v-select>
-              <v-card-subtitle
+              <v-card-subtitle class="normativaCompraTicket"
                 >Solo puedes comprar 5 entradas como número
                 máximo</v-card-subtitle
               >
@@ -134,7 +134,7 @@
             <v-divider></v-divider>
 
             <v-card-subtitle>
-              <v-btn color="light-blue lighten-5" block @click="comprar">
+              <v-btn class="btnComprarBoleta_test" color="light-blue lighten-5" block @click="comprar">
                 Comprar
               </v-btn>
             </v-card-subtitle>

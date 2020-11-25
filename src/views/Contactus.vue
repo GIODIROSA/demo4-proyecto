@@ -11,6 +11,7 @@
       <v-btn
         dark
         block
+        class="btn_contacto_test"
         color="deep-purple lighten-3"
         :to="{ name: 'Contacto' }"
       >
@@ -36,7 +37,7 @@
           {{ notaComentarios }}
         </p>
         <router-link class="linkAgregar" to="/agregar">
-          <v-btn dark color="purple accent-4" block> AGREGAR </v-btn>
+          <v-btn class="btnAgregar_test" dark color="purple accent-4" block> AGREGAR </v-btn>
         </router-link>
       </div>
 
@@ -69,7 +70,7 @@
             <router-link class="linkEditar" :to="`/editar/${item.id}`">
               <v-btn
                 @click="editar(item.id)"
-                class="ma-2"
+                class="btnEditar_test ma-2"
                 icon
                 color="purple accent-4"
               >
@@ -96,7 +97,7 @@ export default {
     return {
       comentario: "COMENTARIOS",
       discapacitado:
-        " Si tiene alguna pregunta relacionada con el acceso para discapacitados y / o desea registrarse en el programa, o si tiene preguntas sobre la entrada de medicamentos al evento, comuníquese con el equipo de acceso en acceso@aufields.cl o llame al 0207009 3490.",
+        "Si tiene alguna pregunta relacionada con el acceso para discapacitados y / o desea registrarse en el programa, o si tiene preguntas sobre la entrada de medicamentos al evento, comuníquese con el equipo de acceso en acceso@aufields.cl o llame al 0207009 3490.",
       notaComentarios:
         "Puedes agregar un comentario para los artistas invitados al AUFIELDS 2021",
     };
