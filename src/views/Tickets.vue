@@ -4,9 +4,11 @@
       <v-parallax dark :src="figuraUno">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <h1 class="tituloTickets_test display-1 font-weight-bold mb-4">
-              {{ titulo }}
-            </h1>
+            <router-link class="linkInicioTickets" :to="{ name: 'Inicio' }">
+              <h1 class="tituloTickets_test display-1 font-weight-bold mb-4 white--text">
+                {{ titulo }}
+              </h1>
+            </router-link>
           </v-col>
         </v-row>
       </v-parallax>
@@ -61,6 +63,9 @@ export default {
 
 <style lang="scss" scoped>
 .linkRedes {
+  text-decoration: none;
+}
+.linkInicioTickets {
   text-decoration: none;
 }
 </style>

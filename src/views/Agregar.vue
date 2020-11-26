@@ -24,7 +24,7 @@
                   v-model="nombre"
                   label="Agregar comentario"
                   hide-details="auto"
-                  class="agregarComentario_test"
+                  id="agregarComentario_test"
                 ></v-text-field>
                 <p class="vistaPreviaAgregar text-caption">
                   Vista previa del comentario: {{ nombre }}

@@ -12,9 +12,9 @@ describe("Prueba del login", () => {
     cy.get("#input-69").type("test@test.com");
     cy.get("#input-72").type("test1234");
     cy.contains(".btn-iniciarSesion_test", "Iniciar Sesion").click;
-    cy.get(".btn-iniciarSesion_test").click;
+    cy.get(".btn-iniciarSesion_test").click();
     cy.contains(".btn_clear_test", "Clear").click;
-    cy.get(".btn_clear_test").click;
+    cy.get(".btn_clear_test").click();
     // cy.get(".textManeraChatear", "la mejor manera de CHATEAR");
     cy.contains(
       ".textoChatearUno",

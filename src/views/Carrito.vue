@@ -14,7 +14,7 @@
     <div>
       <v-container>
         <v-row>
-          <v-btn dark block color="red accent-1" :to="{ name: 'Tickets' }">
+          <v-btn dark block class="volverTicket_test" color="red accent-1" :to="{ name: 'Tickets' }">
             Volver a Tickets
           </v-btn>
         </v-row>

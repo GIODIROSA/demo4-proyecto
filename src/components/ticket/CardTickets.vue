@@ -198,9 +198,9 @@ export default {
       dialog: false,
     };
   },
-  mounted() {
-    this.dialog = true;
-  },
+  // mounted() {
+  //   this.dialog = true;
+  // },
   methods: {
     accionarNormativa() {
       this.dialog = !this.dialog;

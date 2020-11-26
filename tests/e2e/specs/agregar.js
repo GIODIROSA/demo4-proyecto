@@ -12,7 +12,7 @@ describe("Test de agregar", () => {
       ".subtituloAgregar",
       "Podrás agregar un comentario para los artistas"
     );
-    cy.get("#input-65").type("testeando comentario");
+    cy.get("#agregarComentario_test").type("testeando comentario");
     cy.wait(1000);
     cy.get(".btnAgregar_test").click();
   });

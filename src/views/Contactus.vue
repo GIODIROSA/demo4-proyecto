@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <h1 class="tituloComentario">
+      <h1 id="tituloComentario_test" class="tituloComentario">
         <span class="modificarTituloComentario">{{ comentario }}</span>
       </h1>
     </div>
@@ -11,6 +11,7 @@
       <v-btn
         dark
         block
+        id="contactanos_test"
         class="btn_contacto_test"
         color="deep-purple lighten-3"
         :to="{ name: 'Contacto' }"
@@ -30,7 +31,7 @@
         </h3>
       </div>
       <div class="ma-10">
-        <p class="text-caption text-justify">
+        <p id="textDiscapacidad_test" class="text-caption text-justify">
           {{ discapacitado }}
         </p>
         <p class="text-caption">
@@ -46,13 +47,13 @@
       <!-- CARD COMENTARIOS -->
       <div>
         <div class="tegustaComentarios">
-          <h5 class="text-caption mx-5 pa-3 purple lighten-4">¿Te gusta esta sección de comentarios?</h5>
+          <h5 class="text-caption mx-5 pa-3 purple lighten-4">
+            ¿Te gusta esta sección de comentarios?
+          </h5>
           <v-btn class="ma-5" icon text @click="likes">
-          <v-icon color="yellow">mdi-star</v-icon> {{ count }}
-        </v-btn>
-
+            <v-icon color="yellow">mdi-star</v-icon> {{ count }}
+          </v-btn>
         </div>
-        
 
         <v-card
           class="ma-2 purple accent-1"
@@ -81,7 +82,8 @@
             <router-link class="linkEditar" :to="`/editar/${item.id}`">
               <v-btn
                 @click="editar(item.id)"
-                class="btnEditar_test ma-2"
+                class="ma-2"
+                id="btnEditar_test"
                 icon
                 color="purple accent-4"
               >
@@ -134,7 +136,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .tituloComentario {
   display: flex;
   justify-content: center;

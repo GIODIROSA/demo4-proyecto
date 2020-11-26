@@ -130,6 +130,7 @@
             >Inicio</v-btn
           >
           <v-btn
+          class="btnComentarios_test"
             dark
             color="pink accent-4 my-2"
             block

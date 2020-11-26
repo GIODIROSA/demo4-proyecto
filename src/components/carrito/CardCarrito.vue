@@ -49,6 +49,7 @@
             <div class="d-flex justify-center">
               <v-select
                 class="ma-4"
+                id="numeroentrada_test"
                 v-model="cantidad"
                 :items="entradas"
                 label="Agregar cantidad de ticket"
