@@ -22,6 +22,7 @@ describe("Test de Comentarios", () => {
     cy.contains("#tituloComentario_test", "COMENTARIOS");
     cy.get("#contactanos_test").click();
     cy.contains("#contactanos_test", "CONTÁCTANOS").click;
+    cy.get("#btnContador_test").click();
   });
 
   //AGREGAR COMENTARIOS
@@ -36,7 +37,7 @@ describe("Test de Comentarios", () => {
     );
     cy.get("#agregarComentario_test").type("testeando comentario");
     cy.wait(1000);
-    cy.get(".btnAgregar_test").click();
+    cy.get(".btnAgregar_test").dblclick();
   });
 
   //TESTEAR EDITAR COMENTARIOS

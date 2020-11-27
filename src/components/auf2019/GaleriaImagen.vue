@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <!-- <input type="checkbox" v-model="filter" /> -->
-    <v-btn dark color="orange" block @click="modificar">
+    <v-btn id="galeriaAuf" dark color="orange" block @click="modificar">
       <v-btn icon color="pink">
         <v-icon>mdi-heart</v-icon>
       </v-btn>

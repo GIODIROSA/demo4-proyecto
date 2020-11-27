@@ -3,6 +3,13 @@
 describe("Test e2e de Inicio", () => {
   it("Debe cargar el Inicio", () => {
     cy.visit("/");
+    cy.wait(3000);
+    cy.viewport(350, 600);
+    cy.viewport(600, 960);
+    cy.viewport(960, 1264);
+    cy.viewport(1264, 1904);
+    cy.viewport(1904, 2450);
+    cy.wait(1000);
   });
 
   //NAVBAR
@@ -52,9 +59,8 @@ describe("Test e2e de Inicio", () => {
     cy.wait(2000);
     cy.get(".compararticket_btn_test").click();
     cy.contains(".compararticket_btn_test", "Comprar tickets Aufields").click();
-    // cy.get(".lineUp_btn_test").click();
-    // cy.contains(".lineUp_btn_test", "LineUp").click;
 
+    
     //LINK DE REDES
 
     cy.get(".linkRedes:nth-child(1)").click;

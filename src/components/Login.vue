@@ -4,12 +4,17 @@
       <v-parallax dark :src="imagenLogin">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <h1 class="display-1 font-weight-bold mb-4">
-              LOGIN
-            </h1>
-            <h4 class="subheading">
-              ¡LOGUEATE PARA DISFRUTAR DE AUFIELDS WEB!
-            </h4>
+            <router-link class="linkInicioLogin" :to="{ name: 'Inicio' }">
+              <h1
+                id="loginTest"
+                class="display-1 font-weight-bold mb-4 white--text"
+              >
+                LOGIN
+              </h1>
+              <h4 class="subheading white--text">
+                ¡LOGUEATE PARA DISFRUTAR DE AUFIELDS WEB!
+              </h4>
+            </router-link>
           </v-col>
         </v-row>
       </v-parallax>
@@ -42,12 +47,14 @@
               </div>
 
               <v-text-field
+              id="email_test"
                 color="teal lighten-1"
                 label="Email"
                 v-model="usuario"
               >
               </v-text-field>
               <v-text-field
+              id="contrasena_test"
                 color="teal lighten-1"
                 label="Contraseña"
                 v-model="contrasena"
@@ -176,6 +183,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.linkInicioLogin {
+  text-decoration: none;
+}
 .formularioLogin {
   width: 450px;
   margin: auto;

@@ -43,8 +43,9 @@
             </v-card-text>
             <!-- FORMULARIO E INPUT -->
             <v-card-text>
-              <v-form @submit.prevent="enviarMensaje" v-model="valido">
+              <v-form id="formChat" @submit.prevent="enviarMensaje" v-model="valido">
                 <v-text-field
+                id="mensajeChat"
                   color="amber darken-4"
                   v-model="mensaje"
                   label="Escribe tu mensaje AUFIELDS"

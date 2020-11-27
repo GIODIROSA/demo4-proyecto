@@ -2,12 +2,13 @@
   <div>
     <v-parallax height="550" :src="imagenBeneficio">
       <v-btn
-        class="mx-auto"
+        class="btnCorazon_test mx-auto"
+        id="btntest_beneficios"
         fab
         dark
         small
         color="yellow"
-        :to="{ name: 'Tickets' }"
+        :to="{ name: 'Inicio' }"
       >
         <v-icon dark>
           mdi-heart
@@ -18,9 +19,12 @@
     <v-container>
       <v-row>
         <v-col cols="12">
-          <h1 class="tituloBeneficio text-center">
-            BENE<span class="modificaciontitulo">FICIOS</span>
-          </h1>
+          <router-link class="linkBeneficios" :to="{ name: 'Inicio' }">
+            <h1 id="btnBeneficio" class="tituloBeneficio text-center">
+              BENE<span class="modificaciontitulo">FICIOS</span>
+            </h1>
+          </router-link>
+
           <h5 class="subtituloBeneficio">AUFIELDS-CHILE 2021</h5>
         </v-col>
         <v-col cols="12" v-for="(contenido, index) in contenidos" :key="index">
@@ -75,6 +79,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.linkBeneficios {
+  text-decoration: none;
+}
 .subtituloBeneficio {
   color: #ff4081;
   text-align: center;

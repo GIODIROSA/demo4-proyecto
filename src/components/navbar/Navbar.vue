@@ -188,6 +188,7 @@
         <!-- CREAR USUARIO BTN -->
 
         <v-btn
+        id="closeLogin_test"
           dark
           color="red accent-2"
           block
@@ -253,7 +254,7 @@ export default {
 
     // logOut
     logOut() {
-      this.$swal("Vuelve pronto!", "Usuario se desconectado!", "success");
+      this.$swal("Vuelve pronto!😊", "Usuario desconectado!", "success");
       firebase
         .auth()
         .signOut()

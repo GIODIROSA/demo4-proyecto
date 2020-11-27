@@ -5,7 +5,10 @@
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
             <router-link class="linkInicioTickets" :to="{ name: 'Inicio' }">
-              <h1 class="tituloTickets_test display-1 font-weight-bold mb-4 white--text">
+              <h1
+              id="testLink_titulo"
+                class="tituloTickets_test display-1 font-weight-bold mb-4 white--text"
+              >
                 {{ titulo }}
               </h1>
             </router-link>

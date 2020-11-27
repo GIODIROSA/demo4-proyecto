@@ -2,9 +2,12 @@
   <div>
     <v-container>
       <div>
-        <h1 class="tituloTravel text-center py-5">
-          TRAVEL
-        </h1>
+        <router-link class="linkTravel" :to="{ name: 'Inicio' }">
+          <h1 class="tituloTravel text-center py-5">
+            TRAVEL
+          </h1>
+        </router-link>
+
         <v-divider class="py-3" inset></v-divider>
       </div>
       <v-row>
@@ -53,6 +56,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.linkTravel {
+  text-decoration: none;
+}
 .tituloTravel {
   color: #00bfa5;
 }

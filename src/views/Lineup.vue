@@ -52,12 +52,40 @@
         >
       </h1>
     </div>
+
+    <!-- BTN CHAT -->
+    <div>
+      <v-container>
+        <h4 class="chatear_artistas text-caption text-center my-5">
+          ¡Ahora podrás chatear con nuestros artistas invitados!
+        </h4>
+        <div class="d-flex justify-center">
+          <router-link class="linkChat" :to="{ name: 'Chat' }">
+            <v-btn id="btnchat_test" dark class="amber darken-2">
+              CHATEA CON NUESTROS ARTISTAS
+            </v-btn>
+          </router-link>
+        </div>
+      </v-container>
+    </div>
+
+    <!-- FINAL BTN CHAT -->
+
     <v-container>
       <v-row>
         <v-col md="6" v-for="(artista, index) in artistas" :key="index">
           <CardLineup :artista="artista" />
         </v-col>
       </v-row>
+    </v-container>
+    <v-container>
+      <div>
+        <h5 id="notaArtista" class="text-caption text-center">
+          ¡Los artistas Dj, los máximos exponentes de la música electrónica
+          reunidos en un solo concierto! 06 y 07 de Noviembre de 2021 Santiago-
+          Chile.
+        </h5>
+      </div>
     </v-container>
   </div>
 </template>
@@ -101,5 +129,11 @@ export default {
 }
 .videosArtistas {
   height: 350px;
+}
+.linkChat {
+  text-decoration: none;
+}
+.chatear_artistas {
+  color: #9fa8da;
 }
 </style>

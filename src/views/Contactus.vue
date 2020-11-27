@@ -43,18 +43,18 @@
           </v-btn>
         </router-link>
       </div>
-
-      <!-- CARD COMENTARIOS -->
+      <!-- CONTADOR DE LIKES -->
       <div>
         <div class="tegustaComentarios">
-          <h5 class="text-caption mx-5 pa-3 purple lighten-4">
+          <h5 class="textLike_test text-caption mx-5 pa-3 purple lighten-4">
             ¿Te gusta esta sección de comentarios?
           </h5>
-          <v-btn class="ma-5" icon text @click="likes">
+          <v-btn id="btnContador_test" class="ma-5" icon text @click="likes">
             <v-icon color="yellow">mdi-star</v-icon> {{ count }}
           </v-btn>
         </div>
 
+        <!-- CARD COMENTARIOS -->
         <v-card
           class="ma-2 purple accent-1"
           v-for="(item, index) in comentarios"
