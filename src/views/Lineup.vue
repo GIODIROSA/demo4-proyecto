@@ -3,47 +3,56 @@
     <div class="bannerLineUp">
       <Slider :sliderImagen="sliderImagen" />
     </div>
-    <div class="videosArtistas d-flex justify-center green accent-1">
-      <!-- BORIS BREJCHA -->
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/vqz8c4ZP3Wg"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+    <div class="blue lighten-4">
+      <v-container>
+        <v-row>
+          <v-col cols="12" sm="6" md="3" lg="3" xl="3">
+            <!-- BORIS BREJCHA -->
+            <iframe
+              height="315"
+              src="https://www.youtube.com/embed/vqz8c4ZP3Wg"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </v-col>
 
-      <!-- CHARLOTTE DE WITTE -->
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/3cOOu52n26c?start=511"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+          <v-col cols="12" sm="6" md="3" lg="3" xl="3">
+            <!-- CHARLOTTE DE WITTE -->
+            <iframe
+              height="315"
+              src="https://www.youtube.com/embed/3cOOu52n26c?start=511"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </v-col>
 
-      <!-- MARTIN GARRIX -->
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/Pnp_7IaqW74"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+          <v-col cols="12" sm="6" md="3" lg="3" xl="3">
+            <!-- MARTIN GARRIX -->
+            <iframe
+              height="315"
+              src="https://www.youtube.com/embed/Pnp_7IaqW74"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </v-col>
 
-      <!-- AMELIE LENS -->
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/d1-Xc7EfT44?start=11"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+          <v-col cols="12" sm="6" md="3" lg="3">
+            <!-- AMELIE LENS -->
+            <iframe
+              height="315"
+              src="https://www.youtube.com/embed/d1-Xc7EfT44?start=11"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </v-col>
+        </v-row>
+      </v-container>
     </div>
+
     <div class="textoCarousel">
       <h1 class="tituloCarousel light-green accent-1">
         AUFIELDS
@@ -134,6 +143,9 @@ export default {
   text-decoration: none;
 }
 .chatear_artistas {
+  color: #9fa8da;
+}
+#notaArtista {
   color: #9fa8da;
 }
 </style>

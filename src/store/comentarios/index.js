@@ -6,6 +6,7 @@ export default {
   state: {
     comentarios: [],
     comentario: { nombre: "", id: "" },
+    add: false,
   },
   getters: {},
   mutations: {
@@ -19,6 +20,9 @@ export default {
       state.comentarios = state.comentarios.filter(
         (item) => item.id !== payload
       );
+    },
+    MOSTRAR_ADD(state) {
+      state.add = !state.add;
     },
   },
   actions: {
@@ -37,7 +41,9 @@ export default {
             });
             commit("OBTENER_COMENTARIOS", comentario);
           });
-      } catch (error) {}
+      } catch (error) {
+        console.log("Tienes un error : ", error);
+      }
     },
 
     obtenerComentario({ commit }, idComentario) {

@@ -14,11 +14,13 @@
         id="contactanos_test"
         class="btn_contacto_test"
         color="deep-purple lighten-3"
-        :to="{ name: 'Contacto' }"
+        @click="showAdd"
       >
-        CONTÁCTANOS
+        <span v-if="!add">VER CONSULTAS GENERALES</span>
+        <span v-if="add">Quitar CONSULTAS GENERALES</span>
       </v-btn>
-      <router-view />
+      <ConsultaGenerales v-if="add" />
+      <!-- <router-view v-if="add" /> -->
       <!-- FINAL DE CONTACTO -->
 
       <!-- ENVIAR COMENTARIOS A LOS ARTISTAS -->
@@ -103,9 +105,13 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions, mapMutations, mapState } from "vuex";
+import ConsultaGenerales from "@/components/contacto/ConsultaGenerales.vue";
 export default {
   name: "Contactous",
+  components: {
+    ConsultaGenerales,
+  },
   data() {
     return {
       comentario: "COMENTARIOS",
@@ -117,16 +123,21 @@ export default {
     };
   }, //final de data
   computed: {
-    ...mapState("Comentarios", ["comentarios"]),
+    ...mapState("Comentarios", ["comentarios", "add"]),
   },
   methods: {
     ...mapActions("Comentarios", ["eliminarComentario"]),
+    ...mapMutations("Comentarios", ["MOSTRAR_ADD"]),
     editar() {
       this.$swal("Muy bien!", "Puedes editar el comentario!", "success");
     },
     eliminar(id) {
       this.eliminarComentario(id);
       this.$swal("Cuidado!", "Borraste el comentario!", "error");
+    },
+    showAdd() {
+      // this.$route.push("/contactus/contacto");
+      this.MOSTRAR_ADD();
     },
     likes() {
       this.count++;
