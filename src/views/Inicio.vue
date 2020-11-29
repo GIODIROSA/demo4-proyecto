@@ -153,4 +153,6 @@ export default {
 .linkRedes {
   text-decoration: none;
 }
+
+// ANIMACIÓN
 </style>

@@ -18,6 +18,13 @@
           </v-col>
         </v-row>
       </v-parallax>
+        <v-alert
+      outlined
+      type="success"
+      text
+    >
+      Únete a nosotros por medio de Google y podrás chatear con nuestros artistas invitado a la edición AUFIELDS 2021
+    </v-alert>
     </div>
 
     <section class="formularioLogin">

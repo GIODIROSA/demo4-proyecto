@@ -126,9 +126,6 @@
       <!-- button -->
       <v-container>
         <v-row>
-          <v-btn dark color="pink darken-1" block :to="{ name: 'Inicio' }"
-            >Inicio</v-btn
-          >
           <v-btn
             class="btnComentarios_test"
             dark
