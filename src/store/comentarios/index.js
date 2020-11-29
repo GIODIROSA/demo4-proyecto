@@ -46,7 +46,7 @@ export default {
             commit("OBTENER_CONSULTAS", consulta);
           });
       } catch (error) {
-        console.log("Tienes un error : ", error);
+        console.log("Tienes un error en consultas : ", error);
       }
     },
     async obtenerDataComentarios({ commit }) {
@@ -65,7 +65,7 @@ export default {
             commit("OBTENER_COMENTARIOS", comentario);
           });
       } catch (error) {
-        console.log("Tienes un error : ", error);
+        console.log("Tienes un error  en comentarios: ", error);
       }
     },
 

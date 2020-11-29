@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navPrincipal">
     <v-toolbar dense elevation="1">
       <router-link class="linkRouterTitle" :to="{ name: 'Inicio' }">
         <v-toolbar-title>
@@ -130,7 +130,7 @@
             >Inicio</v-btn
           >
           <v-btn
-          class="btnComentarios_test"
+            class="btnComentarios_test"
             dark
             color="pink accent-4 my-2"
             block
@@ -188,7 +188,7 @@
         <!-- CREAR USUARIO BTN -->
 
         <v-btn
-        id="closeLogin_test"
+          id="closeLogin_test"
           dark
           color="red accent-2"
           block
@@ -265,6 +265,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// .navPrincipal {
+//   position: fixed;
+//   z-index: 1;
+// }
 .linkRouterTitle {
   text-decoration: none;
 }

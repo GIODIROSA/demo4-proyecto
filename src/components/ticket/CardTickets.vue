@@ -45,6 +45,11 @@
           </v-icon>
           NORMATIVA
         </v-btn>
+        <div>
+          <p class="parrafoPolitica text-caption my-3 text-center">
+            {{ politica }}
+          </p>
+        </div>
       </div>
       <!-- INICIO DE DIALOG -->
 
@@ -140,7 +145,9 @@
 
               <v-divider></v-divider>
 
-              <div class="nombreArtistas_test my-4 pa-2 subtitle-1 text-caption">
+              <div
+                class="nombreArtistas_test my-4 pa-2 subtitle-1 text-caption"
+              >
                 <span class="modificacionArtista font-weight-bold">
                   Presentación de artistas:
                 </span>
@@ -196,6 +203,8 @@ export default {
       loading: false,
       selection: 1,
       dialog: false,
+      politica:
+        "Lee y acepta la política de asistencia al concierto. Normativas",
     };
   },
   // mounted() {
@@ -242,6 +251,10 @@ export default {
   .btnNormativa {
     display: block;
     margin: auto;
+  }
+
+  .parrafoPolitica {
+    color: #9fa8da;
   }
 }
 //DIALOG======>

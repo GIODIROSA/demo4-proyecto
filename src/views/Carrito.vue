@@ -4,9 +4,9 @@
       <ParallaxCarrito />
     </router-link>
     <div>
-      <p class="light-blue lighten-4 pa-3 font-weight-light text-caption">
+      <v-alert icon="mdi-shield-lock-outline" prominent text type="info">
         {{ info }}
-      </p>
+      </v-alert>
     </div>
 
     <CardCarrito :obtenerTicket="obtenerTicket" />
@@ -14,7 +14,13 @@
     <div>
       <v-container>
         <v-row>
-          <v-btn dark block class="volverTicket_test" color="red accent-1" :to="{ name: 'Tickets' }">
+          <v-btn
+            dark
+            block
+            class="volverTicket_test"
+            color="red accent-1"
+            :to="{ name: 'Tickets' }"
+          >
             Volver a Tickets
           </v-btn>
         </v-row>

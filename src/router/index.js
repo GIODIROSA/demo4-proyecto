@@ -63,16 +63,6 @@ const routes = [
     name: "Contact Us",
     component: () =>
       import(/* webpackChunkName: "contact us" */ "../views/Contactus.vue"),
-    children: [
-      {
-        path: "contacto",
-        name: "Contacto",
-        component: () =>
-          import(
-            /* webpackChunkName: "Contacto" */ "../components/contacto/Contacto.vue"
-          ),
-      },
-    ],
   },
   {
     path: "/editar/:id",

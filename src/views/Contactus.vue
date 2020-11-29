@@ -1,5 +1,17 @@
 <template>
   <div>
+    <v-parallax dark :src="imagenComentarios">
+      <v-row align="center" justify="center">
+        <v-col class="text-center" cols="12">
+          <h1 class="display-1 font-weight-thin mb-4">
+            Escríbenos
+          </h1>
+          <h4 class="subheading">
+            ¡Desde ahora y para siempre, puedes tener una conexión con nosotros!
+          </h4>
+        </v-col>
+      </v-row>
+    </v-parallax>
     <div>
       <h1 id="tituloComentario_test" class="tituloComentario">
         <span class="modificarTituloComentario">{{ comentario }}</span>
@@ -120,6 +132,8 @@ export default {
         "Si tiene alguna pregunta relacionada con el acceso para discapacitados y / o desea registrarse en el programa, o si tiene preguntas sobre la entrada de medicamentos al evento, comuníquese con el equipo de acceso en acceso@aufields.cl o llame al 0207009 3490.",
       notaComentarios:
         "Puedes agregar un comentario para los artistas invitados al AUFIELDS 2021",
+      imagenComentarios:
+        "https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/ambiente%2Fcomentarios-imagen.png?alt=media&token=d41486c4-8238-43c7-99d6-b8da3ae0c7db",
     };
   }, //final de data
   computed: {

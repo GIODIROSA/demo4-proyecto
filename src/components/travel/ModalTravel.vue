@@ -18,7 +18,7 @@
               </h5>
 
               <v-btn
-              id="btnTravelModal"
+                id="btnTravelModal"
                 block
                 class="ma-5"
                 color="lime accent-3"
@@ -47,10 +47,10 @@
             </v-toolbar-items>
           </v-toolbar>
           <v-list three-line subheader>
-            <h5 class="text-caption pa-3">
+            <v-alert outlined type="success" text>
               Diferentes medios para que vengas a disfrutar del evento más
               grande de música electrónica
-            </h5>
+            </v-alert>
           </v-list>
           <v-divider></v-divider>
           <!-- MODAL - DIALOG -->
