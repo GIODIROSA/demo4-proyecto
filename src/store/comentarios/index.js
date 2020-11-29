@@ -5,6 +5,7 @@ export default {
   namespaced: true,
   state: {
     comentarios: [],
+    consultas: [],
     comentario: { nombre: "", id: "" },
     add: false,
   },
@@ -16,6 +17,9 @@ export default {
     OBTENER_INDCOMENTARIO(state, payload) {
       state.comentario = payload;
     },
+    OBTENER_CONSULTAS(state, payload) {
+      state.consultas = payload;
+    },
     ELIMINAR_COMENTARIO(state, payload) {
       state.comentarios = state.comentarios.filter(
         (item) => item.id !== payload
@@ -26,6 +30,25 @@ export default {
     },
   },
   actions: {
+    async obtenerConsultaGenerales({ commit }) {
+      try {
+        await firebase
+          .firestore()
+          .collection("consultas")
+          .onSnapshot((snapshot) => {
+            let consulta = [];
+            snapshot.forEach((doc) => {
+              consulta.push({
+                id: doc.id,
+                data: doc.data(),
+              });
+            });
+            commit("OBTENER_CONSULTAS", consulta);
+          });
+      } catch (error) {
+        console.log("Tienes un error : ", error);
+      }
+    },
     async obtenerDataComentarios({ commit }) {
       try {
         await firebase

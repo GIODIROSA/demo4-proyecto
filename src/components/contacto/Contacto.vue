@@ -47,7 +47,7 @@
               contacto con Lyndsey Doel @ 5D Events, correo electrónico:
               info@5dcuk.com para más información Concesiones de alimentos: - Si
               está interesado en operar un concesión en AUFIELDS, comuníquese
-              con Beth Greaves @ D&J Catering, correo electrónico:
+              con Beth Greaves @ DJ Catering, correo electrónico:
               beth@djcatering.cl / Tel: 0116247 8177
             </v-card-text>
             <v-divider></v-divider>

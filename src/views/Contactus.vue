@@ -133,7 +133,7 @@ export default {
     },
     eliminar(id) {
       this.eliminarComentario(id);
-      this.$swal("Cuidado!", "Borraste el comentario!", "error");
+      this.$swal("Cuidado! 💣", "Borraste el comentario!", "error");
     },
     showAdd() {
       // this.$route.push("/contactus/contacto");
