@@ -48,7 +48,7 @@ describe("Debe testear navbar y continuar con chat", () => {
     cy.get(".v-window__next > .v-btn > .v-btn__content > .v-icon").click();
     cy.get(3000);
     cy.get(
-      ':nth-child(1) > [data-v-45547649=""] > .mx-auto > .v-card__actions > .v-btn--icon > .v-btn__content > .v-icon'
+      ':nth-child(1) > [data-v-dcb7b3d8=""] > .mx-auto > .v-card__actions > .v-btn--icon > .v-btn__content > .v-icon'
     ).click();
     cy.get(3000);
     cy.get("#notaArtista").scrollIntoView();

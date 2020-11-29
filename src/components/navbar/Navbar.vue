@@ -168,6 +168,9 @@
           @click:append="show1 = !show1"
         ></v-text-field>
 
+        <v-alert outlined type="warning" prominent border="left">
+          Crea tu usuario para disfrutar de nuestras novedades.
+        </v-alert>
         <!-- CREAR USUARIO BTN -->
 
         <v-btn

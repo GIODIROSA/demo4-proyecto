@@ -21,7 +21,6 @@ describe("Test de Comentarios", () => {
     cy.wait(2000);
     cy.contains("#tituloComentario_test", "COMENTARIOS");
     cy.get("#contactanos_test").click();
-    cy.contains("#contactanos_test", "CONTÁCTANOS").click;
     cy.get("#btnContador_test").click();
   });
 

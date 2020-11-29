@@ -135,7 +135,12 @@
             <v-divider></v-divider>
 
             <v-card-subtitle>
-              <v-btn class="btnComprarBoleta_test" color="light-blue lighten-5" block @click="comprar">
+              <v-btn
+                class="btnComprarBoleta_test"
+                color="light-blue lighten-5"
+                block
+                @click="comprar"
+              >
                 Comprar
               </v-btn>
             </v-card-subtitle>
@@ -191,10 +196,7 @@ export default {
       const ticketComprado = JSON.parse(JSON.stringify(this.obtenerTicket));
       ticketComprado.cantidad = this.cantidad;
       this.comprarTicket(ticketComprado);
-
-      // const polera = Object.assign({}, this.getPoleraById);
-      // polera.cant = this.cant;
-      // this.comprarPolera(polera);
+      this.$swal("¡Estas listo!💊", "Gracias por tu compra!", "success");
     },
   },
   computed: {
