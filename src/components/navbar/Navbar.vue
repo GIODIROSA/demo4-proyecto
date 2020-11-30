@@ -119,7 +119,7 @@
 
     <!-- DIALOG- MODAL -->
 
-    <v-dialog v-model="dialog" persistent max-width="500">
+    <v-dialog v-model="dialog" persistent max-width="300">
       <v-card color="teal lighten-5" class="pa-5">
         <!-- FORMULARIO -->
         <div class="mb-5">
@@ -147,7 +147,7 @@
           @click:append="show1 = !show1"
         ></v-text-field>
 
-        <v-alert outlined type="warning" prominent border="left">
+        <v-alert outlined type="warning" prominent border="left" class="text-caption">
           Crea tu usuario para disfrutar de nuestras novedades.
         </v-alert>
         <!-- CREAR USUARIO BTN -->

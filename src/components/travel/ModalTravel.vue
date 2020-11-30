@@ -10,17 +10,20 @@
         <template v-slot:activator="{ on, attrs }">
           <v-container>
             <div class="botonMedioTransporte">
-              <h5 class="mensajeTravel ma-5 font-weight-light py-3">
+              <h5
+                class="mensajeTravel ma-5 font-weight-light py-3 d-flex justify-center"
+              >
                 <span class="notaTravel font-weight-bold">
-                  <span class="modificarNota">Nota:</span>
+                  <span class="modificarNota">Nota: </span>
                 </span>
                 Para revisar de que manera puedes llegar al concierto
               </h5>
-
+            </div>
+            <div class="d-flex justify-center">
               <v-btn
                 id="btnTravelModal"
-                class="ma-5 d-flex justify-center"
-                color="lime accent-3"
+                class="ma-5"
+                color="lime darken-1"
                 dark
                 v-bind="attrs"
                 v-on="on"
@@ -29,6 +32,7 @@
               </v-btn>
             </div>
           </v-container>
+
           <!-- MODAL BODY -->
         </template>
 
@@ -116,13 +120,9 @@
               forma barata y ecológica de hacer nuevos amigos y encontrar socios
               delirantes para toda la vida.
             </p>
-            <div>
+            <div class="d-flex justify-center">
               <router-link class="modalTravel" :to="{ name: 'Inicio' }">
-                <v-btn
-                  class="btnModalTravel ma-3"
-                  dark
-                  color="teal accent-3"
-                >
+                <v-btn class="btnModalTravel ma-3" dark color="teal accent-3">
                   Volver a Inicio
                 </v-btn>
               </router-link>
