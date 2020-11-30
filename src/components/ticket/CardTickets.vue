@@ -179,7 +179,7 @@
                   dark
                   color="indigo accent-1"
                 >
-                  Comprar
+                  Seleccionar
                 </v-btn>
               </router-link>
             </div>

@@ -120,7 +120,6 @@
               <router-link class="modalTravel" :to="{ name: 'Inicio' }">
                 <v-btn
                   class="btnModalTravel ma-3"
-                  block
                   dark
                   color="teal accent-3"
                 >

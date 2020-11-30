@@ -29,7 +29,7 @@
         <!-- FORM VUETIFY -->
         <!-- INICIO DE CARD -->
         <v-row>
-          <v-col class="cardLoginForm" cols="9" sm="12" md="12" lg="12">
+          <v-col class="cardLoginForm" cols="12" sm="12" md="12" lg="12">
             <v-card width="350">
               <div>
                 <v-form class="my-5" @submit.prevent="login">
