@@ -32,9 +32,7 @@ describe("Debe testear navbar y continuar con chat", () => {
     // ENTRAR A LINEUP PROTEGIDO
     cy.get(".v-list > [href='/lineup']").click();
     cy.wait(2000);
-    cy.contains("h1", "LOGIN");
-    cy.contains("h4", "¡LOGUEATE PARA DISFRUTAR DE AUFIELDS WEB!");
-    cy.contains("h3", "INICIAR SESIÓN");
+    cy.contains(".tituloFormularioIniciar", "INICIAR SESIÓN");
     cy.get("#email_test").type("test@test.com");
     cy.get("#contrasena_test").type("test1234");
     cy.contains(".btn-iniciarSesion_test", "Iniciar Sesion").click;
@@ -48,7 +46,7 @@ describe("Debe testear navbar y continuar con chat", () => {
     cy.get(".v-window__next > .v-btn > .v-btn__content > .v-icon").click();
     cy.get(3000);
     cy.get(
-      ':nth-child(1) > [data-v-dcb7b3d8=""] > .mx-auto > .v-card__actions > .v-btn--icon > .v-btn__content > .v-icon'
+      ':nth-child(1) > [data-v-42831c1f=""] > .mx-auto > .v-card__actions > .v-btn--icon > .v-btn__content > .v-icon'
     ).click();
     cy.get(3000);
     cy.get("#notaArtista").scrollIntoView();
@@ -56,9 +54,10 @@ describe("Debe testear navbar y continuar con chat", () => {
 
   // ENTRAR A CHAT
   it("Debe entrar a chat", () => {
-    cy.get("#btnchat_test").click();
+    cy.get(".linkChat > #btnchat_test").click();
     cy.get("#mensajeChat").type("Probando test chat");
-    cy.get(".text-center > .tituloChat").click();
+    cy.get("#btnChatTest").click();
+    cy.get(".swal-button").click();
   });
 
   //   ENTRAR EN TRAVEL
@@ -67,7 +66,7 @@ describe("Debe testear navbar y continuar con chat", () => {
     cy.wait(2000);
     cy.get(".v-list > [href='/travel']").click();
     cy.get("#btnTravelModal").click();
-    cy.get(".tituloTravel").click();
+    cy.get(".v-btn--active > .v-btn__content").click();
   });
 
   //ENTRAR EN TICKET
@@ -85,13 +84,7 @@ describe("Debe testear navbar y continuar con chat", () => {
     cy.wait(2000);
     cy.get(".v-list > [href='/auf2019']").click();
     cy.get("#galeriaAuf").click();
-    // cy.get("#notaArtista").scrollIntoView();
-    cy.wait(3000);
-  });
-
-  // DESLOGUEAR
-
-  it("Debe desloguearse", () => {
-    cy.get(".red--text > .v-btn__content > .v-icon").click();
+    cy.get(".btnVolver").scrollIntoView();
+    cy.get("#BtnVolverAuf").click();
   });
 });

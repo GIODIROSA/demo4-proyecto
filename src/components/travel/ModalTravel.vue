@@ -19,8 +19,7 @@
 
               <v-btn
                 id="btnTravelModal"
-                block
-                class="ma-5"
+                class="ma-5 d-flex justify-center"
                 color="lime accent-3"
                 dark
                 v-bind="attrs"
@@ -117,6 +116,18 @@
               forma barata y ecológica de hacer nuevos amigos y encontrar socios
               delirantes para toda la vida.
             </p>
+            <div>
+              <router-link class="modalTravel" :to="{ name: 'Inicio' }">
+                <v-btn
+                  class="btnModalTravel ma-3"
+                  block
+                  dark
+                  color="teal accent-3"
+                >
+                  Volver a Inicio
+                </v-btn>
+              </router-link>
+            </div>
           </v-container>
         </v-card>
       </v-dialog>
@@ -179,6 +190,9 @@ export default {
   color: #ff1744;
 }
 .linkRedes {
+  text-decoration: none;
+}
+.modalTravel {
   text-decoration: none;
 }
 </style>

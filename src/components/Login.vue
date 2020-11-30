@@ -18,96 +18,109 @@
           </v-col>
         </v-row>
       </v-parallax>
-        <v-alert
-      outlined
-      type="success"
-      text
-    >
-      Únete a nosotros por medio de Google y podrás chatear con nuestros artistas invitado a la edición AUFIELDS 2021
-    </v-alert>
+      <v-alert outlined type="success" text>
+        Únete a nosotros por medio de Google y podrás chatear con nuestros
+        artistas invitado a la edición AUFIELDS 2021
+      </v-alert>
     </div>
 
     <section class="formularioLogin">
       <v-container>
+        <!-- FORM VUETIFY -->
+        <!-- INICIO DE CARD -->
         <v-row>
-          <v-col class="menuBtn" cols="12" sm="12" md="12" lg="12">
-            <!-- FORM VUETIFY -->
-            <v-form class="loginForm" @submit.prevent="login">
-              <div class="py-5">
-                <v-btn icon color="indigo">
-                  <v-icon>mdi-star</v-icon>
-                </v-btn>
-                <v-btn icon color="green accent-3">
-                  <v-icon>mdi-music</v-icon>
-                </v-btn>
-                <v-btn icon color="amber darken-3">
-                  <v-icon>mdi-ticket</v-icon>
-                </v-btn>
-              </div>
+          <v-col class="cardLoginForm" cols="9" sm="12" md="12" lg="12">
+            <v-card width="350">
               <div>
-                <h3 class="tituloIniciar font-weight-bold my-5">
-                  INICIAR SESIÓN
-                </h3>
-                <p class="mensajeLogin text-caption">
-                  {{ parrafoRegistro }}
-                </p>
+                <v-form class="my-5" @submit.prevent="login">
+                  <v-card-title
+                    class="tituloFormularioIniciar font-weight-bold my-5"
+                  >
+                    INICIAR SESIÓN
+                  </v-card-title>
+                  <v-card-subtitle class="notaLogin font-weight-thin">
+                    Nota:
+                  </v-card-subtitle>
+                  <v-card-text class="parrafoLogin text-caption">
+                    {{ parrafoRegistro }}
+                  </v-card-text>
+
+                  <v-divider></v-divider>
+
+                  <v-card-text class="text-center pink lighten-3 white--text">
+                    La mejor manera de
+                    <span class="modificarChatear font-weight-bold"
+                      >CHATEAR</span
+                    >
+                  </v-card-text>
+
+                  <v-card-text class="text-caption text-justify">
+                    Tenemos la mejor forma de comunicarse directamente con
+                    nuestros artistas y chatear con ellos.
+                  </v-card-text>
+
+                  <v-card-text class="text-caption text-justify">
+                    Tenemos la mejor forma de comunicarse directamente con
+                    nuestros artistas y chatear con ellos.
+                  </v-card-text>
+
+                  <v-alert outlined type="warning" prominent border="left">
+                    Solo debes loguear por medio de ¡tu cuenta GOOGLE!
+                  </v-alert>
+
+                  <v-btn
+                    block
+                    class="btn_iniciarSesion_google d-flex justify-center mb-5"
+                    dark
+                    @click="logInGoogle"
+                    depressed
+                    color="amber accent-2"
+                  >
+                    <v-icon left>mdi-google</v-icon>
+                    INICIAR SESIÓN
+                  </v-btn>
+
+                  <v-text-field
+                    class="ma-5"
+                    id="email_test"
+                    color="teal lighten-1"
+                    label="Email"
+                    v-model="usuario"
+                  >
+                  </v-text-field>
+                  <v-text-field
+                    class="ma-5"
+                    id="contrasena_test"
+                    color="teal lighten-1"
+                    label="Contraseña"
+                    v-model="contrasena"
+                  >
+                  </v-text-field>
+                  <v-btn
+                    dark
+                    block
+                    class="btn-iniciarSesion_test"
+                    color="cyan lighten-4"
+                    type="submit"
+                    depressed
+                    >Iniciar Sesion</v-btn
+                  >
+                  <v-btn
+                    @click="clear"
+                    dark
+                    block
+                    color="teal accent-3"
+                    class="btn_clear_test my-3"
+                    depressed
+                    >Clear</v-btn
+                  >
+                  <v-divider></v-divider>
+                </v-form>
               </div>
-
-              <v-text-field
-              id="email_test"
-                color="teal lighten-1"
-                label="Email"
-                v-model="usuario"
-              >
-              </v-text-field>
-              <v-text-field
-              id="contrasena_test"
-                color="teal lighten-1"
-                label="Contraseña"
-                v-model="contrasena"
-              >
-              </v-text-field>
-              <v-btn
-                dark
-                block
-                class="btn-iniciarSesion_test"
-                color="cyan lighten-4"
-                type="submit"
-                >Iniciar Sesion</v-btn
-              >
-              <v-btn
-                @click="clear"
-                dark
-                block
-                color="teal accent-3"
-                class="btn_clear_test my-3"
-                >Clear</v-btn
-              >
-              <hr />
-
-              <h4 class="textManeraChatear my-5 pa-5 pink accent-1 white--text">
-                La mejor manera de <span class="modificarChatear">CHATEAR</span>
-              </h4>
-              <p class="textoChatearUno text-caption">
-                Tenemos la mejor forma de comunicarse directamente con nuestros
-                artistas y chatear con ellos.
-              </p>
-              <p class="textoChatearDos text-caption">
-                Solo debes loguear por medio de ¡tu cuenta GOOGLE!
-              </p>
-              <v-btn
-                class="btn_iniciarSesion_google d-flex justify-center"
-                dark
-                @click="logInGoogle"
-                depressed
-                color="amber accent-2"
-              >
-                <v-icon left>mdi-google</v-icon>
-                INICIAR SESIÓN
-              </v-btn>
-            </v-form>
+            </v-card>
           </v-col>
         </v-row>
+        <!-- FINAL DE CARD -->
       </v-container>
     </section>
   </div>
@@ -197,14 +210,14 @@ export default {
   width: 450px;
   margin: auto;
 }
-.tituloIniciar {
-  color: #80deea;
+.tituloFormularioIniciar {
+  color: #f50057;
 }
-.politianLogin {
-  padding: 20px 0;
-  font-weight: 300;
-  font-size: 12px;
+
+.parrafoLogin {
+  color: #64b5f6;
 }
+
 .loginForm {
   width: 300px;
   padding: 10px 0;
@@ -221,7 +234,7 @@ export default {
   color: #757575;
 }
 
-form > * {
-  display: block;
-}
+// form > * {
+//   display: block;
+// }
 </style>

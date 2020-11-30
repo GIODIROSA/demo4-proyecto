@@ -5,6 +5,7 @@
         <ParallaxChat />
       </router-link>
     </div>
+
     <v-container>
       <v-row>
         <v-col cols="12">
@@ -43,9 +44,13 @@
             </v-card-text>
             <!-- FORMULARIO E INPUT -->
             <v-card-text>
-              <v-form id="formChat" @submit.prevent="enviarMensaje" v-model="valido">
+              <v-form
+                id="formChat"
+                @submit.prevent="enviarMensaje"
+                v-model="valido"
+              >
                 <v-text-field
-                id="mensajeChat"
+                  id="mensajeChat"
                   color="amber darken-4"
                   v-model="mensaje"
                   label="Escribe tu mensaje AUFIELDS"
@@ -62,6 +67,20 @@
           </v-card>
         </v-col>
       </v-row>
+      <!-- BTN DESLOGUEARSE -->
+      <div>
+        <v-container>
+          <h4 class="chatear_artistas text-caption text-center my-5">
+            ¡Si quieres cerrar sesión hazlo aquí!
+          </h4>
+          <div class="d-flex justify-center">
+            <v-btn id="btnChatTest" dark class="red accent-3" @click="logOut">
+              CERRAR SESIÓN
+            </v-btn>
+          </div>
+        </v-container>
+      </div>
+      <!-- BTN DESLOGUEARSE -->
       <div class="d-flex justify-center mt-3">
         <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
           <a class="redesLink" :href="icon.link">
@@ -123,6 +142,15 @@ export default {
       } else {
         console.log("No escribiste nada");
       }
+    },
+
+    // Desloguearse
+    logOut() {
+      this.$swal("Vuelve pronto!😊", "Usuario desconectado!", "success");
+      firebase
+        .auth()
+        .signOut()
+        .then(() => this.$router.replace("/"));
     },
   },
   computed: {

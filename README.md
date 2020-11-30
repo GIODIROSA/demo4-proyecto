@@ -6,7 +6,7 @@
 
 #### Puedes ingresar desde éste enlace:
 
-https://loquesea.cl
+https://proyecto-final-1-afa97.web.app/
 
 ## Vista previa INICIO
 

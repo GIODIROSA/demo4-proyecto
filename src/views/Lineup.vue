@@ -62,6 +62,22 @@
       </h1>
     </div>
 
+    <!-- BTN DESLOGUEARME -->
+    <div>
+      <v-container>
+        <h4 class="chatear_artistas text-caption text-center my-5">
+          ¡Si quieres cerrar sesión hazlo aquí!
+        </h4>
+        <div class="d-flex justify-center">
+          <v-btn id="btnchat_test" dark class="red accent-3" @click="logOut">
+            CERRAR SESIÓN
+          </v-btn>
+        </div>
+      </v-container>
+    </div>
+
+    <!-- FINAL BTN DESLOGUEARME -->
+
     <!-- BTN CHAT -->
     <div>
       <v-container>
@@ -100,6 +116,7 @@
 </template>
 
 <script>
+import firebase from "firebase";
 import { mapState } from "vuex";
 import CardLineup from "@/components/lineUp/CardLineup.vue";
 import Slider from "@/components/lineUp/Slider.vue";
@@ -110,6 +127,15 @@ export default {
     return {
       dialog: false,
     };
+  },
+  methods: {
+    logOut() {
+      this.$swal("Vuelve pronto!😊", "Usuario desconectado!", "success");
+      firebase
+        .auth()
+        .signOut()
+        .then(() => this.$router.replace("/"));
+    },
   },
   computed: {
     ...mapState(["artistas"]),

@@ -4,7 +4,12 @@
       Hello <span class="aufTtitulo">AUFIELDS</span> 2019
     </h1>
     <v-container>
-      <GaleriaImagen :imagenes= "imagenes" />
+      <GaleriaImagen :imagenes="imagenes" />
+      <router-link class="linkVolverAuf" :to="{ name: 'Inicio' }">
+        <v-btn block dark color="cyan lighten-1" id="BtnVolverAuf" class="btnVolver">
+          Volver al 2021
+        </v-btn>
+      </router-link>
     </v-container>
   </div>
 </template>
@@ -29,5 +34,8 @@ export default {
 }
 .tituloAuf2019 {
   font-family: "Montserrat", sans-serif;
+}
+.linkVolverAuf {
+  text-decoration: none;
 }
 </style>

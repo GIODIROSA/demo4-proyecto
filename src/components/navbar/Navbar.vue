@@ -55,27 +55,6 @@
 
       <!-- FINAL DE CREAR USUARIO BTN -->
 
-      <!-- CERRAR SESION BTN -->
-
-      <v-tooltip bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            icon
-            dark
-            small
-            class="ma-2"
-            color="red accent-3"
-            v-bind="attrs"
-            v-on="on"
-            @click="logOut"
-          >
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-        </template>
-        <span>Cerrar sesion</span>
-      </v-tooltip>
-
-      <!-- FINAL DE CERRAR SESION BTN -->
       <!-- CARRITO BTN -->
 
       <v-tooltip bottom>
@@ -251,24 +230,11 @@ export default {
       this.addUsuario(this.usuario);
     },
     ...mapActions(["addUsuario"]),
-
-    // logOut
-    logOut() {
-      this.$swal("Vuelve pronto!😊", "Usuario desconectado!", "success");
-      firebase
-        .auth()
-        .signOut()
-        .then(() => this.$router.replace("/"));
-    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-// .navPrincipal {
-//   position: fixed;
-//   z-index: 1;
-// }
 .linkRouterTitle {
   text-decoration: none;
 }
