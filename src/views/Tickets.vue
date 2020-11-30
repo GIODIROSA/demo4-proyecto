@@ -1,6 +1,7 @@
 <template>
   <div>
     <div>
+      <!-- INICIO DE PARALLAX DE TICKET -->
       <v-parallax dark :src="figuraUno">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
@@ -15,7 +16,10 @@
           </v-col>
         </v-row>
       </v-parallax>
+      <!-- FINAL DE PARALLAX DE TICKET -->
+
     </div>
+    <!-- LINK DE REDES SOCIALES -->
     <section>
       <div class="d-flex justify-center mt-3">
         <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
@@ -27,6 +31,8 @@
         </v-btn>
       </div>
     </section>
+    <!-- FINAL DE LINK DE REDES SOCIALES -->
+    <!-- COMPONENTE DE SELECCION DE TIPO DE TICKET PARA EL CONCIERTO -->
     <CardTickets :ticketsDisponibles="ticketsDisponibles" />
   </div>
 </template>

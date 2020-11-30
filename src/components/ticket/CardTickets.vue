@@ -33,6 +33,7 @@
           06 y 07 de NOVIEMBRE/ CLUB HÍPICO
         </h5>
         <!-- BTN DE NORMATIVA -->
+
         <v-btn
           tile
           dark
@@ -45,12 +46,14 @@
           </v-icon>
           NORMATIVA
         </v-btn>
+        <!-- FINAL DE BTN NORMATIVA -->
         <div>
           <p class="parrafoPolitica text-caption my-3 text-center">
             {{ politica }}
           </p>
         </div>
       </div>
+
       <!-- INICIO DE DIALOG -->
 
       <v-dialog v-model="dialog" width="800px">
@@ -187,6 +190,7 @@
             <!-- FINAL BTN DE COMPRAR PARAMS DINAMICA -->
           </v-card>
         </v-col>
+
         <!-- FINAL DE LA COL DE CARD TICKET -->
       </v-row>
     </v-container>
@@ -207,15 +211,13 @@ export default {
         "Lee y acepta la política de asistencia al concierto. Normativas",
     };
   },
-  // mounted() {
-  //   this.dialog = true;
-  // },
+
   methods: {
     accionarNormativa() {
       this.dialog = !this.dialog;
     },
     comprar(id) {
-      this.$swal(`Numero de ticket: ${id}`, "Eres lo máximo!", "success");
+      this.$swal(`Numero de ticket: ${id}`, "Eres lo máximo! 💸", "success");
     },
   }, //final de methods
   computed: {
@@ -257,7 +259,8 @@ export default {
     color: #9fa8da;
   }
 }
-//DIALOG======>
+// DIALOG
+
 .tituloNormativa {
   color: #ffb300;
 }
@@ -269,6 +272,7 @@ export default {
 }
 
 // TICKET
+
 .tituloTipo {
   color: #e0f7fa;
 }

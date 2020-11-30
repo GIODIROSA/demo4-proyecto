@@ -2,6 +2,7 @@
   <div class="bannercarrito">
     <v-container>
       <v-row>
+        <!-- INICIO DEL TICKET SELECCIONADO -->
         <v-col cols="12" sm="6" md="8" lg="8">
           <v-card class="mx-auto yellow accent-4" max-width="500">
             <v-img :src="obtenerTicket.data.imagen" height="400px"></v-img>
@@ -148,6 +149,8 @@
         </v-col>
 
         <!-- FINAL DE CARD BOLETA DE COMPRA -->
+
+        <!-- INICIO DE LINK DE REDES -->
       </v-row>
       <div class="d-flex justify-center mt-3">
         <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
@@ -158,6 +161,7 @@
           >
         </v-btn>
       </div>
+      <!-- FINAL DE LINK DE REDES -->
     </v-container>
   </div>
 </template>
@@ -179,15 +183,6 @@ export default {
         { redes: "mdi-linkedin", link: "https://www.linkedin.com/" },
         { redes: "mdi-instagram", link: "https://www.instagram.com/" },
       ],
-      //objeto de ticket seleccionado
-      ticketSeleccionado: {
-        tipoTicket: "",
-        areaTicket: "",
-        idTicketSeleccionado: "",
-        stockTicket: "",
-        artistasTicket: "",
-        precioticket: "",
-      },
     };
   },
   methods: {
@@ -202,11 +197,6 @@ export default {
   computed: {
     ...mapState("Carrito", ["impuesto"]),
     ...mapGetters("Tickets", ["cantidadEntrada"]),
-
-    cantidadEntradaSeleccionada() {
-      const id = this.ticketSeleccionado.idTicketSeleccionado;
-      return this.cantidadEntrada(id);
-    },
 
     numeroEntradasPermitidas() {
       let numeroEntrada = [1, 2, 3, 4, 5];

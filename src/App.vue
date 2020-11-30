@@ -1,12 +1,15 @@
 <template>
   <v-app>
+    <!-- COMPONENTE NAVBAR -->
     <Navbar />
-
     <v-main>
+      <!-- TRANSICIONES DE VISTAS -->
       <transition name="fade" mode="out-in">
         <router-view />
       </transition>
+      <!-- FINAL TRANSICIONES DE VISTAS -->
     </v-main>
+    <!-- BARRA FOOTER GRADIENTE EN COLOR -->
     <div class="barraColorFooter"></div>
   </v-app>
 </template>
@@ -23,6 +26,7 @@ export default {
     //
   }),
   methods: {
+    // LLAMADOS DE LOS ACTIONS DE LOS VUEX MODULES
     ...mapActions(["getDataArtista"]),
     ...mapActions("Areas", ["obtenerAreasConcierto"]),
     ...mapActions("Contenidos", ["obtenerData"]),
@@ -37,6 +41,7 @@ export default {
     ...mapActions("Faqs", ["obtenerFaqs"]),
   },
   created() {
+    // MONTAJE EN EL HOOK DEL LLAMADO A FIREBASE POR MEDIO DE VUEX MODULES
     this.getDataArtista();
     this.obtenerAreasConcierto();
     this.obtenerData();
@@ -63,7 +68,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-// configuracion de la transicion de las vistas
+// CONFIGURACIÓN DE LA ANIMACIÓN PARA LA ENTRADA DE LAS VISTAS
 .fade-enter-active {
   transition: all 1s ease;
 }
@@ -76,6 +81,7 @@ body {
   opacity: 0;
 }
 
+// CONFIGURACIÓN CROMÁTICA DE LA GRADACIÓN DEL FOOTER
 .barraColorFooter {
   background: #ff0000;
   background: linear-gradient(122deg, #ff0000 0%, #7100ff 80%);

@@ -1,8 +1,10 @@
 <template>
   <div>
+    <!-- INICIO DE COMPONENTE SLIDER -->
     <div class="bannerLineUp">
       <Slider :sliderImagen="sliderImagen" />
     </div>
+    <!-- FINAL DE COMPONENTE SLIDER -->
     <div class="blue lighten-4">
       <v-container>
         <v-row>
@@ -53,6 +55,7 @@
       </v-container>
     </div>
 
+    <!-- BANNER DE TITULO DE LINEUP VISTA -->
     <div class="textoCarousel">
       <h1 class="tituloCarousel light-green accent-1">
         AUFIELDS
@@ -104,6 +107,8 @@
       </v-row>
     </v-container>
     <v-container>
+      <!-- NOTA FINAL -->
+
       <div>
         <h5 id="notaArtista" class="text-caption text-center">
           ¡Los artistas Dj, los máximos exponentes de la música electrónica
@@ -111,6 +116,8 @@
           Chile.
         </h5>
       </div>
+
+      <!-- FINAL DE NOTA -->
     </v-container>
   </div>
 </template>

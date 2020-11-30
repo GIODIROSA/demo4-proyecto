@@ -1,5 +1,6 @@
 <template>
   <div class="slider">
+    <!-- INICIO DE CAROUSEL -->
     <v-carousel>
       <v-carousel-item
         v-for="(item, i) in sliderImagen"
@@ -10,6 +11,7 @@
       >
       </v-carousel-item>
     </v-carousel>
+    <!-- FINAL DE CAORUSEL -->
   </div>
 </template>
 

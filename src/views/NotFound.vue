@@ -1,19 +1,23 @@
 <template>
   <div>
+    <!-- PARALLAX PARA ENCABEZADO DE 404 NOT FOUND -->
     <v-parallax height="950" dark :src="imagen404">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
           <h1 class="textoError404 display-1 font-weight-bold mb-4">
             404 AMIG(X).... ¡TE FUISTE AL OTRO MUNDO CON LA DOSIS!
           </h1>
+          <!-- BTN CON LINK RUTA PARA RETORNAR A INICIO -->
           <router-link :to="{ name: 'Inicio' }" class="linkInicio_404">
             <v-btn @click="volver" color="lime">
               REGRESA AL MUNDO
             </v-btn>
           </router-link>
+          <!-- FINAL DE BTN -->
         </v-col>
       </v-row>
     </v-parallax>
+    <!-- FINAL DE PARALLAX -->
   </div>
 </template>
 

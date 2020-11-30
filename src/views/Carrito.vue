@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- PARRALLAX ANCLADO CON ROUTE LINK PARA RETORNO DE TICKET -->
     <router-link class="linkCarrito" :to="{ name: 'Tickets' }">
       <ParallaxCarrito />
     </router-link>
@@ -8,9 +9,11 @@
         {{ info }}
       </v-alert>
     </div>
-
+    <!-- FINAL DE PARALLAX -->
+    <!-- COMPONENTE DE SELECCION DEL TICKET OBTENIDO POR LA SELECCIÓN DEL USUARIO -->
     <CardCarrito :obtenerTicket="obtenerTicket" />
 
+    <!-- BTN DE RETORNO A TICKETS -->
     <div>
       <v-container>
         <v-row>
@@ -26,6 +29,7 @@
         </v-row>
       </v-container>
     </div>
+    <!-- FINAL DE BTN DE TICKETS -->
   </div>
 </template>
 
@@ -48,11 +52,6 @@ export default {
     obtenerTicket() {
       let id = this.id;
       return this.busqueda_ticket(id) || { data: {} };
-    },
-  },
-  methods: {
-    alert() {
-      this.$swal("Gracias!", "You clicked the button!", "success");
     },
   },
 };

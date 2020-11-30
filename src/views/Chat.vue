@@ -1,15 +1,17 @@
 <template>
   <div>
+    <!-- PARALLAX CON RUTA DE INICIO -->
     <div>
       <router-link class="linkChat" :to="{ name: 'Inicio' }">
         <ParallaxChat />
       </router-link>
     </div>
-
+<!-- DESARROLLO DEL CHAT -->
     <v-container>
       <v-row>
         <v-col cols="12">
-          <v-card color="orange lighten-3">
+          <!-- INICIO DE CARD -->
+          <v-card color="blue lighten-4">
             <v-card-text>
               <h3 class="tituloChat">
                 Bienvenido:
@@ -31,7 +33,15 @@
                 v-for="(item, index) in mensajes"
                 :key="index"
               >
-                <v-chip color="orange accent-3" pill class="yellow lighten-3">
+                <v-chip
+                  :color="
+                    item.nombre === usuario.nombre
+                      ? 'orange accent-3'
+                      : 'cyan accent-1'
+                  "
+                  pill
+                  class="cyan accent-1"
+                >
                   <v-avatar left>
                     <v-img :src="item.foto"> </v-img>
                   </v-avatar>
@@ -65,6 +75,7 @@
               </v-form>
             </v-card-text>
           </v-card>
+          <!-- FINAL DE CARD -->
         </v-col>
       </v-row>
       <!-- BTN DESLOGUEARSE -->
@@ -144,7 +155,7 @@ export default {
       }
     },
 
-    // Desloguearse
+    // DESLOGUEARSE
     logOut() {
       this.$swal("Vuelve pronto!😊", "Usuario desconectado!", "success");
       firebase

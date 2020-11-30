@@ -13,9 +13,7 @@
               <h5
                 class="mensajeTravel ma-5 font-weight-light py-3 d-flex justify-center"
               >
-                <span class="notaTravel font-weight-bold">
-                  <span class="modificarNota">Nota: </span>
-                </span>
+                <span class="modificarNota font-weight-bold">Nota : </span>
                 Para revisar de que manera puedes llegar al concierto
               </h5>
             </div>
@@ -33,9 +31,8 @@
             </div>
           </v-container>
 
-          <!-- MODAL BODY -->
+          <!-- CUERPO DEL MODAL-->
         </template>
-
         <v-card>
           <v-toolbar dark color="purple accent-1">
             <v-btn icon dark @click="dialog = false">
@@ -65,6 +62,7 @@
             </h1>
           </v-parallax>
           <!-- FINAL PARALLAX -->
+          <!-- CONTENIDO DE DIALOG -->
           <v-container>
             <v-row>
               <v-col
@@ -106,19 +104,14 @@
                 </v-card>
               </v-col>
             </v-row>
-            <!-- FINAL DE LOS MEDIOS DE TRANSPORTE -->
+            <!-- FINAL CONTENIDO DE  -->
             <!-- MENSAJE PARA COMPARTIR VEHICULO -->
             <v-divider inset class="py-2"></v-divider>
             <h1 class="tituloCompartir">
-              ¿Porqué no compartes?
+              {{ tituloComparte }}
             </h1>
             <p class="text-justify font-weight-light py-3 ">
-              Dirígete para encontrar viajeros que se dirigen desde tu área o
-              para alquilar tus propios asientos para el automóvil para que
-              otros se unan a ti. Los propietarios de automóviles establecen su
-              propio precio para compartir el costo del combustible, y es una
-              forma barata y ecológica de hacer nuevos amigos y encontrar socios
-              delirantes para toda la vida.
+              {{ textoComparte }}
             </p>
             <div class="d-flex justify-center">
               <router-link class="modalTravel" :to="{ name: 'Inicio' }">
@@ -131,6 +124,7 @@
         </v-card>
       </v-dialog>
     </v-row>
+    <!-- LINK DE REDES SOCIALES -->
     <div class="d-flex justify-center ma-3">
       <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
         <a class="linkRedes" :href="icon.link">
@@ -140,6 +134,7 @@
         >
       </v-btn>
     </div>
+    <!-- FINAL DE LOS ICONOS DE REDES -->
   </div>
 </template>
 
@@ -150,9 +145,6 @@ export default {
     return {
       dialog: false,
       notifications: false,
-      sound: true,
-      widgets: false,
-      show: false,
       icons: [
         { redes: "mdi-facebook", link: "https://www.facebook.com/" },
         { redes: "mdi-twitter", link: "https://twitter.com/?lang=en" },
@@ -161,6 +153,9 @@ export default {
       ],
       imagenInterna:
         "https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/ambiente%2Ftravelinterno.png?alt=media&token=644072e0-e59c-47f1-a096-948dca39bcc8",
+      tituloComparte: "¿Porqué no compartes?",
+      textoComparte:
+        "Dirígete para encontrar viajeros que se dirigen desde tu área o para alquilar tus propios asientos para el automóvil para que otros se unan a ti. Los propietarios de automóviles establecen su propio precio para compartir el costo del combustible, y es una forma barata y ecológica de hacer nuevos amigos y encontrar socios delirantes para toda la vida.",
     };
   }, //final de data
   computed: {
@@ -170,9 +165,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.modificacionTituloTravel {
-  color: #fff176;
-}
 .imagenTravel {
   filter: grayscale(60%);
 }

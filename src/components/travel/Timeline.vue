@@ -2,16 +2,17 @@
   <div>
     <v-container>
       <div>
+        <!-- TITULO DE LA VISTA TRAVEL CON ANCLA PARA INICIO -->
         <router-link class="linkTravel" :to="{ name: 'Inicio' }">
           <h1 class="tituloTravel text-center py-5">
             TRAVEL
           </h1>
         </router-link>
-
+        <!-- LINEA DIVISORA  -->
         <v-divider class="py-3" inset></v-divider>
       </div>
       <v-row>
-        <!-- COLUMNA 1 -->
+        <!-- TITULO, DESCRIPCIÓN, COL 1 -->
         <v-col>
           <h1 class="tituloDondeQueda text-md-body-1 px-5 mt-5">
             {{ titulo }}
@@ -20,7 +21,8 @@
             {{ descripcion }}
           </p>
         </v-col>
-        <!-- COLUMNA 2 -->
+        <!-- FINAL DE COL1 TITULO Y DESCRIPCIO -->
+        <!-- LINEA DE METRO PARA LLEGAR EL LUGAR DEL CONCIERTO, INFOGRAFIA, COL 2 -->
         <v-col>
           <v-timeline>
             <v-timeline-item color="pink" class="metroLinea1"
@@ -36,6 +38,8 @@
             </v-timeline-item>
           </v-timeline>
         </v-col>
+        <!--FINAL LINEA DE METRO PARA LLEGAR EL LUGAR DEL CONCIERTO, INFOGRAFIA, COL 2 -->
+
       </v-row>
       <v-divider inset class="py-2"></v-divider>
     </v-container>
