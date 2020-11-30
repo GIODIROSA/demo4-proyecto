@@ -6,10 +6,21 @@
     <v-container>
       <GaleriaImagen :imagenes="imagenes" />
       <router-link class="linkVolverAuf" :to="{ name: 'Inicio' }">
-        <v-btn block dark color="cyan lighten-1" id="BtnVolverAuf" class="btnVolver">
+        <v-btn
+          block
+          dark
+          color="cyan lighten-1"
+          id="BtnVolverAuf"
+          class="btnVolver"
+        >
           Volver al 2021
         </v-btn>
       </router-link>
+      <div>
+        <p class="textFooter text-caption text-center py-3">
+          ® Todos los derechos reservados. Aufields 2021
+        </p>
+      </div>
     </v-container>
   </div>
 </template>

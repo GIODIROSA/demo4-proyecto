@@ -81,7 +81,7 @@ body {
   background: linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
   background: -webkit-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
   background: -moz-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
-  height: 25px;
+  height: 35px;
   width: 100%;
 }
 </style>
