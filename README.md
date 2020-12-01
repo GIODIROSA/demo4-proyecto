@@ -32,8 +32,6 @@ https://proyecto-final-1-afa97.web.app/
 
 ![FAQS](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreen09.png?alt=media&token=3beec36d-1953-4f50-b2e2-6874e2da6f2c "Vista de faqs")
 
-
-
 # Construido con 🔧
 
 > Este proyecto está construido con la ayuda de Vuetify. -A MATERIAL DESIGN FRAMEWORK, un gran recurso para desarrollar aplicaciones y su aspecto profesional con VueJS. Éstas y otras tecnologías se han utilizado en el proyecto:
@@ -46,9 +44,44 @@ https://proyecto-final-1-afa97.web.app/
 5. HTML5 y CSS3 - Como lenguajes de etiquetas y estilos.
 6. Firebase - Usado para hacer deploy y como hosting de la aplicación.
 
+# Ingresa aquí para ver a la App 🔥
+
+## Pasos a seguir 📄:
+
+#### Instalar node modules y dependencias
+
+```
+yarn install
+```
+
+#### Una vez instalado, seguir con:
+
+```
+yarn serve
+```
+
+#### Compilación para producción:
+
+```
+yarn build
+```
+
+#### Construcción de la estructura:
+
+```
+firebase deploy --only hosting
+```
+
+#### Prueba de comando para correr E2E:
+
+```
+npm run test:e2e
+```
+
 # Testing e2e, **cypress** ✔️
 
 #### Ventajas de cypress
+
 1. No usa Selenium
 2. Se enfoca en hacer E2E muy bien.
 3. Funciona con cualquier front end.
@@ -56,6 +89,52 @@ https://proyecto-final-1-afa97.web.app/
 5. Es todo en uno.
 6. Amigables con desarrolladores y QA
 7. Mucho más rápido que las demás alternativas.
+
+### Muestra de aprobación de test:
+
+#### Test Inicio - CHAT
+
+> Este Test E2E verifica desde el inicio la entrada y el logueo de las páginas con prohibición. Siendo recorridas hasta llegar al punto inicial.
+
+1. Carga inicio
+2. Testeo Navbar
+3. Entrar LineUp _protegido_
+4. Card Artista
+5. Entrar Chat _protegido_
+6. Entrar en Travel
+7. Entrar ticket
+8. Entrar en AUF2019
+
+![test chat](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/testE2E%2Fchat.png?alt=media&token=45c7f75a-b540-435d-a969-be99f2436092 "Test de chat desde inicio")
+
+#### Test Inicio - Comentarios
+
+> Este Test E2E verifica la realización de un CRUD (created, Read, Update, Delete), estableciendo una sección destinada para la interacción del artistas con el público del concierto.
+
+![test comentarios](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/testE2E%2Fcomentarios-crud.png?alt=media&token=2b18afb3-58ba-4380-9739-a8819582a922 "Test de comentarios desde inicio")
+
+1. Carga inicio
+2. Testea Navigation drawer
+3. Testea contactanos
+4. Agregar comentarios
+5. Testea editar comentarios
+
+#### Test Inicio - comprar de ticket
+
+> Este Test E2E verifica la realización de la compra de un ticket.
+
+![test inicio](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/testE2E%2Finicio-compra-ticket.png?alt=media&token=1efa0b86-604f-446e-98d9-b6e61155d1ff "Test de compra de ticket desde inicio")
+
+1. Carga de inicio
+2. Navbar
+3. Parallax
+4. Componente PostArtistas
+5. Componente Area concierto
+6. Banner inicio
+7. Link de redes
+8. Encabezado de tickets
+9. Modal normativa
+10. Comprar ticket seleccionado
 
 # Autor 💊
 
@@ -65,7 +144,7 @@ https://proyecto-final-1-afa97.web.app/
 
 # Licencia 📋
 
-Este proyecto está bajo la Licencia - Mira el archivo LICENSE para detalles.
+Este proyecto está bajo la Licencia gratuita y de caracter público - para consultas: giodirosaartes@gmail.com
 
 # Expresiones de Gratitud ⚔️
 

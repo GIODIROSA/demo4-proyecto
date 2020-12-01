@@ -1,6 +1,6 @@
 //Testear NAVBAR Y CHAT
 
-describe("Debe testear navbar y continuar con chat", () => {
+describe("Debe testear el navbar/ entrar a lineup/ entrar y desloguear en chat/ volver a inicio", () => {
   // CARGA DE INICIO
   it("Debe probar la carga de Inicio para proceder el testeo", () => {
     cy.visit("/");
@@ -13,22 +13,14 @@ describe("Debe testear navbar y continuar con chat", () => {
     cy.wait(3000);
   });
 
-  // //   ENTRAR EN TRAVEL
-  // it("Debe entrar Travel y salir", () => {
-  //   cy.get(".v-app-bar__nav-icon > .v-btn__content > .v-icon").click();
-  //   cy.wait(2000);
-  //   cy.get(".v-list > [href='/travel']").click();
-  //   cy.get(".tituloTravel").click();
-  // });
-
   //   TESTEO DE NAVBAR
 
   it("Debe probar cada btn del navbar y retornar a inicio", () => {
     // PROBAR EL DESPLIEGUE DE NAVEGATION DRAWER
     cy.wait(2000);
     cy.get(".v-app-bar__nav-icon > .v-btn__content > .v-icon").click();
+    
 
-    //ENTRAR EN CADA COMPONENTE DE LA SFC
     // ENTRAR A LINEUP PROTEGIDO
     cy.get(".v-list > [href='/lineup']").click();
     cy.wait(2000);
@@ -46,7 +38,7 @@ describe("Debe testear navbar y continuar con chat", () => {
     cy.get(".v-window__next > .v-btn > .v-btn__content > .v-icon").click();
     cy.get(3000);
     cy.get(
-      ':nth-child(1) > [data-v-42831c1f=""] > .mx-auto > .v-card__actions > .v-btn--icon > .v-btn__content > .v-icon'
+      ':nth-child(1) > [data-v-fdb34116=""] > .mx-auto > .v-card__actions > .v-btn--icon'
     ).click();
     cy.get(3000);
     cy.get("#notaArtista").scrollIntoView();

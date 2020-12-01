@@ -4,7 +4,7 @@
     <div class="bannerTravel">
       <v-parallax class="parallaxImagenTravel" dark :src="imagenTravel">
         <v-row align="center" justify="center">
-          <!-- iMAGEN ESTATICA Y LOCAL PARA EL EFECTO DE SOBREPOSICIÓN -->
+          <!-- iMAGEN ESTATICA Y LOCAL PARA EL EFECTO DE YUXTAPOSICIÓN -->
           <img
             class="imagenTravel"
             src="../assets/img/mascara01.png"

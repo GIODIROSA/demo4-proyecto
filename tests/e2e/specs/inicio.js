@@ -60,7 +60,6 @@ describe("Test e2e de Inicio", () => {
     cy.get(".compararticket_btn_test").click();
     cy.contains(".compararticket_btn_test", "Comprar tickets Aufields").click();
 
-    
     //LINK DE REDES
 
     cy.get(".linkRedes:nth-child(1)").click;
@@ -92,12 +91,13 @@ describe("Test e2e de Inicio", () => {
     cy.get("#comprarTest").click();
     cy.get(".swal-button").click();
     cy.get(".v-input__icon > .v-icon").click();
-    cy.get("#list-item-190-2").click();
+    cy.get("#list-item-187-0 > .v-list-item__content").click();
     cy.contains(
       ".normativaCompraTicket",
       "Solo puedes comprar 5 entradas como número máximo"
     );
     cy.get(".btnComprarBoleta_test").click();
+    cy.get(".swal-button").click();
     cy.get(
       ".v-card__actions > .v-btn--icon > .v-btn__content > .v-icon"
     ).click();

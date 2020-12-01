@@ -1,6 +1,6 @@
 // Testear Comentarios
 
-describe("Test de Comentarios", () => {
+describe("Test de Comentarios CRUD", () => {
   //CARGAR INICIO
   it("Se debe testear el recorrido desde incio", () => {
     cy.visit("/");
@@ -44,6 +44,8 @@ describe("Test de Comentarios", () => {
   it("Debe testear el update de crud de comentarios", () => {
     cy.wait(2000);
     cy.get("#btnEditar_test").click();
+    cy.wait(2000);
+
     cy.get(".swal-button").click();
     cy.contains(".tituloEditarComentario", "EL COMENTARIO");
     cy.contains(
@@ -52,6 +54,10 @@ describe("Test de Comentarios", () => {
     );
     cy.get("#btnEditar_test").click();
     cy.get("#parallaxEditar").click();
+    cy.get(
+      ":nth-child(5) > .lighten-3 > .amber--text > .v-btn__content > .v-icon"
+    ).click();
+    cy.get(".swal-button").click();
     cy.get(".tituloEvento").click();
   });
 });
