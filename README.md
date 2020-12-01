@@ -26,7 +26,7 @@ https://proyecto-final-1-afa97.web.app/
 
 ## Vista previa CHAT
 
-![CHAT](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreen06.png?alt=media&token=265ff0fb-52a5-4eb4-8c6a-eb26bb269adc "Vista de chat")
+![CHAT](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreencapture-localhost-8080-chat.png?alt=media&token=1fca405e-24d9-42d3-b6b9-642074362ade "Vista de chat")
 
 ## Vista previa faqs
 
