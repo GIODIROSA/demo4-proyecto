@@ -1,3 +1,7 @@
+![presentacion](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/ambiente%2Fpresentacion-readme.png?alt=media&token=78ac712d-13ab-4498-956b-3b9a7fb75a71 "Vista de presentacion de readme")
+
+[Puedes ingresar AUFIELDS CHILE 2021](https://proyecto-final-1-afa97.web.app/)
+
 # AUFIELDS APP
 
 ##### El concierto más grande del pacífico sur de música electrónica.- Aufields CHILE 2021
@@ -153,27 +157,5 @@ Este proyecto está bajo la Licencia gratuita y de caracter público - para cons
 - Etc
 
 ⌨️ Gio Di Rosa. Hecho con ❤️
-
-# demo4-proyecto
-
-## Project setup
-
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-
-```
-yarn build
-```
-
-### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
