@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-container>
+      <!-- ENCABEZADO Y TITULO DE AREA DE CONCIERTO -->
       <div class="encabezadoTicketConcierto">
         <h1 class="areaConcierto pt-5">AREA DE CONCIERTO</h1>
         <h5 class="subtituloConcierto">AREAS DE TICKET | STANTARD | GOLD</h5>
-     
       </div>
-
+      <!-- FINAL DE ENCABEZADO Y TITULO DE AREA DE CONCIERTO -->
       <v-divider inset></v-divider>
       <v-row>
         <v-col
@@ -17,6 +17,7 @@
           v-for="(area, index) in areas"
           :key="index"
         >
+        <!-- CARGA E ITERACION DE DATA RENDERIZADA -->
           <h3 class="tituloArea py-4">
             {{ area.data.titulo }}
           </h3>
@@ -37,17 +38,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.encabezadoTicketConcierto{
+.encabezadoTicketConcierto {
   padding: 50px 0px;
-.areaConcierto {
-  text-align: center;
-  color: #4fc3f7;
-}
-.subtituloConcierto {
-  text-align: center;
-  color: #757575;
-
-}
+  .areaConcierto {
+    text-align: center;
+    color: #4fc3f7;
+  }
+  .subtituloConcierto {
+    text-align: center;
+    color: #757575;
+  }
 }
 
 .tituloArea {

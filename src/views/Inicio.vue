@@ -11,7 +11,7 @@
         >
           <v-row align="center" justify="center">
             <v-col class="text-center" cols="12">
-              <!-- LOGOTIPO -->
+              <!-- LOGOTIPO , SVG EN LOCAL-->
               <div class="logotipo">
                 <img
                   class="imagenLogotipo"
@@ -33,7 +33,7 @@
               >
                 Comprar tickets Aufields
               </v-btn>
-
+              <!-- BTN DE LINEUP -->
               <v-btn
                 dark
                 class="lineUp_btn_test teal accent-3 my-3"
@@ -42,13 +42,14 @@
               >
                 LineUp
               </v-btn>
+              <!-- FINAL DE BTN LINEUP -->
             </v-col>
           </v-row>
         </v-parallax>
       </div>
     </section>
     <!-- FINAL BANNER PARALLAX INICIO -->
-
+    <!-- INICIO DE REDES SOCIALES -->
     <section class="redesInicio">
       <div class="d-flex justify-center mt-3">
         <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
@@ -58,14 +59,16 @@
             </v-icon></a
           >
         </v-btn>
+        <!-- FINAL DE ICONOS DE REDES SOCIALES -->
       </div>
     </section>
-
+    <!-- COMPONENTE DE POST ARTISTAS -->
     <section class="cardArtistasInicio">
       <div class="PostArtistas my-2">
         <PostArtistas :artistas="artistas" />
       </div>
     </section>
+    <!-- FINAL DEL COMPONENTE -->
 
     <!-- PARALLAX -->
     <section class="descansoParallaxInicio">
@@ -86,6 +89,7 @@
 
     <!-- AREAS DE CONCIERTO -->
     <section class="areaConciertoInicio blue lighten-5">
+      <!-- COMPONENTES DE AREA DE CONCIERTO -->
       <AreaConcierto :areas="areas" />
     </section>
     <!-- FINAL AREAS DE CONCIERTO -->
@@ -154,5 +158,5 @@ export default {
   text-decoration: none;
 }
 
-// ANIMACIÓN
+
 </style>

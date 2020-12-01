@@ -1,11 +1,14 @@
 <template>
   <div>
+    <!-- ENCABEZADO Y TITULO DE AUF GALERIA  -->
     <h1 class="tituloAuf2019 text-center purple accent-4 white--text">
       Hello <span class="aufTtitulo">AUFIELDS</span> 2019
     </h1>
     <v-container>
+      <!-- COMPONENTE DE GRALERIA DE IMAGENES DE EVENTOS PASADOS -->
       <GaleriaImagen :imagenes="imagenes" />
       <router-link class="linkVolverAuf" :to="{ name: 'Inicio' }">
+        <!-- BTN DE VOLVER A INICIO -->
         <v-btn
           block
           dark
@@ -16,6 +19,8 @@
           Volver al 2021
         </v-btn>
       </router-link>
+      <!-- FINAL DE BTN -->
+      <!-- DERECHOS RESERVADOS -->
       <div>
         <p class="textFooter text-caption text-center py-3">
           ® Todos los derechos reservados. Aufields 2021

@@ -32,7 +32,6 @@
         <span v-if="add">Quitar CONSULTAS GENERALES</span>
       </v-btn>
       <ConsultaGenerales v-if="add" />
-      <!-- <router-view v-if="add" /> -->
       <!-- FINAL DE CONTACTO -->
 
       <!-- ENVIAR COMENTARIOS A LOS ARTISTAS -->
@@ -150,7 +149,6 @@ export default {
       this.$swal("Cuidado! 💣", "Borraste el comentario!", "error");
     },
     showAdd() {
-      // this.$route.push("/contactus/contacto");
       this.MOSTRAR_ADD();
     },
     likes() {
@@ -171,9 +169,9 @@ export default {
   background: linear-gradient(49deg, #6e60f1 0%, #7ec4f7 80%);
   background: -webkit-linear-gradient(49deg, #6e60f1 0%, #7ec4f7 80%);
   background: -moz-linear-gradient(49deg, #6e60f1 0%, #7ec4f7 80%);
-  .modificarTituloComentario {
-    color: #f3e5f5;
-  }
+}
+.modificarTituloComentario {
+  color: #f3e5f5;
 }
 .textoDataNombre {
   color: #6a1b9a;

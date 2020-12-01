@@ -1,20 +1,24 @@
 <template>
   <div>
+    <!-- PARALLAX CON RUTA A INICIO PARA RETORNO -->
     <router-link class="linkfaqs" :to="{ name: 'Inicio' }">
       <v-parallax class="parallaxFaqs" dark :src="imagenParallaxFaqs">
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
+            <!-- IMAGEN LOCAL PARA HACER UNA YUXTAPOSICIÓN AL EFECTO PARALLAX -->
             <img
               class="mascaraFaqs"
               src="@/assets/img/mascara02.png"
               alt="imagen"
             />
+            <!-- TITULO DE FAQS DENTRO DEL PARALLAX -->
             <h1 class="tituloFaqs display-1 font-weight-black mb-4">
               FREQUENTLY ASKED QUESTIONS
             </h1>
             <h4 class="subtituloFaqs">
               ¡Todas tus inquietudes en un solo lugar!
             </h4>
+            <!-- FINAL DE TITULO DE FAQS -->
           </v-col>
         </v-row>
       </v-parallax>
@@ -44,10 +48,6 @@ export default {
 .mascaraFaqs {
   width: 350px;
   height: 250px;
-}
-.tituloFaqs {
-  color: #e0f7fa;
-  text-shadow: 1px 1px 1px black;
 }
 .subtituloFaqs {
   color: #e0f7fa;

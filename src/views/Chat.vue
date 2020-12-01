@@ -6,7 +6,7 @@
         <ParallaxChat />
       </router-link>
     </div>
-<!-- DESARROLLO DEL CHAT -->
+    <!-- DESARROLLO DEL CHAT -->
     <v-container>
       <v-row>
         <v-col cols="12">
@@ -36,11 +36,10 @@
                 <v-chip
                   :color="
                     item.nombre === usuario.nombre
-                      ? 'orange accent-3'
+                      ? 'amber darken-1'
                       : 'cyan accent-1'
                   "
                   pill
-                  class="cyan accent-1"
                 >
                   <v-avatar left>
                     <v-img :src="item.foto"> </v-img>

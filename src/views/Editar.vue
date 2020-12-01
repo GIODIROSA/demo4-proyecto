@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-link :to="{ name: 'Contact Us' }">
-      <Parallaxeditar id="parallaxEditar"/>
+      <Parallaxeditar id="parallaxEditar" />
     </router-link>
     <v-container>
       <v-row>
@@ -10,9 +10,8 @@
           <v-card color="cyan lighten-4">
             <!-- CHIP IDENTIFICADOR -->
             <v-chip
-              class="ma-2 text-caption
-        "
-              color="cyan darken-1 "
+              class="ma-2 text-caption"
+              color="cyan darken-1"
               label
               text-color="white"
             >
@@ -83,9 +82,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tituloEditarComentario {
-  color: #00838f;
-}
 .subTituloEditarComentario {
   color: #bdbdbd;
 }

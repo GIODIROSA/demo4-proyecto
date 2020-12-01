@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- ENCABEZADO Y TITULO DE LA SECCIÓN DE ARTISTAS -->
     <div class="encabezadoPostArtista">
       <h1 class="tituloPostArtistas text-center">
         ARTISTAS INVITADOS
@@ -9,7 +10,11 @@
         CONCIERTO DE MÚSICA ELECTRÓNICA MÁS GRANDE DE SUR AMÉRICA
       </h5>
     </div>
+    <!-- FINAL DE TITULO DE SECCIÓN DE ARTISTAS -->
+
     <v-divider></v-divider>
+
+    <!-- CARGA DE IMAGEN Y CARD DE ARTISTAS 2021 -->
     <v-container>
       <v-row>
         <v-col
@@ -20,7 +25,11 @@
           v-for="(artista, index) in artistas"
           :key="index"
         >
-          <v-card class="cardDj_test mx-auto" max-width="400" :to="{ name: 'LineUp' }">
+          <v-card
+            class="cardDj_test mx-auto"
+            max-width="400"
+            :to="{ name: 'LineUp' }"
+          >
             <v-img
               class="white--text align-end"
               height="600px"
@@ -31,6 +40,7 @@
               }}</v-card-title>
             </v-img>
           </v-card>
+          <!-- FINAL DE LA CARD DE ARTSITAS -->
         </v-col>
       </v-row>
     </v-container>

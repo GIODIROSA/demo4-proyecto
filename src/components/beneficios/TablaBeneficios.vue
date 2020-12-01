@@ -1,4 +1,5 @@
 <template>
+<!-- TABLA DE BENEFICIOS Y BONOFICACION -->
   <v-container>
     <v-row>
       <v-col>

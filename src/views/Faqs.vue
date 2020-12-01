@@ -1,8 +1,10 @@
 <template>
   <div>
+    <!-- COMPONENTE PARALLAX DE LA IMAGEN DE FAQS -->
     <ImagenFaqs />
-    <!-- select vuetify -->
     <v-container>
+
+      <!-- SELECT DE FAQS -->
       <div class="lime accent-4">
         <h5 class="text-caption text-center">
           Selecciona la preguntas frecuente que te acontece
@@ -22,7 +24,9 @@
           ></v-select>
         </v-col>
       </v-row>
-      <!-- RESPUESTAS -->
+      <!-- FINAL DE SELECT DE FAQS -->
+
+      <!-- RESPUESTAS A LAS PREGUNTAS FRECUENTES-->
       <v-card class="lime">
         <div
           class="pa-5"
@@ -35,6 +39,7 @@
         </div>
       </v-card>
     </v-container>
+    <!-- LINK DE REDES -->
     <div class="d-flex justify-center mt-3">
       <v-btn v-for="(icon, index) in icons" :key="index" class="mx-4 " icon>
         <a class="redesLink" :href="icon.link">
@@ -44,6 +49,7 @@
         >
       </v-btn>
     </div>
+    <!-- FINAL DE LINK DE REDES -->
   </div>
 </template>
 

@@ -1,4 +1,5 @@
 <template>
+<!-- COMPONENTES DE BENEFICIOS AUF -->
   <div>
     <BeneficiosAuf :contenidos="contenidos" />
   </div>

@@ -1,6 +1,8 @@
 <template>
   <div>
+    <!-- PARALLAX Y ENCABEZADO DE BENEFICIOS -->
     <v-parallax height="550" :src="imagenBeneficio">
+      <!-- BTN DE RUTA PARA VOLVER A INICIO -->
       <v-btn
         class="btnCorazon_test mx-auto"
         id="btntest_beneficios"
@@ -15,10 +17,12 @@
         </v-icon>
       </v-btn>
     </v-parallax>
-
+    <!-- FINAL DE PARALLAX -->
+    <!-- INICIO DE RENDERIZADO DE DATA DE BENEFICIOS -->
     <v-container>
       <v-row>
         <v-col cols="12">
+
           <router-link class="linkBeneficios" :to="{ name: 'Inicio' }">
             <h1 id="btnBeneficio" class="tituloBeneficio text-center">
               BENE<span class="modificaciontitulo">FICIOS</span>
@@ -27,11 +31,13 @@
 
           <h5 class="subtituloBeneficio">AUFIELDS-CHILE 2021</h5>
         </v-col>
+        <!-- CONTENIDO DE BENEFICIO -->
         <v-col cols="12" v-for="(contenido, index) in contenidos" :key="index">
           <p class="textoBeneficio text-justify font-weight-light">
             {{ contenido.data.beneficio }}
           </p>
         </v-col>
+
         <v-col cols="12">
           <h1 class="tituloConservenTicket yellow">
             Beneficio para los que
@@ -44,8 +50,10 @@
             {{ mensaje }}
           </h5>
         </div>
+
       </v-row>
     </v-container>
+    <!-- COMPONENTE DE TABLA -->
     <TablaBeneficios />
     <v-container>
       <p

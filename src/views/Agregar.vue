@@ -1,10 +1,12 @@
 <template>
   <div>
+    <!-- RUTA Y PARALLAX HACIA CONTACT US -->
     <div>
       <router-link :to="{ name: 'Contact Us' }">
         <Parallaxagregar />
       </router-link>
     </div>
+    <!-- CARD DE AGREGAR -->
     <v-container>
       <v-row>
         <v-col>
@@ -16,7 +18,10 @@
               Podrás agregar un comentario para los artistas
             </v-card-subtitle>
             <!-- FORM DE AGREGAR COMENTARIO -->
-            <form class="form_test mx-4" @submit.prevent="agregarComentario(nombre)">
+            <form
+              class="form_test mx-4"
+              @submit.prevent="agregarComentario(nombre)"
+            >
               <div>
                 <v-text-field
                   color="teal lighten-2"
@@ -36,7 +41,7 @@
               </button>
             </form>
           </v-card>
-          <!-- FINAL DE CARD DE AGREGAR COMENTARIO -->
+          <!-- FINAL DE FORM Y CARD DE AGREGAR COMENTARIO -->
         </v-col>
       </v-row>
     </v-container>
