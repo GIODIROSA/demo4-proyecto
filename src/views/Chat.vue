@@ -134,8 +134,6 @@ export default {
   methods: {
     enviarMensaje() {
       if (this.valido) {
-        console.log("enviaste un mensaje ", this.mensaje);
-
         // GUARDAR EN FIREBASE
         firebase
           .firestore()
@@ -150,7 +148,7 @@ export default {
 
         this.mensaje = "";
       } else {
-        console.log("No escribiste nada");
+        alert("No escribiste nada");
       }
     },
 

@@ -11,15 +11,5 @@ export default {
       state.usuario = payload;
     },
   },
-  actions: {
-    // obtenerLogin({ commit }, user) {
-    //   const usuario = {
-    //     nombre: user.displayName,
-    //     email: user.email,
-    //     uid: user.uid,
-    //     foto: user.photoURL,
-    //   };
-    //   // commit("NUEVO_USUARIO", usuario);
-    // },
-  },
+  actions: {},
 };

@@ -8,7 +8,6 @@ export default {
   getters: {},
   mutations: {
     OBTENER_CONTENIDO(state, payload) {
-      // console.log(payload);
       state.contenidos = payload;
     },
   },

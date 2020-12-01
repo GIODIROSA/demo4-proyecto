@@ -17,17 +17,12 @@ export default {
     busqueda_ticket: (state, getters) => (idTicket) => {
       return getters.ticketsOnStock.find((t) => t.id === idTicket);
     },
-    cantidadEntrada: (state) => (numeroEntrada) => {
-      return console.log(numeroEntrada);
-    },
   },
   mutations: {
     OBTENER_TICKETS(state, payload) {
       state.tickets = payload;
     },
-    AÑADIR_CARRITO(state, payload) {
-      console.log(payload);
-    },
+
     OBTENER_NORMATIVA(state, payload) {
       state.normativasConcierto = payload;
     },

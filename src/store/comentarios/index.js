@@ -76,8 +76,6 @@ export default {
         .doc(idComentario)
         .get()
         .then((doc) => {
-          console.log(doc.id);
-          console.log(doc.data());
           let IndComentario = doc.data();
           IndComentario.id = doc.id;
           commit("OBTENER_INDCOMENTARIO", IndComentario);
@@ -93,7 +91,6 @@ export default {
           nombre: comentario.nombre,
         })
         .then(() => {
-          console.log("tarea editada");
           router.push("/contactus");
         });
     },
@@ -106,7 +103,6 @@ export default {
           nombre: nombreComentario,
         })
         .then((doc) => {
-          console.log(doc.id);
           router.push("/contactus");
         });
     },
@@ -118,7 +114,6 @@ export default {
         .doc(id)
         .delete()
         .then(() => {
-          console.log("Comentario Eliminado");
           commit("ELIMINAR_COMENTARIO", id);
         });
     },

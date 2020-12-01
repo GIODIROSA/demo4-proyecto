@@ -29,7 +29,7 @@ export default {
             commit("OBTENER_TRAVEL", travel);
           });
       } catch (error) {
-        console.log("el error en el contenido es:", error);
+        console.log("El error en el contenido es:", error);
       }
     },
   },

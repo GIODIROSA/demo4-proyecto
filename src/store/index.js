@@ -3,7 +3,7 @@ import Vuex from "vuex";
 import createPersistedState from "vuex-persistedstate";
 import firebase from "firebase";
 
-// modules
+// MODULES
 import Areas from "../store/areas";
 import Contenidos from "../store/contenido";
 import Tickets from "../store/ticket";

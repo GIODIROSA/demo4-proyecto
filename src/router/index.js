@@ -105,7 +105,6 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   let usuario = firebase.auth().currentUser;
-  console.log(usuario);
   let autorizacion = to.matched.some((record) => record.meta.autentificado);
 
   if (autorizacion && !usuario) {

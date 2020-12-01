@@ -196,7 +196,6 @@ export default {
   },
   computed: {
     ...mapState("Carrito", ["impuesto"]),
-    ...mapGetters("Tickets", ["cantidadEntrada"]),
 
     numeroEntradasPermitidas() {
       let numeroEntrada = [1, 2, 3, 4, 5];
@@ -214,10 +213,8 @@ export default {
     },
   },
   mounted() {
-    this.seleccionTicket;
     this.numeroEntradasPermitidas;
     this.tituloBoletaCarrito;
-    this.cantidadEntradaSeleccionada;
   },
 };
 </script>
