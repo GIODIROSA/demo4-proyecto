@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "cypress": "6.0.1",
     "firebase": "^7.24.0",
     "moment": "^2.29.1",
     "vue": "^2.6.11",

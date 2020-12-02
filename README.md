@@ -8,7 +8,7 @@
 
 > Aufields, es una aplicación desarrollada con VueJs y Firebase para ayudar a la gestión de promoción y venta de tickets para dicho evento. Contando así, con un chat para la interacción y una sección de comentarios para el feedback con los DJ´s invitados para la versión 2021 del evento en sí. Siendo atrayente para el fanático y asiduo público que está dentro de la onda techno de nuestro país.
 
-#### Puedes ingresar desde éste enlace:
+#### Puedes copiar éste enlace:
 
 https://proyecto-final-1-afa97.web.app/
 
@@ -47,6 +47,21 @@ https://proyecto-final-1-afa97.web.app/
 4. NodeJs y npm/ yarn - Javascript como Backend y Manejador de dependencias.
 5. HTML5 y CSS3 - Como lenguajes de etiquetas y estilos.
 6. Firebase - Usado para hacer deploy y como hosting de la aplicación.
+
+### Dependecies
+
+1. core-js 3.6.5
+2. firebase 7.24.0
+3. moment 2.29.1
+4. vue 2.6.11
+5. vue chat scroll 1.4.0
+6. vue router 3.2.0
+7. vue-chat-scroll 1.4.0
+8. vue router 3.2.0
+9. vue swal 1.0.0
+10. vuetify 2.2.11
+11. vuex 3.4.0
+12. vuex pesistedstate 4.0.0 beta-1
 
 # Ingresa aquí para ver a la App 🔥
 
