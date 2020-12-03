@@ -177,9 +177,9 @@ export default {
             uid: user.uid,
             foto: user.photoURL,
           };
-
-          // this.createUser(user);
+          // camino hacia el mutations
           this.NUEVO_USUARIO(usuario);
+          // camino hacia la collection firebase
           this.createUser(usuario);
         })
         .catch((error) => {

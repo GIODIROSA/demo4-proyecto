@@ -17,8 +17,6 @@ import VueSwal from "vue-swal";
 Vue.use(VueSwal);
 // FINAL SWEET ALERT
 
-
-
 Vue.config.productionTip = false;
 
 const firebaseConfig = {
@@ -43,10 +41,3 @@ firebase.auth().onAuthStateChanged(function(user) {
     render: (h) => h(App),
   }).$mount("#app");
 });
-
-// new Vue({
-//   router,
-//   store,
-//   vuetify,
-//   render: (h) => h(App),
-// }).$mount("#app");

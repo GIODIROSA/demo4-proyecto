@@ -7,7 +7,7 @@
           <v-col class="text-center" cols="12">
             <router-link class="linkInicioTickets" :to="{ name: 'Inicio' }">
               <h1
-              id="testLink_titulo"
+                id="testLink_titulo"
                 class="tituloTickets_test display-1 font-weight-bold mb-4 white--text"
               >
                 {{ titulo }}
@@ -17,7 +17,6 @@
         </v-row>
       </v-parallax>
       <!-- FINAL DE PARALLAX DE TICKET -->
-
     </div>
     <!-- LINK DE REDES SOCIALES -->
     <section>
@@ -40,7 +39,7 @@
 <script>
 import CardTickets from "@/components/ticket/CardTickets.vue";
 
-import { mapActions, mapGetters, mapState } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: "Tickets",
   components: {
@@ -61,7 +60,6 @@ export default {
   },
 
   computed: {
-    ...mapState("Tickets", ["tickets"]),
     ...mapGetters("Tickets", ["ticketsOnStock"]),
     ticketsDisponibles() {
       return this.ticketsOnStock;
