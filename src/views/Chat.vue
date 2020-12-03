@@ -148,7 +148,7 @@ export default {
 
         this.mensaje = "";
       } else {
-        alert("No escribiste nada");
+        this.$swal("No escribiste nada", "Animate! ✏️", "error");
       }
     },
 
