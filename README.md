@@ -38,7 +38,7 @@ https://proyecto-final-1-afa97.web.app/
 
 ## Paleta de colores 🖍️
 
-> Los colores empleados son los primarios, estableciendo así un policromia en la app. Estableciendo, un manejo de analogos y complementarios en algunas vistas. Planteando la mecanica cromatica de colores de saturación de blanco como tambien contrastes para la jerarquización de contra puntos visuales.
+> Los colores empleados son los primarios, estableciendo así un policromia en la app. Estableciendo, un manejo de analogos y complementarios en algunas vistas. Planteando la mecánica cromática de colores de saturación de blanco como tambien contrastes para la jerarquización de contra puntos visuales.
 
 ##### Ejemplo de gradient color
 
@@ -83,7 +83,7 @@ https://proyecto-final-1-afa97.web.app/
 
 1. VueJS- El framework web escrito en javascript más versátil, simple y amigable de usar; además, progresivo para crear interfaces de usuario. Construido por medio de la comunidad desarrolladora. Bajo, la autoria y visión programática de Evan You.
 2. Vue-CLI- Herramienta para complementar VueJS.
-   3.Vue-Router - Herramienta para complementar VueJs.
+3. Vue-Router - Herramienta para complementar VueJs.
 3. Vueity v2.3.18 - Framework para CSS.
 4. NodeJs y npm/ yarn - Javascript como Backend y Manejador de dependencias.
 5. HTML5 y CSS3 - Como lenguajes de etiquetas y estilos.
@@ -220,4 +220,4 @@ Este proyecto está bajo la Licencia gratuita y de caracter público - para cons
 
 ⌨️ Gio Di Rosa. Hecho con ❤️
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Ver [Configuration Reference](https://cli.vuejs.org/config/).

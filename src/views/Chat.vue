@@ -72,6 +72,7 @@
                   <span class="modificarMensajeChat">{{ mensaje }}</span>
                 </v-card-subtitle>
               </v-form>
+              <!-- FINARL DE FORM -->
             </v-card-text>
           </v-card>
           <!-- FINAL DE CARD -->
