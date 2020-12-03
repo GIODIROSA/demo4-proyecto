@@ -52,9 +52,7 @@ https://proyecto-final-1-afa97.web.app/
 ##### Ejemplo de style color
 
 ```
-.linkChat {
-  text-decoration: none;
-}
+
 .tituloChat {
   color: #e65100;
 }
@@ -67,9 +65,7 @@ https://proyecto-final-1-afa97.web.app/
 .modificarMensajeChat {
   color: #ff7043;
 }
-.redesLink {
-  text-decoration: none;
-}
+
 ```
 
 ## Fuente usada Sans serif ✒️
@@ -93,7 +89,7 @@ https://proyecto-final-1-afa97.web.app/
 5. HTML5 y CSS3 - Como lenguajes de etiquetas y estilos.
 6. Firebase - Usado para hacer deploy y como hosting de la aplicación.
 
-### Dependecies
+### Dependencies
 
 1. core-js 3.6.5
 2. firebase 7.24.0
