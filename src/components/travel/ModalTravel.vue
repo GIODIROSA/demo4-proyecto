@@ -13,7 +13,7 @@
               <h5
                 class="mensajeTravel ma-5 font-weight-light py-3 d-flex justify-center"
               >
-                <span class="modificarNota font-weight-bold">Nota : </span>
+                <span class="modificarNota font-weight-bold">Nota:</span>
                 Para revisar de que manera puedes llegar al concierto
               </h5>
             </div>
@@ -110,7 +110,7 @@
             <h1 class="tituloCompartir">
               {{ tituloComparte }}
             </h1>
-            <p class="text-justify font-weight-light py-3 ">
+            <p class="text-justify font-weight-light py-3 ma-3 ">
               {{ textoComparte }}
             </p>
             <div class="d-flex justify-center">

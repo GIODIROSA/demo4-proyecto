@@ -36,6 +36,51 @@ https://proyecto-final-1-afa97.web.app/
 
 ![FAQS](https://firebasestorage.googleapis.com/v0/b/proyecto-final-1-afa97.appspot.com/o/readme%2Fscreen09.png?alt=media&token=3beec36d-1953-4f50-b2e2-6874e2da6f2c "Vista de faqs")
 
+## Paleta de colores 🖍️
+
+> Los colores empleados son los primarios, estableciendo así un policromia en la app. Estableciendo, un manejo de analogos y complementarios en algunas vistas. Planteando la mecanica cromatica de colores de saturación de blanco como tambien contrastes para la jerarquización de contra puntos visuales.
+
+##### Ejemplo de gradient color
+
+```
+ background: #ff0000;
+  background: linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+  background: -webkit-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+  background: -moz-linear-gradient(122deg, #ff0000 0%, #7100ff 80%);
+```
+
+##### Ejemplo de style color
+
+```
+.linkChat {
+  text-decoration: none;
+}
+.tituloChat {
+  color: #e65100;
+}
+.modificarUsuario {
+  color: #ff6d00;
+}
+.textoFechaChat {
+  color: #ff3d00;
+}
+.modificarMensajeChat {
+  color: #ff7043;
+}
+.redesLink {
+  text-decoration: none;
+}
+```
+
+## Fuente usada Sans serif ✒️
+
+> La tipografía Montserrat tiene como fuente de inspiración viejos carteles, letreros luminosos y marquesinas del tradicional barrio de Buenos Aires. La diseñadora Julieta Ulanovsky ha desarrollado esta fuente que rescata la belleza de la tipografía urbana de la primera mitad del siglo XX. El objetivo es dar luz a lo que hay en Montserrat y mostrarlo libremente, bajo una licencia libre en código abierto.
+
+```
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap");
+
+```
+
 # Construido con 🔧
 
 > Este proyecto está construido con la ayuda de Vuetify. -A MATERIAL DESIGN FRAMEWORK, un gran recurso para desarrollar aplicaciones y su aspecto profesional con VueJS. Éstas y otras tecnologías se han utilizado en el proyecto:

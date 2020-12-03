@@ -178,12 +178,6 @@ export default {
             foto: user.photoURL,
           };
 
-          // let user = {
-          //   name: result.user.displayName,
-          //   photoUrl: result.user.providerData[0].photoURL,
-          //   email: result.user.email,
-          // };
-
           // this.createUser(user);
           this.NUEVO_USUARIO(usuario);
           this.createUser(usuario);
