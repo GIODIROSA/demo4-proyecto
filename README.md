@@ -120,6 +120,12 @@ yarn install
 yarn serve
 ```
 
+#### Instalación de Firebase:
+
+```
+npm i firebase
+```
+
 #### Compilación para producción:
 
 ```

@@ -14,7 +14,7 @@ export default {
     OBTENER_COMENTARIOS(state, payload) {
       state.comentarios = payload;
     },
-    OBTENER_INDCOMENTARIO(state, payload) {
+    OBTENER_IDCOMENTARIO(state, payload) {
       state.comentario = payload;
     },
     OBTENER_CONSULTAS(state, payload) {
@@ -49,6 +49,7 @@ export default {
         console.log("Tienes un error en consultas : ", error);
       }
     },
+    // READ DATA FIREBASE
     async obtenerDataComentarios({ commit }) {
       try {
         await firebase
@@ -68,7 +69,7 @@ export default {
         console.log("Tienes un error  en comentarios: ", error);
       }
     },
-
+    // proviene de EDITAR
     obtenerComentario({ commit }, idComentario) {
       firebase
         .firestore()
@@ -76,9 +77,9 @@ export default {
         .doc(idComentario)
         .get()
         .then((doc) => {
-          let IndComentario = doc.data();
-          IndComentario.id = doc.id;
-          commit("OBTENER_INDCOMENTARIO", IndComentario);
+          let IdComentario = doc.data();
+          IdComentario.id = doc.id;
+          commit("OBTENER_IDCOMENTARIO", IdComentario);
         });
     },
 
