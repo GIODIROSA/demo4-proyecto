@@ -84,10 +84,10 @@ https://proyecto-final-1-afa97.web.app/
 1. VueJS- El framework web escrito en javascript más versátil, simple y amigable de usar; además, progresivo para crear interfaces de usuario. Construido por medio de la comunidad desarrolladora. Bajo, la autoria y visión programática de Evan You.
 2. Vue-CLI- Herramienta para complementar VueJS.
 3. Vue-Router - Herramienta para complementar VueJs.
-3. Vueity v2.3.18 - Framework para CSS.
-4. NodeJs y npm/ yarn - Javascript como Backend y Manejador de dependencias.
-5. HTML5 y CSS3 - Como lenguajes de etiquetas y estilos.
-6. Firebase - Usado para hacer deploy y como hosting de la aplicación.
+4. Vueity v2.3.18 - Framework para CSS.
+5. NodeJs y npm/ yarn - Javascript como Backend y Manejador de dependencias.
+6. HTML5 y CSS3 - Como lenguajes de etiquetas y estilos.
+7. Firebase - Usado para hacer deploy y como hosting de la aplicación.
 
 ### Dependencies
 
